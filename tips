@@ -6,3 +6,9 @@ find ./driver/ ./system/ ./include/ ./test/ | grep ".*[ch]$" | xargs sed -i 's/u
 
 #sed删除行尾空格
 sed -i 's/[ \t]*$//g' file
+
+#sed 文件顶部增加一行
+sed -i '1s/^/abcdefg\n/' file
+
+#递归搜索，替换
+find . -type f -name '*.txt' -exec sed -i 's/this/that/g' {} +
