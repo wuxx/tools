@@ -1,5 +1,6 @@
 set nu
 set hlsearch
+syntax on
 
 set tabstop=4
 set expandtab
