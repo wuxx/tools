@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#convert path to window style
+
+WIN_PATH=$(echo ${PWD} | sed 's/\/mnt\/hgfs/E:/' | sed 's/\//\\/g')
+
+echo ${WIN_PATH}

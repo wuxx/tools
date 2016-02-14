@@ -25,3 +25,7 @@ git config --global color.ui true
 
 #gcc predefined macro
 gcc -dM -E - < /dev/null
+
+
+#make raspberry pi image
+sudo dd if=./2015-05-05-raspbian-wheezy.img of=/dev/sdb bs=2M
