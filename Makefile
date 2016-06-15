@@ -7,7 +7,9 @@ CFLAGS = -Wall -g
 all: hextool
 
 hextool: hextool.c
-	gcc $(CFLAGS)  $< -o $@
+	gcc $(CFLAGS)  $< -o hextool
+	cp hextool hexdump
+	cp hextool hexedit
 
 clean:	
-	rm -f hextool tags *.bin
+	rm -f hextool hexdump hexedit tags *.bin

@@ -64,7 +64,6 @@ static struct option const long_options[] =
   {"help",          no_argument,        NULL, 'h'},
 
     /* dump mode parameters */
-  {"col",           required_argument,  NULL, 'c'},
   {"canonical",     no_argument,        NULL, 'C'},
   {"groupsize",     required_argument,  NULL, 'g'},
   {"little-endian", no_argument,        NULL, 'e'},
@@ -187,6 +186,7 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
     u32 count;
     u32 group_index = 0;
     u8  byte;
+    /* u8 char_buf[17] = {0}; */ /* TODO: display the characters. */
     s32 i;
 
     DUMP("%08x: ", group_index);
@@ -201,8 +201,7 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
         if (count == groupsize) {
             new_word = gen_new_word(old_word, endian, groupsize);
             dump_word(new_word, groupsize, col, group_index);
-            group_index ++;
-
+            group_index++;
         } else if (count <= groupsize) {
             if (count == 0) {
                 break;
@@ -224,7 +223,6 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
                     for(i = 0; i < (groupsize - count); i++) {
                         DUMP("  ");
                     }
-                    DUMP("\n");
 
                 } else if (endian == LE) {
 
@@ -247,6 +245,7 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
         }
     }
     
+    DUMP("\n");
     return 0;
 }
 
@@ -262,6 +261,7 @@ int edit(s32 ifd, u32 len, u32 value)
 
 int main(int argc, char **argv)
 {
+    char *prog_name = NULL;
     s32 c;
     s32 option_index;
     s32 ifd;
@@ -277,13 +277,21 @@ int main(int argc, char **argv)
 
     if (argc == 1) {
         usage(argv[0]);
+        exit(-1);
     }
-    while ((c = getopt_long (argc, argv, "c:deg:hmn:o:v:CE", 
+
+    prog_name = strrchr(argv[0], '/');
+
+    if (strcmp(&prog_name[1], "hexdump") == 0) {
+        mode = DUMP_MODE;
+    } else if (strcmp(&prog_name[1], "hexedit") == 0) {
+        mode = DUMP_MODE;
+    }
+
+
+    while ((c = getopt_long (argc, argv, "deg:hmn:o:v:CE",
                 long_options, &option_index)) != -1) {
         switch (c) {
-            case ('c'):
-                col = atoi(optarg);
-                break;
             case ('d'):
                 mode = DUMP_MODE;
                 break;
