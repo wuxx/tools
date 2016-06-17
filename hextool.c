@@ -110,28 +110,6 @@ u32 gen_new_word(u32 old_word, u32 endian, u32 groupsize)
     return new_word;
 }
 
-void dump_word(u32 new_word, u32 groupsize, u32 col, u32 group_index)
-{
-    switch (groupsize) {
-        case (1):
-            DUMP(FORMAT_STR_HEX_1, (u8)(new_word));
-            break;
-        case (2):
-            DUMP(FORMAT_STR_HEX_2, (u16)(new_word));
-            break;
-        case (4):
-            DUMP(FORMAT_STR_HEX_4, (u32)(new_word));
-            break;
-        default:
-            assert(0);
-            break;
-    }
-
-    if ((group_index + 1) % col == 0) {
-        DUMP("\n%08x: ", (group_index + 1) * groupsize);
-    }
-}
-
 int get_host_endian()
 {
     int x = 0x12345678;
@@ -163,9 +141,6 @@ u8 get_byte(u32 word, u32 groupsize, u32 endian, u32 index)
     u8 *pc = (u8 *)(&word);
 
     assert(index <= (groupsize - 1));
-#if 0
-    printf("%s %x %x %x \n", __func__, word, index, pc[index]);
-#endif
     switch (endian) {
         case (LE):
             return pc[index];
@@ -184,9 +159,11 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
 
     u32 old_word, new_word;
     u32 count;
+    u8  char_buf[17] = {0};
     u32 group_index = 0;
+    u32 char_index  = 0;
+    u8  *pc;
     u8  byte;
-    /* u8 char_buf[17] = {0}; */ /* TODO: display the characters. */
     s32 i;
 
     DUMP("%08x: ", group_index);
@@ -200,21 +177,67 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
 
         if (count == groupsize) {
             new_word = gen_new_word(old_word, endian, groupsize);
-            dump_word(new_word, groupsize, col, group_index);
+
+            switch (groupsize) {
+                case (1):
+                    DUMP(FORMAT_STR_HEX_1, (u8) (new_word));
+                    break;
+                case (2):
+                    DUMP(FORMAT_STR_HEX_2, (u16)(new_word));
+                    break;
+                case (4):
+                    DUMP(FORMAT_STR_HEX_4, (u32)(new_word));
+                    break;
+                default:
+                    assert(0);
+                    break;
+            }
+
+            pc = (u8 *)(&new_word);
+            for(i = groupsize - 1; i >= 0; i--) {
+                if (pc[i] >= 0x20 && pc[i] <= 0x7E) {
+                    char_buf[char_index++] = pc[i];
+                } else {
+                    char_buf[char_index++] = '.';
+                }
+            }
+
+            if ((group_index + 1) % col == 0) {
+                DUMP("  %s", char_buf);
+                DUMP("\n%08x: ", (group_index + 1) * groupsize);
+                char_index = 0;
+                memset(char_buf, 0, sizeof(char_buf));
+            }
             group_index++;
         } else if (count <= groupsize) {
-            if (count == 0) {
+            if (count == 0) {   /* file end */
+                /* printf("group_index: %x \n", group_index); */
+                /* pad */
+                for(; (group_index % col) != 0; group_index++) {
+                    DUMP(" ");
+                    for(i = 0; i < groupsize; i++) {
+                        DUMP("  ");
+                    }
+
+                }
+
+                DUMP("   %s\n", char_buf);
                 break;
-            } else {
-                new_word = gen_new_word(old_word, endian, groupsize);
+            }
 
-#if 0
-                printf("count %d ; groupsize %d\n", count, groupsize);
-                printf("old_word: %08x \n", old_word);
-                printf("new_word: %08x \n", new_word);
-#endif
+            new_word = gen_new_word(old_word, endian, groupsize);
 
-                if (endian == BE) {
+            pc = (u8 *)(&new_word);
+            for(i = count - 1; i >= 0; i--) {
+                if (pc[i] >= 0x20 && pc[i] <= 0x7E) {
+                    char_buf[char_index++] = pc[i];
+                } else {
+                    char_buf[char_index++] = '.';
+                }
+            }
+
+            switch (endian) {
+                case (BE):
                     for(i = 0; i < count; i++) {
                         byte = get_byte(new_word, groupsize, endian, i);
                         DUMP("%02x", byte);
@@ -223,8 +246,9 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
                     for(i = 0; i < (groupsize - count); i++) {
                         DUMP("  ");
                     }
+                    break;
 
-                } else if (endian == LE) {
+                case (LE):
 
                     for(i = 0; i < (groupsize - count); i++) {
                         DUMP("  ");
@@ -234,10 +258,12 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
                         byte = get_byte(new_word, groupsize, endian, i);
                         DUMP("%02x", byte);
                     }
-                    DUMP("\n");
-                }
+                    break;
             }
-            
+
+
+            group_index++;
+
         } else {
             printf("unexpect count %d \n", count);
             exit(-1);
@@ -328,6 +354,7 @@ int main(int argc, char **argv)
         }
     }
 
+#if 0
     PRINT_VAR(mode);
     PRINT_VAR(col);
     PRINT_VAR(endian);
@@ -336,6 +363,7 @@ int main(int argc, char **argv)
     PRINT_VAR(offset);
     PRINT_VAR(len);
     PRINT_VAR(value);
+#endif
 
     col = 16 / groupsize; /* always 16 bytes per line */
     assert(get_host_endian() == LE);
