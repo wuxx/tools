@@ -214,38 +214,35 @@ int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
                 /* printf("group_index: %x \n", group_index); */
                 /* pad */
                 for(; (group_index % col) != 0; group_index++) {
-                    DUMP(" ");
                     for(i = 0; i < groupsize; i++) {
                         DUMP("  ");
                     }
+                    DUMP(" ");
 
                 }
 
-                DUMP("   %s\n", char_buf);
+                DUMP("  %s\n", char_buf);
                 break;
             }
 
             new_word = gen_new_word(old_word, endian, groupsize);
-
-            pc = (u8 *)(&new_word);
-            for(i = count - 1; i >= 0; i--) {
-                if (pc[i] >= 0x20 && pc[i] <= 0x7E) {
-                    char_buf[char_index++] = pc[i];
-                } else {
-                    char_buf[char_index++] = '.';
-                }
-            }
 
             switch (endian) {
                 case (BE):
                     for(i = 0; i < count; i++) {
                         byte = get_byte(new_word, groupsize, endian, i);
                         DUMP("%02x", byte);
+                        if (byte >= 0x20 && byte <= 0x7E) {
+                            char_buf[char_index++] = byte;
+                        } else {
+                            char_buf[char_index++] = '.';
+                        }
                     }
 
                     for(i = 0; i < (groupsize - count); i++) {
                         DUMP("  ");
                     }
+                    DUMP(" ");
                     break;
 
                 case (LE):
@@ -311,7 +308,7 @@ int main(int argc, char **argv)
     if (strcmp(&prog_name[1], "hexdump") == 0) {
         mode = DUMP_MODE;
     } else if (strcmp(&prog_name[1], "hexedit") == 0) {
-        mode = DUMP_MODE;
+        mode = EDIT_MODE;
     }
 
 

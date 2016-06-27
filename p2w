@@ -2,6 +2,8 @@
 
 #convert path to window style
 
-WIN_PATH=$(echo ${PWD} | sed 's/\/mnt\/hgfs/E:/' | sed 's/\//\\/g')
+IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}')
+
+WIN_PATH=$(echo ${PWD} | sed 's/\/home\/pi/\\\\'${IP}'/' | sed 's/\//\\/g')
 
 echo ${WIN_PATH}
