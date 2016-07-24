@@ -41,3 +41,9 @@ curl -u admin:admin http://192.168.1.1/userRpm/StatusRpm.htm | grep -A1 "6C-E8-7
 
 #save
 %!xxd -r
+
+#set the timezone on debian linux system
+dpkg-reconfigure tzdata
+
+#starting with the Kth of each file (count start from 1)
+tail -c +K file
