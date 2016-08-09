@@ -47,3 +47,6 @@ dpkg-reconfigure tzdata
 
 #starting with the Kth of each file (count start from 1)
 tail -c +K file
+
+#putty serial
+putty -serial COM7 -sercfg 115200,8,n,1,X
