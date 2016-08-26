@@ -52,3 +52,6 @@ tail -c +K file
 
 #putty serial
 putty -serial COM7 -sercfg 115200,8,n,1,X
+
+#xargs
+ls mifare/javacard/*.cap | xargs -I '{}' ./readcap {} > 1.log

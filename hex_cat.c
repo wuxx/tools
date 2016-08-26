@@ -8,6 +8,14 @@
 #include <unistd.h>
 #include <assert.h>
 
+void dump_byte(char *buf, int size)
+{
+    int i;
+    for(i = 0; i < size; i++) {
+        printf("[%d]: [0x%02x] [%c]\n", i, buf[i], buf[i]);
+    }
+}
+
 int main(int argc, char **argv)
 {
     int ifd;

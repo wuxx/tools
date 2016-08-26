@@ -5,15 +5,21 @@ CFLAGS = -Wall -g
 
 .PHONY: all
 
-all: hextool hex_cat
+all: hextool hex_cat readcap jbdump
 
 hextool: hextool.c
 	$(CC) $(CFLAGS) $< -o hextool
 	cp hextool hexdump
 	cp hextool hexedit
 
-hextool: hex_cat.c
+hex_cat: hex_cat.c
 	$(CC) $(CFLAGS) $< -o hex_cat
 
+readcap: readcap.c
+	$(CC) $(CFLAGS) $< -o readcap
+
+jbdump: jbdump.c
+	$(CC) $(CFLAGS) $< -o jbdump
+
 clean:	
-	rm -f hextool hexdump hexedit hex_cat tags *.bin
+	rm -f hextool hexdump hexedit hex_cat readcap jbdump tags *.bin
