@@ -354,6 +354,7 @@ void dump_component_import(unsigned char *buf, int size)
 
     return;
 }
+
 void dump_component_constantpool(unsigned char *buf, int size)
 {
     int i;
@@ -375,30 +376,37 @@ void dump_component_constantpool(unsigned char *buf, int size)
 
     return;
 }
+
 void dump_component_class(unsigned char *buf, int size)
 {
     return;
 }
+
 void dump_component_method(unsigned char *buf, int size)
 {
     return;
 }
+
 void dump_component_staticfield(unsigned char *buf, int size)
 {
     return;
 }
+
 void dump_component_referencelocation(unsigned char *buf, int size)
 {
     return;
 }
+
 void dump_component_export(unsigned char *buf, int size)
 {
     return;
 }
+
 void dump_component_descriptor(unsigned char *buf, int size)
 {
     return;
 }
+
 void dump_component_debug(unsigned char *buf, int size)
 {
     return;

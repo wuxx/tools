@@ -161,7 +161,7 @@ void update_c_code()
 int main(int argc, char **argv)
 {
 
-    int i;
+    int i, j;
     int ifd;
     unsigned char *mbuf;
     struct stat st; 
@@ -261,7 +261,13 @@ int main(int argc, char **argv)
     update_c_code();
 
     for(i = 0; i < cindex; i++) {
-        printf("[%d]:len: %d; code: 0x%08x\n", i, c_st[i].len, c_st[i].code);
+        printf("[%d]:len: %02d; code:", i, c_st[i].len);
+
+        for (j = c_st[i].len - 1; j >= 0; j--) {
+            printf("%d", get_bit(c_st[i].code, j)); 
+        }
+        printf("\n");
+
     }
 
     munmap(mbuf, st.st_size);
