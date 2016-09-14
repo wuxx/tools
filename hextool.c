@@ -284,7 +284,6 @@ int edit(s32 ifd, u32 len, u32 value)
 
 int main(int argc, char **argv)
 {
-    char *prog_name = NULL;
     s32 c;
     s32 option_index;
     s32 ifd;
@@ -303,12 +302,15 @@ int main(int argc, char **argv)
         exit(-1);
     }
 
-    prog_name = strrchr(argv[0], '/');
-
-    if (strcmp(&prog_name[1], "hexdump") == 0) {
+    if (strcmp(argv[0], "hexdump") == 0) {
         mode = DUMP_MODE;
-    } else if (strcmp(&prog_name[1], "hexedit") == 0) {
+    } else if (strcmp(argv[0], "hexedit") == 0) {
         mode = EDIT_MODE;
+    } else if (strcmp(argv[0], "hextool") == 0) {
+        mode = DUMP_MODE;
+    } else {
+        printf("unknown program name [%s] \n", argv[0]);
+        exit(-1);
     }
 
 
