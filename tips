@@ -2,7 +2,10 @@
 export LS_COLORS="no=00:fi=00:di=01;34:ln=00;04;31:pi=00;37:so=01;31:bd=37:cd=37:or=01;31:ex=01;31:*.o=01:*.gz=00;35:*.tar=00;35:*.Z=00;35:*.tgz=00;35:*.mpg=36:*.mpeg=36:*.dat=35:*.mov=35:*.pm=35:*.jpg=36:*.JPG=36:*.gif=36:*.GIF=36:*.ps=01;33:*.pdf=01;35:*.fm=01;35:*.htm=01;34:*.html=01;34:*.HTM=01;34:*.HTML=01;34:*.c=00;31:*.cpp=00;31:*.pl=00;31:*.my=01;04;35:*.man=01;04;07;30:*.ppt=35:*.DOC=35:*.doc=35:*.cmd=04;35:*.tcl=04;36:*.tclscript=04;36:*.log=04;35"
 
 #替换目录下所有文件中的的匹配字符串
-find ./driver/ ./system/ ./include/ ./test/ | grep ".*[ch]$" | xargs sed -i 's/uart_printf/PRINT_EMG/g'
+find ./driver/ ./system/ ./include/ ./test/ | grep ".*\.[ch]$" | xargs sed -i 's/uart_printf/PRINT_EMG/g'
+
+# count .c .h lines
+find . | egrep ".*\.c$|.*\.h$" | xargs wc -l
 
 #sed删除行尾空格
 sed -i 's/[ \t]*$//g' file
@@ -30,6 +33,8 @@ git stash save -u
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
+#simple http server
+python -m SimpleHTTPServer 8080
 
 #make raspberry pi image
 sudo dd if=./2015-05-05-raspbian-wheezy.img of=/dev/sdb bs=2M
