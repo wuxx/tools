@@ -4,6 +4,9 @@ export LS_COLORS="no=00:fi=00:di=01;34:ln=00;04;31:pi=00;37:so=01;31:bd=37:cd=37
 #替换目录下所有文件中的的匹配字符串
 find ./driver/ ./system/ ./include/ ./test/ | grep ".*\.[ch]$" | xargs sed -i 's/uart_printf/PRINT_EMG/g'
 
+#delete space at the end of line
+sed -i 's/[ ]*$//g'
+
 # count .c .h lines
 find . | egrep ".*\.c$|.*\.h$" | xargs wc -l
 
@@ -33,8 +36,10 @@ git stash save -u
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
-#simple http server
+#python 2.7 simple http server
 python -m SimpleHTTPServer 8080
+#python 3 simple http server
+python -m http.server 8080
 
 #make raspberry pi image
 sudo dd if=./2015-05-05-raspbian-wheezy.img of=/dev/sdb bs=2M
