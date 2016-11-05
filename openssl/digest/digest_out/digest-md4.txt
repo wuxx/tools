@@ -1,1 +1,0 @@
-MD4(plaintext.txt)= 540f48faf7b55d5ca3af5a1182308656

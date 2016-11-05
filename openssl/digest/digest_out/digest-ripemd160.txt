@@ -1,1 +1,0 @@
-RIPEMD160(plaintext.txt)= 12785636b61e15787e927bab80aa504ea81d94a4

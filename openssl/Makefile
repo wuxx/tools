@@ -1,10 +1,7 @@
-
 CC = gcc
 CFLAGS = -Wall -g
 
 PLAINTEXT  = plaintext.txt
-KEY = "1234567890"
-IV  = "1234567890"
 
 .PHONY: all
 
