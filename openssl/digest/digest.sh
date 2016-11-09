@@ -7,7 +7,7 @@ echo $digest_list
 out_dir="./digest_out"
 
 key="1234567890"
-ifile="plaintext.txt"
+ifile="../plaintext.txt"
 
 #echo $cipher_list
 

@@ -3,9 +3,9 @@ CFLAGS = -Wall -g
 
 PLAINTEXT  = plaintext.txt
 
-.PHONY: all
+.PHONY: all sc_encrypt sc_decrypt ac_encrypt ac_decrypt digest mac
 
-all: encrypt digest
+all: encrypt digest mac
 
 encrypt: sc_encrypt ac_encrypt
 
@@ -31,5 +31,9 @@ digest:
 	@echo "$@"
 	cd dgst && sh digest.sh
 
+mac:
+	@echo "$@"
+	cd mac && sh mac.sh
+
 clean:	
-	rm -rf sc/ciphertext_out/* sc/plaintext_out/* ac/ciphertext_out/* ac/plaintext_out/* dgst/digest_out/*
+	rm -rf sc/ciphertext_out/* sc/plaintext_out/* ac/ciphertext_out/* ac/plaintext_out/* dgst/digest_out/* mac/mac_out/*
