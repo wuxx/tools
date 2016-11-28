@@ -65,3 +65,6 @@ putty -serial COM7 -sercfg 115200,8,n,1,X
 
 #xargs
 ls mifare/javacard/*.cap | xargs -I '{}' ./readcap {} > 1.log
+
+#ssh tunnel
+ssh -N -f -o TCPKeepAlive=yes -R 2222:127.0.0.1:22  root@internet_ip
