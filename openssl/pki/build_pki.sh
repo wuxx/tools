@@ -6,7 +6,7 @@ help() {
     echo -e "\t\t--help"
 }
 
-CA_LEVEL="1"
+CA_LEVEL="NA"
 
 while [ ! -z "$1" ]; do
     case "$1" in
@@ -16,6 +16,14 @@ while [ ! -z "$1" ]; do
             shift
             ;;  
         "--server")
+            SERVER_NAME="server"
+            SERVER_DIR=./server
+    
+            openssl genrsa -des3 -out $SERVER_DIR/$SERVER_NAME.key 2048
+            openssl req -new -days 3650 -key $SERVER_DIR/$SERVER_NAME.key -out $SERVER_DIR/$SERVER_NAME.csr
+            #openssl ca -extensions v3_ca -in $CA1_DIR/$CA1_NAME.csr -config $CA1_DIR/$CA1_NAME.cnf -days 3000 -out $CA1_DIR/$CA1_NAME.crt -cert $CA0_DIR/careq.pem -keyfile $CA0_DIR/private/cakey.pem
+            #openssl ca -extensions v3_ca -in $CA1_DIR/$CA1_NAME.csr -config /etc/ssl/openssl.cnf -days 3000 -out $CA1_DIR/$CA1_NAME.crt -cert $CA0_DIR/careq.pem -keyfile $CA0_DIR/private/cakey.pem
+            openssl ca -extensions v3_ca -in ./server/server.csr -days 3000 -out ./server/server.crt -cert ./ca1/ca1.crt -config server.cnf
             shift
             ;;  
         "--client")
