@@ -58,6 +58,7 @@ case "$CA_LEVEL" in
         openssl genrsa -des3 -out $CA0_DIR/private/cakey.pem 2048
         #openssl req -new -x509 -config $CA0_DIR/demoCA.cnf -key $CA0_DIR/private/cakey.pem -out $CA0_DIR/careq.pem -days 3650 -passin pass:123456 
         openssl req -new -x509 -config /etc/ssl/openssl.cnf -key $CA0_DIR/private/cakey.pem -out $CA0_DIR/careq.pem -days 3650 -passin pass:123456 
+        #openssl x509 -in demoCA/careq.pem -inform pem -noout -text
         ;;  
     "1")
         #level 1 CA
