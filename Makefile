@@ -21,5 +21,8 @@ readcap: readcap.c
 jbdump: jbdump.c
 	$(CC) $(CFLAGS) $< -o jbdump
 
+hexgrep: hexgrep.c
+	$(CC) $(CFLAGS) $< -o hexgrep
+
 clean:	
 	rm -f hextool hexdump hexedit hex_cat readcap jbdump tags *.bin
