@@ -46,7 +46,7 @@ int match(int *buf1, int *buf2, int word_nr)
 
 int main(int argc, char **argv)
 {
-    int i;
+    int i, j;
     int fd;
     FILE *fp;
     char line[1024] = {0};
@@ -54,7 +54,8 @@ int main(int argc, char **argv)
     int windex = 0;
     int mcount = 0;
     int mmax = 0;
-    int max_offset = 0;
+    int max_offset[128] = {0};
+    int mindex = 0;
     int *mbuf = NULL;
     struct stat st; 
 
@@ -109,15 +110,30 @@ int main(int argc, char **argv)
     /* match start, let's kick it */
     for(i = 0; i <= ((st.st_size / 4) - windex); i++) {
         mcount = match(word, &mbuf[i], windex);
+
+        if (mcount == mmax) {
+            max_offset[mindex++] = i * 4;
+        }
+
         if (mcount > mmax) {
             mmax = mcount;
-            max_offset = i * 4;
+
+            mindex = 0;
+            max_offset[mindex++] = i * 4;
         }
     }
 
-    printf("offset: 0x%08x; match_max: %d\n", max_offset, mmax);
-    for(i = 0; i < windex; i++) {
-        printf("[%d]: 0x%08x\n", i, mbuf[(max_offset / 4) + i]);
+    printf("offset: 0x%08x; match_max: %d\n", max_offset[0], mmax);
+
+    for(i = 0; i < mindex; i++) {
+
+        printf("%d", i);
+
+        for(j = 0; j < windex; j++) {
+            printf("0x%08x ", mbuf[(max_offset[i] / 4) + j]);
+        }
+
+        printf("\n");
     }
 
     munmap(mbuf, st.st_size);
