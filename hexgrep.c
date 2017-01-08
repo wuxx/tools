@@ -113,6 +113,7 @@ int main(int argc, char **argv)
 
         if (mcount == mmax) {
             max_offset[mindex++] = i * 4;
+	    assert(mindex < (sizeof(max_offset) / sizeof(max_offset[0])));
         }
 
         if (mcount > mmax) {
@@ -127,7 +128,7 @@ int main(int argc, char **argv)
 
     for(i = 0; i < mindex; i++) {
 
-        printf("%d", i);
+        printf("%d: 0x%08x\n\t", i, max_offset[i]);
 
         for(j = 0; j < windex; j++) {
             printf("0x%08x ", mbuf[(max_offset[i] / 4) + j]);
