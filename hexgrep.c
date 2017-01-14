@@ -124,7 +124,12 @@ int main(int argc, char **argv)
         }
     }
 
-    printf("offset: 0x%08x; match_max: %d\n", max_offset[0], mmax);
+    printf("\t");
+    for(i = 0; i < windex; i++) {
+        printf("[%d]: 0x%08x\n", i, word[windex]);
+    }
+
+    printf("offset: 0x%08x; max: 0x%08x; match_max: %d\n", max_offset, windex * 32,  mmax);
 
     for(i = 0; i < mindex; i++) {
 
