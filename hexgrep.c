@@ -20,6 +20,27 @@ typedef   signed short s16;
 typedef unsigned int u32;
 typedef   signed int s32;
 
+void usage(char *program_name)
+{
+    printf("Usage: %s: [OPTION] [FILE] \n", program_name);
+    fputs (("\
+             -i | --ifile                   input file                                      \n\
+             -m | --mfile                   search mode config file                         \n\
+             -g | --groupsize               groupsize = [1|2|4]                             \n\
+             -h | --help                    display help info                               \n\
+"), stdout);
+    exit(0);
+}
+
+static struct option const long_options[] =
+{
+  {"ifile",     required_argument,  NULL, 'i'},
+  {"mfile",     required_argument,  NULL, 'm'},
+  {"g",         required_argument,  NULL, 'g'},
+  {"help",      no_argument,        NULL, 'h'},
+
+};
+
 int count_one_bit(unsigned int x)  
 {  
     int count = 0;  
@@ -46,7 +67,9 @@ int match(int *buf1, int *buf2, int word_nr)
 
 int main(int argc, char **argv)
 {
+    char *ifile, *mfile;
     int i, j;
+    int c;
     int fd;
     FILE *fp;
     char line[1024] = {0};
@@ -56,6 +79,7 @@ int main(int argc, char **argv)
     int mmax = 0;
     int max_offset[128] = {0};
     int mindex = 0;
+    int group_size = 4;
     int *mbuf = NULL;
     struct stat st; 
 
@@ -64,7 +88,38 @@ int main(int argc, char **argv)
         exit(-1);
     }
 
-    if ((fp = fopen(argv[2], "r")) == NULL) {
+    while ((c = getopt_long (argc, argv, "i:m:g:h",
+                long_options, &option_index)) != -1) {
+        switch (c) {
+            case ('i'):
+                ifile = optarg;
+                break;
+            case ('m'):
+                mfile = optarg;
+                break;
+            case ('g'):
+                groupsize = atoi(optarg);
+                break;
+            case ('h'):
+                usage(argv[0]);
+                break;
+            default:
+                usage(argv[0]);
+                break;
+        }
+    }
+
+    if (groupsize != 1 || groupsize != 2 || groupsize != 2) {
+        printf("groupsize must be one of [1|2|4]\n");
+        exit(-1);
+    }
+
+    if ((fd = open(ifile, O_RDWR)) == -1) {
+        perror("open");
+        exit(-1);
+    }
+
+    if ((fp = fopen(mfile, "r")) == NULL) {
         perror("fopen");
         exit(-1);
     }
@@ -87,11 +142,6 @@ int main(int argc, char **argv)
         printf("[%d]: 0x%08x\n", i, word[i]);
     }
     */
-
-    if ((fd = open(argv[1], O_RDWR)) == -1) {
-        perror("open");
-        exit(-1);
-    }
 
     if ((fstat(fd, &st)) == -1) {
         perror("fstat");
