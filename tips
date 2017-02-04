@@ -68,3 +68,9 @@ ls mifare/javacard/*.cap | xargs -I '{}' ./readcap {} > 1.log
 
 #ssh tunnel
 ssh -N -f -o TCPKeepAlive=yes -R 2222:127.0.0.1:22  root@internet_ip
+
+#delete file accord the inum
+find ./ -inum 919102 -exec rm -rfi {} \;
+
+#search head file
+apt-file search xxx.h

@@ -1,9 +1,16 @@
 #!/bin/sh
 
-echo 'set nu'        >> ~/.vimrc
-echo 'set hlsearch'  >> ~/.vimrc
-echo 'syntax on'     >> ~/.vimrc
-echo 'set ts=4'      >> ~/.vimrc
-echo 'set expandtab' >> ~/.vimrc
+cat << EOF >> ~/.vimrc
+set nu
+set hlsearch
+syntax on
+set ts=4
+set expandtab
+set sw=4
+set cindent
+set smarttab
+set incsearch
 
-#autocmd BufReadPost *  if line("'\"")>0&&line("'\"")<=line("$") | exe "normal g'\"" |  endif
+autocmd BufReadPost *  if line("'\"")>0&&line("'\"")<=line("$") | exe "normal g'\"" |  endif
+
+EOF
