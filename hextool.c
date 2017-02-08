@@ -44,6 +44,7 @@ void usage(char *program_name)
              -o offset | --offset offset    offset bytes in file                            \n\
              -h | --help                    display help info                               \n\n\
              * dump mode parameters *                                                       \n\
+             -b addr | --base addr                                                          \n\
              -c cols | --col cols                                                           \n\
              -C | --canonical               canonical hex+ASCII display                     \n\
              -g bytes | --groupsize bytes                                                   \n\
@@ -64,6 +65,7 @@ static struct option const long_options[] =
   {"help",          no_argument,        NULL, 'h'},
 
     /* dump mode parameters */
+  {"base",          required_argument,  NULL, 'b'},
   {"canonical",     no_argument,        NULL, 'C'},
   {"groupsize",     required_argument,  NULL, 'g'},
   {"little-endian", no_argument,        NULL, 'e'},
@@ -154,18 +156,19 @@ u8 get_byte(u32 word, u32 groupsize, u32 endian, u32 index)
 
 }
 
-int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical)
+int dump(s32 ifd, u32 col, u32 endian, u32 groupsize, u32 canonical, u32 base)
 {
 
     u32 old_word, new_word;
     u32 count;
     u8  char_buf[17] = {0};
-    u32 group_index = 0;
+    u32 group_index;
     u32 char_index  = 0;
     u8  *pc;
     u8  byte;
     s32 i;
 
+    group_index = base;
     DUMP("%08x: ", group_index);
 
     while (1) {
@@ -290,6 +293,7 @@ int main(int argc, char **argv)
 
     u32 mode      = DUMP_MODE; 
     u32 endian    = BE;
+    u32 base      = 0x0; 
     u32 groupsize = 1; 
     u32 col       = 16 / groupsize; /* always 16 bytes per line */
     u32 len       = 1; 
@@ -302,21 +306,12 @@ int main(int argc, char **argv)
         exit(-1);
     }
 
-    if (strcmp(argv[0], "hexdump") == 0) {
-        mode = DUMP_MODE;
-    } else if (strcmp(argv[0], "hexedit") == 0) {
-        mode = EDIT_MODE;
-    } else if (strcmp(argv[0], "hextool") == 0) {
-        mode = DUMP_MODE;
-    } else {
-        printf("unknown program name [%s] \n", argv[0]);
-        exit(-1);
-    }
-
-
-    while ((c = getopt_long (argc, argv, "deg:hmn:o:v:CE",
+    while ((c = getopt_long (argc, argv, "b:deg:hmn:o:v:CE",
                 long_options, &option_index)) != -1) {
         switch (c) {
+            case ('b'):
+                base = strtol(optarg, NULL, 0);
+                break;
             case ('d'):
                 mode = DUMP_MODE;
                 break;
@@ -385,7 +380,7 @@ int main(int argc, char **argv)
 
     switch (mode) {
         case (DUMP_MODE):
-            dump(ifd, col, endian, groupsize, canonical);
+            dump(ifd, col, endian, groupsize, canonical, base);
             break;
         case (EDIT_MODE):
             edit(ifd, len, value);

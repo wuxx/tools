@@ -1,0 +1,162 @@
+Compiled from "HelloWorld.java"
+public class HelloWorld {
+  public HelloWorld();
+    Code:
+       0: aload_0       
+       1: invokespecial #1;                 // Method java/lang/Object."<init>":()V
+       4: return        
+
+  public static void main0(java.lang.String[]);
+    Code:
+       0: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: ldc           #3;                 // String Hello World!
+       5: invokevirtual #4;                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: return        
+
+  public static void main1(java.lang.String[]) throws java.lang.Exception;
+    Code:
+       0: ldc           #5;                 // String abc
+       2: astore_1      
+       3: ldc           #6;                 // String abcd
+       5: astore_2      
+       6: aload_1       
+       7: invokevirtual #7;                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      10: astore_3      
+      11: aload_2       
+      12: invokevirtual #7;                 // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      15: astore        4
+      17: ldc_w         #8;                 // class java/lang/String
+      20: astore        5
+      22: ldc           #9;                 // String java.lang.String
+      24: invokestatic  #10;                // Method java/lang/Class.forName:(Ljava/lang/String;)Ljava/lang/Class;
+      27: astore        6
+      29: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      32: aload_3       
+      33: invokevirtual #11;                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+      36: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      39: aload         4
+      41: invokevirtual #11;                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+      44: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      47: aload         5
+      49: invokevirtual #11;                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+      52: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      55: aload         6
+      57: invokevirtual #11;                // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+      60: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      63: aload_3       
+      64: aload         4
+      66: if_acmpne     73
+      69: iconst_1      
+      70: goto          74
+      73: iconst_0      
+      74: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+      77: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      80: aload_3       
+      81: aload         5
+      83: if_acmpne     90
+      86: iconst_1      
+      87: goto          91
+      90: iconst_0      
+      91: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+      94: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      97: aload_3       
+      98: invokevirtual #13;                // Method java/lang/Class.isPrimitive:()Z
+     101: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+     104: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     107: getstatic     #14;                // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+     110: invokevirtual #13;                // Method java/lang/Class.isPrimitive:()Z
+     113: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+     116: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     119: getstatic     #14;                // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+     122: ldc_w         #15;                // class java/lang/Integer
+     125: if_acmpne     132
+     128: iconst_1      
+     129: goto          133
+     132: iconst_0      
+     133: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+     136: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     139: getstatic     #14;                // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+     142: getstatic     #14;                // Field java/lang/Integer.TYPE:Ljava/lang/Class;
+     145: if_acmpne     152
+     148: iconst_1      
+     149: goto          153
+     152: iconst_0      
+     153: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+     156: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     159: ldc_w         #16;                // class "[I"
+     162: invokevirtual #13;                // Method java/lang/Class.isPrimitive:()Z
+     165: invokevirtual #12;                // Method java/io/PrintStream.println:(Z)V
+     168: return        
+
+  public static void main(java.lang.String[]) throws java.lang.Exception;
+    Code:
+       0: ldc_w         #8;                 // class java/lang/String
+       3: iconst_1      
+       4: anewarray     #17;                // class java/lang/Class
+       7: dup           
+       8: iconst_0      
+       9: ldc_w         #18;                // class java/lang/StringBuffer
+      12: aastore       
+      13: invokevirtual #19;                // Method java/lang/Class.getConstructor:([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+      16: astore_1      
+      17: aload_1       
+      18: iconst_1      
+      19: anewarray     #20;                // class java/lang/Object
+      22: dup           
+      23: iconst_0      
+      24: new           #18;                // class java/lang/StringBuffer
+      27: dup           
+      28: ldc           #5;                 // String abc
+      30: invokespecial #21;                // Method java/lang/StringBuffer."<init>":(Ljava/lang/String;)V
+      33: aastore       
+      34: invokevirtual #22;                // Method java/lang/reflect/Constructor.newInstance:([Ljava/lang/Object;)Ljava/lang/Object;
+      37: checkcast     #8;                 // class java/lang/String
+      40: astore_2      
+      41: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      44: aload_2       
+      45: invokevirtual #4;                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      48: ldc_w         #8;                 // class java/lang/String
+      51: invokevirtual #23;                // Method java/lang/Class.newInstance:()Ljava/lang/Object;
+      54: checkcast     #8;                 // class java/lang/String
+      57: astore_3      
+      58: ldc           #9;                 // String java.lang.String
+      60: invokestatic  #10;                // Method java/lang/Class.forName:(Ljava/lang/String;)Ljava/lang/Class;
+      63: invokevirtual #24;                // Method java/lang/Class.getConstructors:()[Ljava/lang/reflect/Constructor;
+      66: astore        4
+      68: iconst_0      
+      69: istore        5
+      71: iload         5
+      73: aload         4
+      75: arraylength   
+      76: if_icmpge     147
+      79: aload         4
+      81: iload         5
+      83: aaload        
+      84: invokevirtual #25;                // Method java/lang/reflect/Constructor.getGenericParameterTypes:()[Ljava/lang/reflect/Type;
+      87: astore        6
+      89: iconst_0      
+      90: istore        7
+      92: iload         7
+      94: aload         6
+      96: arraylength   
+      97: if_icmpge     135
+     100: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     103: new           #26;                // class java/lang/StringBuilder
+     106: dup           
+     107: invokespecial #27;                // Method java/lang/StringBuilder."<init>":()V
+     110: aload         6
+     112: iload         7
+     114: aaload        
+     115: invokevirtual #28;                // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+     118: ldc           #29;                // String ,
+     120: invokevirtual #30;                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     123: invokevirtual #31;                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     126: invokevirtual #32;                // Method java/io/PrintStream.print:(Ljava/lang/String;)V
+     129: iinc          7, 1
+     132: goto          92
+     135: getstatic     #2;                 // Field java/lang/System.out:Ljava/io/PrintStream;
+     138: invokevirtual #33;                // Method java/io/PrintStream.println:()V
+     141: iinc          5, 1
+     144: goto          71
+     147: return        
+}
