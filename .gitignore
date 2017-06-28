@@ -1,3 +1,4 @@
 hextool
 hexdump
 hexedit
+*.pyc
