@@ -39,27 +39,46 @@ public class Chord_God
     public static void main(String args[])
     {
         HashMap map = new HashMap();
-        map.put("1-3-5",        "");
-        map.put("1-3-#5",       "aug");
+
+        map.put("1-3-5",        "M");
+        map.put("1-3-5-2",      "add9");
+        map.put("1-3-5-4",      "add11");
+        map.put("1-3-5-6",      "maj6");
+        map.put("1-3-5-2-6",    "maj69");
+
         map.put("1-b3-5",       "min");
+
+        map.put("1-3-#5",       "aug");
+
         map.put("1-b3-b5",      "dim");
+
         map.put("1-4-5",        "sus4");
+
         map.put("1-2-5",        "sus2");
 
-        map.put("1-3-5-9",      "add9");
-        map.put("1-3-5-11",     "add11");
-        map.put("1-3-5-13",     "maj6");
-        map.put("1-b3-5-13",    "min6");
+        map.put("1-b3-5-6",    "min6");
 
-        map.put("1-3-5-7",      "maj7");
-        map.put("1-b3-5-b7",    "min7");
+        map.put("1-3-5-7",          "maj7");
+        map.put("1-3-5-7-2",        "maj9");
+        map.put("1-3-5-7-2-6",      "maj13");
+        map.put("1-3-5-7-2-#4-6",   "maj13(#11)");
+        map.put("1-3-5-7-#2",       "maj7(#11)");
+
+        map.put("1-b3-5-b7",        "min7");
+        map.put("1-b3-5-7",         "cm(maj7)");
+
+        map.put("1-3-#5-b7",    "aug7");
         map.put("1-3-#5-7",     "aug(maj7)");
-        map.put("1-b3-b5-b7",   "min7b5");
-        map.put("1-b3-5-7",     "cm(maj7)");
+
+        map.put("1-b3-b5-b7",      "min7b5");
+        map.put("1-b3-5-b7-2",     "min9");
+        map.put("1-b3-5-b7-4",     "min7add11");
+        map.put("1-b3-5-b7-2-4",   "min11");
+        map.put("1-b3-b5-6",       "dim7");
+
         map.put("1-3-5-b7",     "dom7");
         map.put("1-4-5-b7",     "dom7(sus4)");
-        map.put("1-3-#5-b7",    "aug7");
-        map.put("1-b3-b5-6",    "dim7");
+
 
         Set set = map.entrySet();
 
