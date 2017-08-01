@@ -22,6 +22,9 @@ clean:
 	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions \
         *.order *.symvers
 
+node:
+	-sudo mknod /dev/khelper c 200 0
+
 install:
 	-sudo rmmod khelper
 	sudo insmod khelper.ko
