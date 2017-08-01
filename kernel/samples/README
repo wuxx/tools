@@ -1,0 +1,40 @@
+.
+|-- GNU_GPL
+|-- hello
+|   |-- hello.c
+|   `-- Makefile
+|-- kobject
+|   |-- kobject-example.c
+|   |-- kset-example.c
+|   `-- Makefile
+|-- LICENSE
+|-- Makefile
+|-- module-tools
+|   |-- insmod.c
+|   |-- logging.c
+|   |-- logging.h
+|   |-- Makefile
+|   |-- rmmod.c
+|   |-- util.c
+|   `-- util.h
+`-- README
+
+3 directories, 16 files
+
+
+Requirements:
+    - A 2.6 series Linux kernel with sysfs, procfs, and loadable module
+          support enabled in the kernel configuration.
+    - Module versioning (MODVERSIONS) must be enabled.
+
+Quickstart:
+    - Make sure you have appropriate development tools (gcc, GNU autotools,
+      etc) 
+    - Make sure you have a kernel source tree in 
+         /lib/modules/$(shell uname -r)/build before build modules 
+
+    1. make or make all
+    2. make clean
+
+Enjoy!
+Harris Wang <wstoneh@126.com>

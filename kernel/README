@@ -1,0 +1,5 @@
+1. uname
+root@iZ2ze66hn1pkopqvbdkpp2Z:~# uname -a
+Linux iZ2ze66hn1pkopqvbdkpp2Z 3.13.0-86-generic #130-Ubuntu SMP Mon Apr 18 18:27:15 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+2. https://www.ibm.com/developerworks/cn/linux/l-cn-kernelmodules/index.html
