@@ -2,3 +2,6 @@ hextool
 hexdump
 hexedit
 *.pyc
+*.o
+*.ko
+*.cmd

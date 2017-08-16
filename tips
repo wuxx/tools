@@ -36,6 +36,9 @@ git stash save -u
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
+#dump optimizers
+gcc -Q --help=optimizers -O1
+
 #python 2.7 simple http server
 python -m SimpleHTTPServer 8080
 #python 3 simple http server
