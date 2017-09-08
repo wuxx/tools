@@ -47,6 +47,9 @@ python -m http.server 8080
 #make raspberry pi image
 sudo dd if=./2015-05-05-raspbian-wheezy.img of=/dev/sdb bs=2M
 
+#get 8K random data
+dd if=/dev/urandom of=data.bin bs=8K count=1
+
 #get the internet address on my router
 curl -u admin:admin http://192.168.1.1/userRpm/StatusRpm.htm | grep -A1 "6C-E8-73-6F-A6-D5" | tail -n 1 | sed 's/,//'
 
