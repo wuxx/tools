@@ -12,6 +12,9 @@
 #define DEVICE "/dev/ttyAMA0"
 #define SIZE 1024
 
+int bindex = 0;
+char buffer_cache[4096] = {0};
+
 int sfd = 0;
 
 struct termios st_new;
@@ -23,7 +26,7 @@ int serialinit()
     sfd = open(DEVICE, O_RDWR|O_NOCTTY|O_NDELAY);
     if(-1 == sfd)
     {
-        perror("open serial port [%s] fail!\n", DEVICE);
+        perror("open serial port fail!\n");
         return -1;
     }
     if( (fcntl(sfd, F_SETFL, 0)) < 0 )
@@ -80,25 +83,27 @@ int main(int argc, char **argv)
     }
 
     bzero(buf, SIZE);
-#if 0   /* read */
+
+    /* nret = write(sfd, "hello, world!\r\n", 16); */
+#if 1   /* read */
     while(1)
     {
         nret = read(sfd, buf, SIZE);
         if(-1 == nret)
         {
-            perror("Read Data Error!\n");
+            perror("read data error!\n");
             break;
         }
         if(0 < nret)
         {
             buf[nret] = 0;
-            printf("Recv Data: %s\n", buf);
+            printf("recv data: [%s]\n", buf);
         }
     }
 #endif
 
 
-    nret = write(sfd, "hello, world!\n", 14);
+    //nret = write(sfd, "hello, world!\r\n", 14);
 
     close(sfd);
     return 0;
