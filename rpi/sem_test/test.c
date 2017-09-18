@@ -30,7 +30,7 @@ int main()
     sem_args.array = array;
 
     /* create share memory */
-    shmid = shmget(0x1234, getpagesize(), IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH);
+    shmid = shmget(0x2234, getpagesize(), IPC_CREAT | IPC_EXCL | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH);
     if(shmid == -1) {
         perror("shmget error:");
         exit(EXIT_FAILURE);
@@ -50,8 +50,10 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    struct sembuf sem1_opt_wakeup[1] ={0,  1, SEM_UNDO};    /*  1 means release 1 resorce */
-    struct sembuf sem2_opt_wait[1]   ={1, -1, SEM_UNDO};    /* -1 means need 1 resorce */
+    struct sembuf sem1_opt_wait[1]   = {0, -1, SEM_UNDO};    /*  1 means release 1 resorce */
+
+    struct sembuf sem1_opt_wakeup[1] = {0,  1, SEM_UNDO};    /*  1 means release 1 resorce */
+    struct sembuf sem2_opt_wait[1]   = {1, -1, SEM_UNDO};    /* -1 means need 1 resorce */
 
     /* 1. wait sem2 */
     /* 2. access share memory */
@@ -73,6 +75,15 @@ int main()
         shmdt(addr);
 
         semop(semid, sem1_opt_wakeup, 1);
+
+        printf("%s-%d\n", __func__, __LINE__);
+        semop(semid, sem1_opt_wait, 1);
+        printf("%s-%d\n", __func__, __LINE__);
+        semop(semid, sem1_opt_wait, 1);
+        printf("%s-%d\n", __func__, __LINE__);
+
+        semop(semid, sem1_opt_wait, 1);
+        printf("%s-%d\n", __func__, __LINE__);
 
         printf("exit please enter 1");
 
