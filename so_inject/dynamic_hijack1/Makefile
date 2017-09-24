@@ -1,3 +1,3 @@
 
 all:
-	gcc -c mycrypt.c
+	gcc -m32 -c mycrypt.c
