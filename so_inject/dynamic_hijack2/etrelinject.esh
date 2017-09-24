@@ -1,0 +1,16 @@
+#!/usr/bin/elfsh
+
+#check out http://bestofbr33d.blogspot.com/2012/09/relinking-elf-executable.html
+
+load ./myprog
+
+load ./goo.o
+
+reladd 1 2  #this expect fail, and elfsh exit. so need type these cmd by hand.
+
+reladd 1 2
+
+redir foo goo
+save myprog.new
+quit
+

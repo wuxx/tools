@@ -3,6 +3,8 @@ CC = gcc
 #CFLAGS = -m32 -g
 CFLAGS = -Wall -g
 
+PWD=$(shell pwd -P)
+
 SHELLCODE_SRC  = shellcode2.s shellcode3.s shellcode4.s shellcode5.s
 SHELLCODE_OBJ  = $(patsubst %.s,%.o,$(SHELLCODE_SRC))
 SHELLCODE_ELF  = $(patsubst %.s,%.elf,$(SHELLCODE_SRC))
@@ -10,7 +12,8 @@ SHELLCODE_ELF  = $(patsubst %.s,%.elf,$(SHELLCODE_SRC))
 
 all: 
 	gcc -m32 -shared -fPIC lib_test.c -o libtest.so
-	gcc -m32 main.c -o main -L ./ -ltest
+	gcc -m32 main.c -o main -L./ -Wl,-rpath=$(PWD) -ltest
+	#gcc -m32 main.c -o main -L ./ -ltest
 
 disasm: 
 	objdump -d libtest.so > libtest.asm
