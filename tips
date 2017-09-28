@@ -33,6 +33,19 @@ git config --global core.editor vim
 
 git stash save -u
 
+git bisect start
+git bisect good
+git bisect bad <SHA-1>
+then...
+git bisect good or git bisect bad
+
+#mov to one commit id temporary
+git checkout <SHA-1>
+#mov back to master
+git checkout master
+
+git branch --set-upstream-to=origin/master master
+
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
