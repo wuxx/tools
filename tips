@@ -89,8 +89,11 @@ putty -serial COM7 -sercfg 115200,8,n,1,X
 ls mifare/javacard/*.cap | xargs -I '{}' ./readcap {} > 1.log
 
 #ssh tunnel
+on local machine
 ssh -N -f -o TCPKeepAlive=yes -R 2222:127.0.0.1:22  root@internet_ip
 
+on internet machine
+ssh pi@127.0.0.1 -p 2222
 
 #delete file accord the inum
 find ./ -inum 919102 -exec rm -rfi {} \;
