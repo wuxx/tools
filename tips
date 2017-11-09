@@ -7,6 +7,12 @@ find ./driver/ ./system/ ./include/ ./test/ | grep ".*\.[ch]$" | xargs sed -i 's
 #delete space at the end of line
 sed -i 's/[ ]*$//g'
 
+#modify line 1234
+sed -i '1234creplacedtext' file
+
+#delete last line
+sed -i '$d' file
+
 # count .c .h lines
 find . | egrep ".*\.c$|.*\.h$" | xargs wc -l
 
@@ -46,7 +52,7 @@ git checkout master
 
 git branch --set-upstream-to=origin/master master
 
-#multi github account in one PC.
+#multi github account in one PC. ssh
 http://jingyan.baidu.com/article/948f592414ad67d80ef5f966.html
 
 #gcc predefined macro
@@ -136,3 +142,18 @@ sudo swapon /var/swap
 swapon -s
 # 查看当前swap使用情况
 free -m
+
+
+#make ramdisk
+$sudo mke2fs /dev/ram0 /^C
+$sudo mkdir /mnt/ramdisk0
+$sudo mount /dev/ram0 /mnt/ramdisk0/
+
+
+#show symbol debug info
+LD_DEBUG=symbols ./xxx.elf
+
+tmux 
+detach the session
+ctrl+b d
+tmux a -t session-name

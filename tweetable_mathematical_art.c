@@ -13,6 +13,8 @@
 unsigned char GR(int,int);
 unsigned char BL(int,int);
 
+#define P1
+
 #if defined(P1)
 unsigned char RD(int i,int j){
     return (char)(_sq(cos(atan2(j-512,i-512)/2))*255);
