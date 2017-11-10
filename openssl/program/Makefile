@@ -9,6 +9,7 @@ all:
 	gcc hash_test.c -lssl -lcrypto -o hash_test
 	gcc aes_test.c  -lssl -lcrypto -o aes_test
 	gcc rsa_test.c  -lssl -lcrypto -o rsa_test
+	gcc all_test.c  -lssl -lcrypto -o all_test
 
 clean:	
-	rm -rf hash_test aes_test rsa_test
+	rm -rf hash_test aes_test rsa_test all_test

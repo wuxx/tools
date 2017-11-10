@@ -8,10 +8,154 @@
 
 #include <openssl/pem.h>
 #include <openssl/ssl.h>
+#include <openssl/aes.h>
 #include <openssl/rsa.h>
 #include <openssl/evp.h>
 #include <openssl/bio.h>
 #include <openssl/err.h>
+
+#define INPUT "testOpenssl"
+
+/*
+    to verity: echo -n "testOpenssl" | sha256sum
+*/
+
+int hash_main()  
+{  
+    char digestType[][20] =   
+    {  
+        "md4",  
+        "md5",  
+        "sha1",  
+        "sha256",  
+        "sha384",  
+        "sha512",  
+    };  
+  
+    int size = sizeof(digestType) / sizeof(digestType[0]);  
+    int i = 0;  
+    for(i = 0; i < size; i++)  
+    {     
+        EVP_MD_CTX mdctx;  
+        const EVP_MD *md = NULL;  
+        unsigned char mdValue[EVP_MAX_MD_SIZE] = {0};  
+        unsigned int mdLen = 0;  
+  
+        OpenSSL_add_all_digests();  
+        md = EVP_get_digestbyname(digestType[i]);  
+        if(!md) // 不支持的格式  
+        {  
+            printf("Unknown message digest %s\n", digestType[i]);  
+            continue;  
+        }  
+  
+        EVP_MD_CTX_init(&mdctx);  
+        EVP_DigestInit_ex(&mdctx, md, NULL);  
+        EVP_DigestUpdate(&mdctx, INPUT, strlen(INPUT));  
+        EVP_DigestFinal_ex(&mdctx, mdValue, &mdLen);  
+        EVP_MD_CTX_cleanup(&mdctx);  
+  
+        printf("%s is ",  digestType[i]);  
+        int j = 0;  
+        for(j = 0; j < mdLen; j++)  
+        {  
+            printf("%02X", mdValue[j]);  
+        }  
+  
+        printf("\n");  
+    }  
+  
+    return 0;  
+}
+
+#define AES_BITS 128
+#define MSG_LEN 128
+
+int aes_encrypt(char* in, char* key, char* out)//, int olen)可能会设置buf长度
+{
+	AES_KEY aes;
+	if(!in || !key || !out) return 0;
+	unsigned char iv[AES_BLOCK_SIZE];
+	for(int i=0; i<AES_BLOCK_SIZE; ++i) {
+		iv[i] = 0;
+    }
+
+	if(AES_set_encrypt_key((unsigned char*)key, 128, &aes) < 0) {
+		return 0;
+	}
+	int len = strlen(in);
+
+	AES_cbc_encrypt((unsigned char*)in, (unsigned char*)out, len, &aes, iv, AES_ENCRYPT);
+	return 1;
+}
+
+int aes_decrypt(char* in, char* key, char* out)
+{
+	AES_KEY aes;
+	unsigned char iv[AES_BLOCK_SIZE];
+
+	if(!in || !key || !out) return 0;
+
+
+	for(int i=0; i < AES_BLOCK_SIZE; i++) {
+		iv[i] = 0;
+    }
+
+	if(AES_set_decrypt_key((unsigned char*)key, 128, &aes) < 0)
+	{
+		return 0;
+	}
+	int len=strlen(in);
+	AES_cbc_encrypt((unsigned char*)in, (unsigned char*)out, len, &aes, iv, AES_DECRYPT);
+	return 1;
+}
+
+int aes_main()
+{
+	char plaintext[MSG_LEN];
+	char ciphertext[MSG_LEN];
+
+	memset((char*)plaintext,  0, MSG_LEN);
+	memset((char*)ciphertext, 0, MSG_LEN);
+
+	strcpy((char*)plaintext, "123456789 123456789 123456789 12a");
+	//strcpy((char*)plaintext, argv[1]);
+
+	char key[AES_BLOCK_SIZE];
+	int i;
+	for(i = 0; i < 16; i++) {
+		key[i] = 32 + i;
+	}
+
+	if(!aes_encrypt(plaintext, key, ciphertext)) {
+		printf("encrypt error\n");
+		return -1;
+	}
+
+	//printf("enc %d:",strlen((char*)ciphertext));
+
+	for(i = 0; i < MSG_LEN; i++) {
+		printf("%x",(unsigned char)ciphertext[i]);
+	}
+
+	memset((char*)plaintext, 0, MSG_LEN);
+
+	if(!aes_decrypt(ciphertext, key, plaintext)) {
+		printf("decrypt error\n");
+		return -1;
+	}
+
+	printf("\n");
+	printf("dec %d:",strlen((char*)plaintext));
+	printf("%s\n",plaintext);
+
+	for(i = 0; plaintext[i]; i += 1) {
+		printf("%x", (unsigned char)plaintext[i]);
+	}
+
+	printf("\n");
+	return 0;
+}
 
 unsigned char publicKey[] = "-----BEGIN PUBLIC KEY-----\n"\
 "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA416900/64SMztl65mokW\n"\
@@ -51,8 +195,7 @@ unsigned char privateKey[] = "-----BEGIN RSA PRIVATE KEY-----\n"\
 "4KfrVusw+65HHQ7U++hgNx0b8qnxtV9md4xhlsrFKjBYV8pqp58iDQ==\n"\
 "-----END RSA PRIVATE KEY-----\n";
 
-RSA *createRSA(unsigned char *key, int public) 
-{
+RSA *createRSA(unsigned char *key, int public) {
     RSA *rsa = NULL;
     BIO *keybio;
     keybio = BIO_new_mem_buf(key, -1);
@@ -71,9 +214,7 @@ RSA *createRSA(unsigned char *key, int public)
     }
     return rsa;
 }
-
-void printLastError(char *msg) 
-{
+void printLastError(char *msg) {
     char * err = malloc(130);
     ERR_load_crypto_strings();
     ERR_error_string(ERR_get_error(), err);
@@ -81,14 +222,13 @@ void printLastError(char *msg)
     free(err);
 }
 
-int private_decrypt(unsigned char *enc_data, int data_len, unsigned char *key, unsigned char *decrypted) 
-{
+int private_decrypt(unsigned char *enc_data, int data_len, unsigned char *key, unsigned char *decrypted) {
     RSA *rsa = createRSA(key, 0);
     int  result = RSA_private_decrypt(data_len, enc_data, decrypted, rsa, RSA_PKCS1_PADDING);
     return result;
 }
 
-int main(int argc, char **argv) 
+int rsa_main(int argc, char **argv) 
 {
 
     char *public_key;
@@ -136,21 +276,20 @@ int main(int argc, char **argv)
         public_key  = publicKey;
         private_key = privateKey;
     }
-
-    unsigned char plainText[2048/8] = "Hello world!";
+    unsigned char plaintext[2048/8] = "Hello world!";
 
     unsigned char ciphertext[4098] = {};
 
     RSA *rsa_pub = createRSA(publicKey, 1);
 
-    int encrypted_length = RSA_public_encrypt(strlen((char *)plainText), plainText, ciphertext, rsa_pub, RSA_PKCS1_PADDING);
+    int encrypted_length = RSA_public_encrypt(strlen((char *)plaintext), plaintext, ciphertext, rsa_pub, RSA_PKCS1_PADDING);
 
     if (encrypted_length == -1) {
         printLastError("PUBLIC ENCRYPT FAILED");
         exit(0);
     }
 
-    printf("encrypted_length: %d", encrypted_length);
+    printf("encrypted_length: %d; rsa_size: %d;", encrypted_length, RSA_size(rsa_pub));
 
     FILE *out = fopen("out.bin", "w");
 
@@ -175,6 +314,7 @@ int main(int argc, char **argv)
 
         int decrypted_length = private_decrypt(encrypted, encrypted_length, privateKey, decrypted);
 
+        printf("decrypted_length: %d;", decrypted_length);
         if(decrypted_length == -1) {
             printLastError("Private Decrypt failed ");
             exit(0);
@@ -188,3 +328,12 @@ int main(int argc, char **argv)
 
     return 0;
 }
+
+int main(int argc, char **argv) 
+{
+    hash_main();
+    aes_main();
+    rsa_main(argc, argv);
+    return 0;
+}
+
