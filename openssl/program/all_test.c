@@ -20,9 +20,9 @@
     to verity: echo -n "testOpenssl" | sha256sum
 */
 
-int hash_main()  
+int hash_main()
 {  
-    char digestType[][20] =   
+    char digestType[][20] =
     {  
         "md4",  
         "md5",  
@@ -30,7 +30,7 @@ int hash_main()
         "sha256",  
         "sha384",  
         "sha512",  
-    };  
+    };
   
     int size = sizeof(digestType) / sizeof(digestType[0]);  
     int i = 0;  
@@ -231,8 +231,8 @@ int private_decrypt(unsigned char *enc_data, int data_len, unsigned char *key, u
 int rsa_main(int argc, char **argv) 
 {
 
-    char *public_key;
-    char *private_key;
+    char *public_key = NULL;
+    char *private_key = NULL;
 
     if (argc == 3) {
         /* ./program public_key_file private_key_file */
@@ -280,7 +280,7 @@ int rsa_main(int argc, char **argv)
 
     unsigned char ciphertext[4098] = {};
 
-    RSA *rsa_pub = createRSA(publicKey, 1);
+    RSA *rsa_pub = createRSA(public_key, 1);
 
     int encrypted_length = RSA_public_encrypt(strlen((char *)plaintext), plaintext, ciphertext, rsa_pub, RSA_PKCS1_PADDING);
 
@@ -301,7 +301,7 @@ int rsa_main(int argc, char **argv)
     {
         unsigned char encrypted[4098] = {};
         unsigned char decrypted[4098] = {};
-        RSA *rsa_pri = createRSA(publicKey, 1);
+        RSA *rsa_pri = createRSA(public_key, 1);
         int encrypted_length = 256;
 
         printf("Reading back encrypted message and attempting decryption...\n");
@@ -312,7 +312,7 @@ int rsa_main(int argc, char **argv)
 
         fread(encrypted, sizeof(*encrypted), RSA_size(rsa_pri), out);
 
-        int decrypted_length = private_decrypt(encrypted, encrypted_length, privateKey, decrypted);
+        int decrypted_length = private_decrypt(encrypted, encrypted_length, private_key, decrypted);
 
         printf("decrypted_length: %d;", decrypted_length);
         if(decrypted_length == -1) {
