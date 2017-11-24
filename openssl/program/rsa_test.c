@@ -88,6 +88,21 @@ int private_decrypt(unsigned char *enc_data, int data_len, unsigned char *key, u
     return result;
 }
 
+void dump_byte(char *buf, int size, char *desc)
+{
+    int i;
+    printf("%s: \n", desc);
+    for(i = 0; i < size; i++) {
+
+        if ((i != 0) && (i % 8 == 0)) {
+            printf("\n");
+        }
+
+        printf("0x%02x ", (unsigned char)buf[i]);
+    }
+    printf("\n");
+}
+
 int main(int argc, char **argv) 
 {
 
@@ -149,7 +164,7 @@ int main(int argc, char **argv)
         printLastError("PUBLIC ENCRYPT FAILED");
         exit(0);
     }
-
+	dump_byte(ciphertext, encrypted_length, "ciphertext");
     printf("encrypted_length: %d", encrypted_length);
 
     FILE *out = fopen("out.bin", "w");

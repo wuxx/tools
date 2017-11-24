@@ -157,3 +157,5 @@ tmux
 detach the session
 ctrl+b d
 tmux a -t session-name
+
+ln -sf target link-name
