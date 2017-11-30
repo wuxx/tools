@@ -55,6 +55,13 @@ git branch --set-upstream-to=origin/master master
 #multi github account in one PC. ssh
 http://jingyan.baidu.com/article/948f592414ad67d80ef5f966.html
 
+#sparse checkout
+https://www.cnblogs.com/liangzai-cool/p/5821138.html
+
+#delete the untracked file
+git clean -fd  
+git clean -nfd   #like make -n, just show what will be done, not actually do.
+
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
@@ -157,5 +164,14 @@ tmux
 detach the session
 ctrl+b d
 tmux a -t session-name
+#cheetsheet
+http://blog.csdn.net/hcx25909/article/details/7602935
 
 ln -sf target link-name
+
+#ubuntu16.04 turn off gui interface
+http://blog.51cto.com/verdureorange/1771036
+#turn off
+systemctl disable lightdm.service
+#turn on
+sudo ln -s /lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service

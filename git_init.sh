@@ -1,7 +1,10 @@
 #!/bin/sh
 #git
-git config --global user.name "wuxx"
-git config --global user.email "wujianhua0924@gmail.com"
+#git config --global user.name "wuxx"
+#git config --global user.email "wujianhua0924@gmail.com"
+
+git config --global user.name "musex"
+git config --global user.email "447830120@qq.com"
 
 git config --global alias.st status
 git config --global alias.ci commit
