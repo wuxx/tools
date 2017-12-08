@@ -156,6 +156,8 @@ $sudo mke2fs /dev/ram0 /^C
 $sudo mkdir /mnt/ramdisk0
 $sudo mount /dev/ram0 /mnt/ramdisk0/
 
+#mount ram-base fs
+$mount tmpfs /mnt -t tmpfs -o size=512M
 
 #show symbol debug info
 LD_DEBUG=symbols ./xxx.elf
@@ -175,3 +177,6 @@ http://blog.51cto.com/verdureorange/1771036
 systemctl disable lightdm.service
 #turn on
 sudo ln -s /lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
+
+#change user name
+http://www.jianshu.com/p/11cd3564855c
