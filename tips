@@ -157,7 +157,7 @@ $sudo mkdir /mnt/ramdisk0
 $sudo mount /dev/ram0 /mnt/ramdisk0/
 
 #mount ram-base fs
-$mount tmpfs /mnt -t tmpfs -o size=512M
+$mount tmpfs /mnt/tmp -t tmpfs -o size=512M
 
 #show symbol debug info
 LD_DEBUG=symbols ./xxx.elf
@@ -180,3 +180,26 @@ sudo ln -s /lib/systemd/system/lightdm.service /etc/systemd/system/display-manag
 
 #change user name
 http://www.jianshu.com/p/11cd3564855c
+
+#openwrt compile
+git clone https://www.github.com/openwrt/openwrt -b chaos_calmer
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+
+#lede compile
+git clone -b lede-17.01 https://git.lede-project.org/source.git
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+
+#sudo save in vim
+w !sudo tee %
+
+#solve locale problem: perl: warning: Setting locale failed.
+sudo dpkg-reconfigure locales #choose the en_US.UTF-8
+
+#locale
+export LANG=en_US
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
