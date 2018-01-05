@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+typedef unsigned int u32;
+typedef   signed int s32;
+
+typedef unsigned short u16;
+typedef   signed short s16;
+
+typedef unsigned char u8;
+typedef   signed char s8;
+
 #define GPIO_DIR      "/sys/class/gpio"
 
 #define GPIO_EXPORT   "/sys/class/gpio/export"
@@ -48,6 +57,49 @@ enum TAP_STATE_E {
     TAP_IRCAPTURE = 0xe,
     TAP_RESET = 0x0f,
 };
+
+u32 idcode[4];
+
+u8 get_bit(void *map, u32 bit_max, u32 bit_index)
+{
+    u8  bit;
+    u32 word_index, word_offset;
+    u32 *pmap;
+
+    bit_index = bit_index % bit_max;
+
+    pmap = map;
+    word_index  = bit_index / 32;
+    word_offset = bit_index % 32;
+
+    bit = pmap[word_index] & (0x1 << word_offset);
+
+    return bit;
+}
+
+u8 set_bit(void *map, u32 bit_max, u32 bit_index, u8 bit)
+{
+    u32 word_index, word_offset;
+    u32 *pmap;
+    u32 bit_mask;
+
+    bit_index = bit_index % bit_max;
+
+    pmap = map;
+    word_index  = bit_index / 32;
+    word_offset = bit_index % 32;
+
+    if (bit == 0) {
+        bit_mask = ~(0x1 << word_offset);
+        pmap[word_index] = (pmap[word_index]) & bit_mask;
+    } else {    /* b == 1 */
+        bit_mask = (0x1 << word_offset);
+        pmap[word_index] = (pmap[word_index]) | bit_mask;
+    }
+
+    bit = pmap[word_index] & (0x1 << word_offset);
+    return 0;
+}
 
 int gpio_get(int gpio_num)
 {
@@ -177,6 +229,8 @@ void tap_state(int state)
 int main()
 {
     int i = 0;
+    u8 b = 0;
+    u32 irlen = 0;
 
     gpio_init();
     gpio_get(TCK);
@@ -247,12 +301,51 @@ int main()
     printf("IR len: \n");
     /* fill the chain with 0 */
     gpio_set(TDI, 0);
-    for(i = 0; i < 100; i++) {
+    for(i = 0; i < 70; i++) {
+        //printf("[%d]: %d\n", i, jtag_clk());
+        jtag_clk();
+    }
+
+    gpio_set(TDI, 1);
+    for(i = 0; i < 70; i++) {
+        b = jtag_clk();
+
+        if (b == 0) {
+            irlen++;
+        }
+        printf("[%d]: %d\n", i, b);
+    }
+
+    printf("IR len: %d\n", irlen);
+
+    /* goto Select-DR */
+    gpio_set(TMS, 1);
+    jtag_clk();
+
+    gpio_set(TMS, 1);
+    jtag_clk();
+
+    gpio_set(TMS, 1);
+    jtag_clk();
+
+    /* goto Shift-DR */
+    gpio_set(TDI, 0);
+
+    gpio_set(TMS, 0);
+    jtag_clk();
+
+    gpio_set(TMS, 0);
+    jtag_clk();
+
+    printf("number of device: \n");
+    /* fill the chain with 0 */
+    gpio_set(TDI, 0);
+    for(i = 0; i < 70; i++) {
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
     gpio_set(TDI, 1);
-    for(i = 0; i < 100; i++) {
+    for(i = 0; i < 70; i++) {
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
@@ -276,16 +369,16 @@ int main()
     jtag_clk();
 
     /* send plenty of ones */
-    printf("number of devices in the jtag chain: \n");
+    printf("IDCODE: \n");
 
     gpio_set(TDI, 0);
     //tap_state(TAP_IRSHIFT);
-    for(i = 0; i < 100; i++) {
+    for(i = 0; i < 70; i++) {
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
     gpio_set(TDI, 1);
-    for(i = 0; i < 100; i++) {
+    for(i = 0; i < 70; i++) {
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
