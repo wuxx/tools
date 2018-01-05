@@ -184,10 +184,6 @@ int main()
     gpio_get(TDI);
     gpio_get(TDO);
 
-    tap_reset();
-    tap_reset();
-
-    tap_state(TAP_IRSHIFT);
 
 #if 0
     for(i = 0; i < 100; i++) {
@@ -196,6 +192,12 @@ int main()
 
     gpio_set();
 #endif
+
+#if 0
+    tap_reset();
+    tap_reset();
+
+    tap_state(TAP_IRSHIFT);
 
     /* go to Shift-DR */
     gpio_set(TMS, 0);
@@ -218,14 +220,17 @@ int main()
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
+
+#endif
+
+    /* IR chain length */
     tap_reset();
     tap_reset();
 
-#if 1
+    /* goto Select-DR */
     gpio_set(TMS, 0);
     jtag_clk();
 
-    /* goto select-DR */
     gpio_set(TMS, 1);
     jtag_clk();
 
@@ -239,16 +244,48 @@ int main()
     gpio_set(TMS, 0);
     jtag_clk();
 
-    /* send plenty of ones */
-    gpio_set(TMS, 0);
-
-    //tap_state(TAP_IRSHIFT);
-    for(i = 0; i < 80; i++) {
+    printf("IR len: \n");
+    /* fill the chain with 0 */
+    gpio_set(TDI, 0);
+    for(i = 0; i < 100; i++) {
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
+    gpio_set(TDI, 1);
+    for(i = 0; i < 100; i++) {
+        printf("[%d]: %d\n", i, jtag_clk());
+    }
+
+#if 1
+    /* number of devices in the jtag chain */
+    tap_reset();
+    tap_reset();
+
+    /* goto Select-DR */
+    gpio_set(TMS, 0);
+    jtag_clk();
+
     gpio_set(TMS, 1);
-    for(i = 0; i < 80; i++) {
+    jtag_clk();
+
+    /* goto Shift-DR */
+    gpio_set(TMS, 0);
+    jtag_clk();
+
+    gpio_set(TMS, 0);
+    jtag_clk();
+
+    /* send plenty of ones */
+    printf("number of devices in the jtag chain: \n");
+
+    gpio_set(TDI, 0);
+    //tap_state(TAP_IRSHIFT);
+    for(i = 0; i < 100; i++) {
+        printf("[%d]: %d\n", i, jtag_clk());
+    }
+
+    gpio_set(TDI, 1);
+    for(i = 0; i < 100; i++) {
         printf("[%d]: %d\n", i, jtag_clk());
     }
 
