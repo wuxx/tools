@@ -58,7 +58,7 @@ enum TAP_STATE_E {
     TAP_RESET = 0x0f,
 };
 
-u32 idcode[4];
+u32 *idcode;
 
 u8 get_bit(void *map, u32 bit_max, u32 bit_index)
 {
@@ -108,6 +108,7 @@ int gpio_get(int gpio_num)
     char cmd[512];
     char out[512];
 
+    memset(out, 0, sizeof(out));
     snprintf(cmd, sizeof(cmd), "gpio read %d", gpio_num);
 
     fp = popen(cmd, "r");
@@ -150,21 +151,12 @@ void gpio_set(int gpio_num, int value)
 
 }
 
-#if 0
-void jtag_clk()
-{
-    gpio_set(TCK, 0);
-    gpio_set(TCK, 1);
-    gpio_set(TCK, 0);
-}
-#endif
-
 void __gpio_init(int gpio_num, char *direct)
 {
     char cmd[512];
 
     snprintf(cmd, sizeof(cmd), "gpio mode %d %s", gpio_num, direct);
-    printf("cmd0: %s\n", cmd);
+    printf("cmd: %s\n", cmd);
     system(cmd);
 }
 
@@ -174,9 +166,13 @@ void gpio_init()
     /* TMS OUT */
     /* TDI OUT */
     /* TDO IN  */
+    printf("TCK: ");
     __gpio_init(TCK, "out");
+    printf("TMS: ");
     __gpio_init(TMS, "out");
+    printf("TDI: ");
     __gpio_init(TDI, "out");
+    printf("TDO: ");
     __gpio_init(TDO, "in");
 }
 
@@ -184,9 +180,9 @@ int jtag_clk()
 {
     int tdo = 0;
     gpio_set(TCK, 0);
-    usleep(1);
+    //usleep(1);
     gpio_set(TCK, 1);
-    usleep(1);
+    //usleep(1);
     tdo = gpio_get(TDO);
 
     gpio_set(TCK, 0);
@@ -231,6 +227,7 @@ int main()
     int i = 0;
     u8 b = 0;
     u32 irlen = 0;
+    u32 tap_num = 0;
 
     gpio_init();
     gpio_get(TCK);
@@ -301,22 +298,33 @@ int main()
     printf("IR len: \n");
     /* fill the chain with 0 */
     gpio_set(TDI, 0);
-    for(i = 0; i < 70; i++) {
-        //printf("[%d]: %d\n", i, jtag_clk());
-        jtag_clk();
+    for(i = 0; i < 32; i++) {
+        if (i != 0 && i % 4 == 0) {
+            printf(" ");
+        }
+
+        b = jtag_clk();
+
+        printf("%d", b);
     }
 
+    printf("\n");
+
     gpio_set(TDI, 1);
-    for(i = 0; i < 70; i++) {
+    for(i = 0; i < 32; i++) {
+        if (i != 0 && i % 4 == 0) {
+            printf(" ");
+        }
+
         b = jtag_clk();
 
         if (b == 0) {
             irlen++;
         }
-        printf("[%d]: %d\n", i, b);
+        printf("%d", b);
     }
 
-    printf("IR len: %d\n", irlen);
+    printf("\nIR len: %d\n", irlen);
 
     /* goto Select-DR */
     gpio_set(TMS, 1);
@@ -337,19 +345,40 @@ int main()
     gpio_set(TMS, 0);
     jtag_clk();
 
-    printf("number of device: \n");
+    printf("Tap Num:\n");
     /* fill the chain with 0 */
     gpio_set(TDI, 0);
-    for(i = 0; i < 70; i++) {
-        printf("[%d]: %d\n", i, jtag_clk());
+    for(i = 0; i < 32; i++) {
+
+        if (i != 0 && i % 4 == 0) {
+            printf(" ");
+        }
+
+        b = jtag_clk();
+
+        printf("%d", b);
     }
+
+    printf("\n");
 
     gpio_set(TDI, 1);
-    for(i = 0; i < 70; i++) {
-        printf("[%d]: %d\n", i, jtag_clk());
-    }
+    for(i = 0; i < 32; i++) {
 
-#if 1
+        if (i != 0 && i % 4 == 0) {
+            printf(" ");
+        }
+
+        b = jtag_clk();
+        if (b == 0) {
+            tap_num++;
+        }
+
+        printf("%d", b);
+    }
+    printf("\nTap Num: %d\n", tap_num);
+
+    idcode = malloc(tap_num * sizeof(u32));
+
     /* number of devices in the jtag chain */
     tap_reset();
     tap_reset();
@@ -372,17 +401,37 @@ int main()
     printf("IDCODE: \n");
 
     gpio_set(TDI, 0);
-    //tap_state(TAP_IRSHIFT);
-    for(i = 0; i < 70; i++) {
-        printf("[%d]: %d\n", i, jtag_clk());
+
+    for(i = 0; i < tap_num * sizeof(u32) * 8; i++) {
+        if (i != 0 && i % 4 == 0) {
+            printf(" ");
+        }
+
+        b = jtag_clk();
+        set_bit(idcode, tap_num * sizeof(u32) * 8, i, b);
+
+        printf("%d", b);
     }
 
+    printf("\nIDCODE:\n");
+    for(i = 0; i < tap_num; i++) {
+        printf("[%d]: 0x%08x\n", i, idcode[i]);
+    }
+
+#if 0
     gpio_set(TDI, 1);
     for(i = 0; i < 70; i++) {
-        printf("[%d]: %d\n", i, jtag_clk());
-    }
+        if (i != 0 && i % 4 == 0) {
+            printf(" ");
+        }
 
+        b = jtag_clk();
+
+        printf("%d", b);
+    }
 #endif
+
+    free(idcode);
     return 0;
 }
 
