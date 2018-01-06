@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/*
+    inspired by http://www.fpga4fun.com/JTAG.html & openocd
+*/
+
 typedef unsigned int u32;
 typedef   signed int s32;
 
@@ -33,6 +37,7 @@ typedef   signed char s8;
 //#define TMS     (24)
 //#define TDI     (23)
 //#define TDO     (22)
+
 #define TCK     (14)
 #define TMS     (6)
 #define TDI     (12)
@@ -235,45 +240,6 @@ int main()
     gpio_get(TDI);
     gpio_get(TDO);
 
-
-#if 0
-    for(i = 0; i < 100; i++) {
-        jtag_clk();
-    }
-
-    gpio_set();
-#endif
-
-#if 0
-    tap_reset();
-    tap_reset();
-
-    tap_state(TAP_IRSHIFT);
-
-    /* go to Shift-DR */
-    gpio_set(TMS, 0);
-    jtag_clk();
-        //printf("[%d]: %d\n", i, jtag_clk());
-
-    gpio_set(TMS, 1);
-    jtag_clk();
-        //printf("[%d]: %d\n", i, jtag_clk());
-
-    gpio_set(TMS, 0);
-    jtag_clk();
-        //printf("[%d]: %d\n", i, jtag_clk());
-
-    gpio_set(TMS, 0);
-    jtag_clk();
-        //printf("[%d]: %d\n", i, jtag_clk());
-
-    for(i = 0; i < 64; i++) {
-        printf("[%d]: %d\n", i, jtag_clk());
-    }
-
-
-#endif
-
     /* IR chain length */
     tap_reset();
     tap_reset();
@@ -325,6 +291,7 @@ int main()
     }
 
     printf("\nIR len: %d\n", irlen);
+    /* now all IR Reg are filled with 1, means the BYPASS mode */
 
     /* goto Select-DR */
     gpio_set(TMS, 1);
@@ -377,6 +344,7 @@ int main()
     }
     printf("\nTap Num: %d\n", tap_num);
 
+
     idcode = malloc(tap_num * sizeof(u32));
 
     /* number of devices in the jtag chain */
@@ -397,7 +365,6 @@ int main()
     gpio_set(TMS, 0);
     jtag_clk();
 
-    /* send plenty of ones */
     printf("IDCODE: \n");
 
     gpio_set(TDI, 0);
@@ -417,19 +384,6 @@ int main()
     for(i = 0; i < tap_num; i++) {
         printf("[%d]: 0x%08x\n", i, idcode[i]);
     }
-
-#if 0
-    gpio_set(TDI, 1);
-    for(i = 0; i < 70; i++) {
-        if (i != 0 && i % 4 == 0) {
-            printf(" ");
-        }
-
-        b = jtag_clk();
-
-        printf("%d", b);
-    }
-#endif
 
     free(idcode);
     return 0;
