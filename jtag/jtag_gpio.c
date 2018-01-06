@@ -33,15 +33,16 @@ typedef   signed char s8;
 #define TDO     (6)
 #else
 /* wPi GPIO NUM */
-//#define TCK     (25)
-//#define TMS     (24)
-//#define TDI     (23)
-//#define TDO     (22)
+#define TCK     (25)
+#define TMS     (24)
+#define TDI     (23)
+#define TDO     (22)
 
-#define TCK     (14)
-#define TMS     (6)
-#define TDI     (12)
-#define TDO     (13)
+//#define TCK     (14)
+//#define TMS     (6)
+//#define TDI     (12)
+//#define TDO     (13)
+
 #endif
 
 enum TAP_STATE_E {
