@@ -52,6 +52,9 @@ git checkout master
 
 git branch --set-upstream-to=origin/master master
 
+#and work on the same branch with others and somebody already upload some commit and if you want to commit 
+git pull --rebase
+
 #multi github account in one PC. ssh
 http://jingyan.baidu.com/article/948f592414ad67d80ef5f966.html
 
@@ -78,6 +81,9 @@ sudo dd if=./2015-05-05-raspbian-wheezy.img of=/dev/sdb bs=2M
 
 #get 8K random data
 dd if=/dev/urandom of=data.bin bs=8K count=1
+
+#dd with nc
+http://www.cnblogs.com/kumulinux/archive/2012/06/13/2808748.html
 
 #get the internet address on my router
 curl -u admin:admin http://192.168.1.1/userRpm/StatusRpm.htm | grep -A1 "6C-E8-73-6F-A6-D5" | tail -n 1 | sed 's/,//'
@@ -203,3 +209,36 @@ sudo dpkg-reconfigure locales #choose the en_US.UTF-8
 export LANG=en_US
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+sudo dpkg-reconfigure dash
+
+#shell tricks
+#exit when use uninit var
+set -o nounset
+#exit when cmd return non-zero value
+set -o errexit
+
+#minicom usage
+minicom -D /dev/ttyUSB0 -b 115200
+#howto exit
+#ctrl-A X
+
+#wifi connect
+wpa_supplicant -B -c /etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+network={
+    ssid="PandoraBox_0D0D47"
+    psk="wujianhua"
+}
+
+#i2c tools
+i2cdetect -r -y 0
+0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+
