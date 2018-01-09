@@ -1379,3 +1379,219 @@ Connecting Client
 Disconnecting Client
 No timeout, exiting.
 Exiting
+--- Starting bitbake server pid 4206 at 2018-01-09 18:51:54.533875 ---
+ERROR: ParseError at /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: Could not include required file local.conf
+--- Starting bitbake server pid 4211 at 2018-01-09 18:51:56.589028 ---
+ERROR: ParseError at /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: Could not include required file local.conf
+--- Starting bitbake server pid 4216 at 2018-01-09 18:52:09.914499 ---
+ERROR: ParseError at /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: Could not include required file local.conf
+--- Starting bitbake server pid 4233 at 2018-01-09 18:52:29.869733 ---
+ERROR: ParseError at /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: Could not include required file local.conf
+--- Starting bitbake server pid 4256 at 2018-01-09 18:53:02.229501 ---
+ERROR: ParseError at /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: Could not include required file local.conf
+--- Starting bitbake server pid 4292 at 2018-01-09 18:53:54.789134 ---
+Started bitbake server pid 4292
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'dump_signatures': [], 'debug': 0, 'force': False, 'abort': True, 'verbose': False, 'debug_domains': [], 'dry_run': False, 'profile': False, 'invalidate_stamp': None, 'extra_assume_provided': [], 'server_timeout': None, 'prefile': [], 'postfile': []}, {'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'HOME': '/root', 'LANG': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/0', 'TMUX_PANE': '%3', 'SSH_TTY': '/dev/pts/0', 'SHELL': '/bin/bash', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', '_': '/home/share/oss/bitbake/bin/bitbake', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'MAIL': '/var/mail/root', 'USER': 'root', 'TERM': 'screen', 'TMUX': '/tmp/tmux-0/default,31308,0', 'SSH_CLIENT': '58.100.99.143 21493 22', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', 'LOGNAME': 'root', 'XDG_SESSION_ID': '23180', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build', 'SHLVL': '2'}, ['/home/share/oss/bitbake/bin/bitbake', '-s']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['getVariable', 'BBTARGETS']
+Running command ['showVersions']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 4316 at 2018-01-09 18:54:11.142203 ---
+Started bitbake server pid 4316
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'extra_assume_provided': [], 'postfile': [], 'prefile': [], 'server_timeout': None, 'force': False, 'invalidate_stamp': None, 'profile': False, 'verbose': False, 'debug_domains': [], 'dump_signatures': [], 'dry_run': False, 'abort': True, 'debug': 0}, {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LC_ALL': 'en_US.UTF-8', 'LOGNAME': 'root', 'TERM': 'screen', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'USER': 'root', '_': '/home/share/oss/bitbake/bin/bitbake', 'SSH_TTY': '/dev/pts/0', 'LANG': 'en_US.UTF-8', 'TMUX': '/tmp/tmux-0/default,31308,0', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'XDG_RUNTIME_DIR': '/run/user/0', 'SHLVL': '2', 'HOME': '/root', 'TMUX_PANE': '%3', 'SSH_CLIENT': '58.100.99.143 21493 22', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build', 'MAIL': '/var/mail/root', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'SHELL': '/bin/bash', 'XDG_SESSION_ID': '23180', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'}, ['/home/share/oss/bitbake/bin/bitbake', '-s']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['getVariable', 'BBTARGETS']
+Running command ['showVersions']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 4366 at 2018-01-09 18:55:18.037530 ---
+Started bitbake server pid 4366
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'profile': False, 'verbose': False, 'server_timeout': None, 'debug_domains': [], 'force': False, 'prefile': [], 'debug': 0, 'extra_assume_provided': [], 'postfile': [], 'dry_run': False, 'invalidate_stamp': None, 'dump_signatures': []}, {'LOGNAME': 'root', '_': '/home/share/oss/bitbake/bin/bitbake', 'HOME': '/root', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', 'MAIL': '/var/mail/root', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'TMUX': '/tmp/tmux-0/default,31308,0', 'TMUX_PANE': '%3', 'SSH_CLIENT': '58.100.99.143 21493 22', 'SHLVL': '2', 'XDG_SESSION_ID': '23180', 'XDG_RUNTIME_DIR': '/run/user/0', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', 'USER': 'root', 'TERM': 'screen', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LANG': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build'}, ['/home/share/oss/bitbake/bin/bitbake', 'myvar']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['myvar'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 4387 at 2018-01-09 18:56:28.015025 ---
+Started bitbake server pid 4387
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'extra_assume_provided': [], 'debug_domains': [], 'postfile': [], 'prefile': [], 'invalidate_stamp': None, 'dump_signatures': [], 'force': False, 'dry_run': False, 'verbose': False, 'abort': True, 'debug': 0, 'server_timeout': None, 'profile': False}, {'HOME': '/root', 'LOGNAME': 'root', 'TMUX': '/tmp/tmux-0/default,31308,0', 'XDG_RUNTIME_DIR': '/run/user/0', 'TERM': 'screen', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANG': 'en_US.UTF-8', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build', 'SHELL': '/bin/bash', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'SSH_TTY': '/dev/pts/0', '_': '/home/share/oss/bitbake/bin/bitbake', 'XDG_SESSION_ID': '23180', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', 'LC_ALL': 'en_US.UTF-8', 'USER': 'root', 'SHLVL': '2', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'SSH_CLIENT': '58.100.99.143 21493 22', 'TMUX_PANE': '%3', 'MAIL': '/var/mail/root', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'}, ['/home/share/oss/bitbake/bin/bitbake', 'myvar']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['myvar'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 4506 at 2018-01-09 19:00:14.093561 ---
+Started bitbake server pid 4506
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'debug_domains': [], 'profile': False, 'extra_assume_provided': [], 'postfile': [], 'force': False, 'abort': True, 'dump_signatures': [], 'verbose': False, 'debug': 0, 'prefile': [], 'invalidate_stamp': None, 'dry_run': False, 'server_timeout': None}, {'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'USER': 'root', 'XDG_RUNTIME_DIR': '/run/user/0', 'HOME': '/root', 'TERM': 'screen', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_ALL': 'en_US.UTF-8', 'SHLVL': '2', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', 'TMUX': '/tmp/tmux-0/default,31308,0', 'LOGNAME': 'root', 'LANG': 'en_US.UTF-8', 'TMUX_PANE': '%3', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build', 'SSH_CLIENT': '58.100.99.143 21493 22', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', 'SHELL': '/bin/bash', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'XDG_SESSION_ID': '23180', '_': '/home/share/oss/bitbake/bin/bitbake', 'SSH_TTY': '/dev/pts/0', 'MAIL': '/var/mail/root'}, ['/home/share/oss/bitbake/bin/bitbake', '-s']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['getVariable', 'BBTARGETS']
+Running command ['showVersions']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 4521 at 2018-01-09 19:00:25.577081 ---
+Started bitbake server pid 4521
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'invalidate_stamp': None, 'force': False, 'dry_run': False, 'profile': False, 'verbose': False, 'dump_signatures': [], 'extra_assume_provided': [], 'postfile': [], 'debug_domains': [], 'abort': True, 'debug': 0, 'prefile': [], 'server_timeout': None}, {'XDG_SESSION_ID': '23180', 'SHLVL': '2', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', '_': '/home/share/oss/bitbake/bin/bitbake', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'USER': 'root', 'TMUX_PANE': '%3', 'SHELL': '/bin/bash', 'LOGNAME': 'root', 'MAIL': '/var/mail/root', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'XDG_RUNTIME_DIR': '/run/user/0', 'SSH_TTY': '/dev/pts/0', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'TMUX': '/tmp/tmux-0/default,31308,0', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build', 'TERM': 'screen', 'HOME': '/root', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'SSH_CLIENT': '58.100.99.143 21493 22', 'LANG': 'en_US.UTF-8', 'LESSOPEN': '| /usr/bin/lesspipe %s'}, ['/home/share/oss/bitbake/bin/bitbake', 'varbuild']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['varbuild'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 4629 at 2018-01-09 19:01:30.727836 ---
+Started bitbake server pid 4629
+DEBUG: Found bblayers.conf (/home/share/oss/tools/bitbake/bbTutorial/build/conf/bblayers.conf)
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial
+DEBUG: Adding layer /home/share/oss/tools/bitbake/bbTutorial/build/../meta-two
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:52: including local.conf
+DEBUG: CONF /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/conf/bitbake.conf:53: including conf/might_exist.conf
+DEBUG: CONF file 'conf/might_exist.conf' not found
+DEBUG: Inheriting /home/share/oss/tools/bitbake/bbTutorial/build/../meta-tutorial/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/home/share/oss/tools/bitbake/bbTutorial/build/tmp/cache/bb_codeparser.dat'
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>]
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'profile': False, 'debug': 0, 'server_timeout': None, 'invalidate_stamp': None, 'verbose': False, 'postfile': [], 'dump_signatures': [], 'dry_run': False, 'force': False, 'prefile': [], 'extra_assume_provided': [], 'debug_domains': [], 'abort': True}, {'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'SSH_CONNECTION': '58.100.99.143 22124 172.17.2.12 22', 'SHELL': '/bin/bash', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SHLVL': '2', 'LOGNAME': 'root', 'SSH_CLIENT': '58.100.99.143 21493 22', 'TERM': 'screen', 'SSH_TTY': '/dev/pts/0', 'XDG_RUNTIME_DIR': '/run/user/0', 'PYTHONPATH': '/home/share/oss/bitbake/lib:', 'XDG_SESSION_ID': '23180', 'LC_ALL': 'en_US.UTF-8', 'MAIL': '/var/mail/root', 'TMUX_PANE': '%3', 'HOME': '/root', 'PWD': '/home/share/oss/tools/bitbake/bbTutorial/build', 'LANG': 'en_US.UTF-8', 'USER': 'root', 'TMUX': '/tmp/tmux-0/default,31308,0', 'OLDPWD': '/home/share/oss/tools/bitbake/bbTutorial', 'PATH': '/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin', '_': '/home/share/oss/bitbake/bin/bitbake'}, ['/home/share/oss/bitbake/bin/bitbake', 'varbuild']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['varbuild'], 'build']
+Connecting Client
+Disconnecting Client
+No timeout, exiting.
+Exiting

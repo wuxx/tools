@@ -1,0 +1,4 @@
+DEBUG: Executing shell function do_build
+/home/share/oss/tools/bitbake/bbTutorial/build/tmp/work/varbuild-0.1-r1/temp/run.do_build.4535: 26: /home/share/oss/tools/bitbake/bbTutorial/build/tmp/work/varbuild-0.1-r1/temp/run.do_build.4535: do_build: not found
+WARNING: exit code 127 from a shell command.
+ERROR: Function failed: do_build (log file is located at /home/share/oss/tools/bitbake/bbTutorial/build/tmp/work/varbuild-0.1-r1/temp/log.do_build.4535)

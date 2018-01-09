@@ -1,0 +1,3 @@
+DEBUG: Executing python function do_myvar_py
+DEBUG: Python function do_myvar_py finished
+myvar_py: hello from MYVAR
