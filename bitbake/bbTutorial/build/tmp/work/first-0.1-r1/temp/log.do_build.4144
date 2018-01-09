@@ -1,0 +1,3 @@
+DEBUG: Executing shell function do_build
+first: some shell script running as build
+DEBUG: Shell function do_build finished

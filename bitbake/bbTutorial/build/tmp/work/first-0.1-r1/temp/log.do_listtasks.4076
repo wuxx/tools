@@ -1,0 +1,6 @@
+DEBUG: Executing python function do_listtasks
+do_showdata
+do_build
+do_listtasks
+do_patch
+DEBUG: Python function do_listtasks finished

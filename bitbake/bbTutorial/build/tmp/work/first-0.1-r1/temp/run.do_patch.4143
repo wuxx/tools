@@ -1,0 +1,5 @@
+def do_patch(d):
+    bb.note ("first:do_patch")
+
+do_patch(d)
+
