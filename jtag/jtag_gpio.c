@@ -37,6 +37,7 @@ typedef   signed char s8;
 #define TMS     (24)
 #define TDI     (23)
 #define TDO     (22)
+#define TRST_N  (21)
 
 //#define TCK     (14)
 //#define TMS     (6)
@@ -180,15 +181,19 @@ void gpio_init()
     __gpio_init(TDI, "out");
     printf("TDO: ");
     __gpio_init(TDO, "in");
+
+    printf("TRST_N: ");
+    __gpio_init(TRST_N, "out");
+    gpio_set(TRST_N, 1);    /* we MUST always keep the TRST_N to 1 */
 }
 
 int jtag_clk()
 {
     int tdo = 0;
     gpio_set(TCK, 0);
-    //usleep(1);
+    usleep(1);
     gpio_set(TCK, 1);
-    //usleep(1);
+    usleep(1);
     tdo = gpio_get(TDO);
 
     gpio_set(TCK, 0);
