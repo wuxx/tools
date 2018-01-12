@@ -1,0 +1,241 @@
+[    0.000000] Linux version 3.18.23 (stefan@debian) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r48792) 6
+[    0.000000] SoC Type: Ralink RT5350 id:1 rev:3
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 0001964c (MIPS 24KEc)
+[    0.000000] MIPS: machine is RT5350F-OLINUXINO-DIN
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 02000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x01ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x01ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00000000-0x01ffffff]
+[    0.000000] On node 0 totalpages: 8192
+[    0.000000] free_area_init_node: node 0, pgdat 802da0d0, node_mem_map 81000000
+[    0.000000]   Normal zone: 64 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 8192 pages, LIFO batch:0
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 16kB, 4-way, VIPT, no aliases, linesize 32 bytes
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 8128
+[    0.000000] Kernel command line: console=ttyS0,57600 rootfstype=squashfs,jffs2
+[    0.000000] PID hash table entries: 128 (order: -3, 512 bytes)
+[    0.000000] Dentry cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Inode-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Writing ErrCtl register=00000002
+[    0.000000] Readback ErrCtl register=00000002
+[    0.000000] Memory: 29016K/32768K available (2404K kernel code, 120K rwdata, 480K rodata, 188K init, 181K bss)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:256
+[    0.000000] CPU Clock: 360MHz
+[    0.000000] systick: running - mult: 214748, shift: 32
+[    0.010000] Calibrating delay loop... 239.61 BogoMIPS (lpj=1198080)
+[    0.080000] pid_max: default: 32768 minimum: 301
+[    0.090000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.100000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.110000] pinctrl core: initialized pinctrl subsystem
+[    0.120000] NET: Registered protocol family 16
+[    0.130000] rt2880-pinmux pinctrl: try to register 28 pins ...
+[    0.130000] pinctrl core: registered pin 0 (io0) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 1 (io1) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 2 (io2) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 3 (io3) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 4 (io4) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 5 (io5) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 6 (io6) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 7 (io7) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 8 (io8) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 9 (io9) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 10 (io10) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 11 (io11) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 12 (io12) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 13 (io13) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 14 (io14) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 15 (io15) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 16 (io16) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 17 (io17) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 18 (io18) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 19 (io19) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 20 (io20) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 21 (io21) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 22 (io22) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 23 (io23) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 24 (io24) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 25 (io25) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 26 (io26) on rt2880-pinmux
+[    0.130000] pinctrl core: registered pin 27 (io27) on rt2880-pinmux
+[    0.130000] pinctrl core: add 4 pinmux maps
+[    0.130000] rt2880-pinmux pinctrl: found group selector 4 for jtag
+[    0.130000] rt2880-pinmux pinctrl: invalid group "rgmii" for function "gpio"
+[    0.140000] rt2880-pinmux pinctrl: invalid group "mdio" for function "gpio"
+[    0.150000] rt2880-pinmux pinctrl: found group selector 2 for uartf
+[    0.150000] rt2880-pinmux pinctrl: request pin 17 (io17) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 18 (io18) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 19 (io19) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 20 (io20) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 21 (io21) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 7 (io7) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 8 (io8) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 9 (io9) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 10 (io10) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 11 (io11) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 12 (io12) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 13 (io13) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: request pin 14 (io14) for pinctrl
+[    0.150000] rt2880-pinmux pinctrl: failed to lookup the sleep state
+[    0.180000] rt2880_gpio 10000600.gpio: registering 22 gpios
+[    0.190000] rt2880_gpio 10000600.gpio: registering 22 irq handlers
+[    0.200000] rt2880_gpio 10000660.gpio: registering 6 gpios
+[    0.210000] rt2880_gpio 10000660.gpio: registering 6 irq handlers
+[    0.220000] Switched to clocksource systick
+[    0.230000] NET: Registered protocol family 2
+[    0.240000] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.250000] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.260000] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.280000] TCP: reno registered
+[    0.280000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.290000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.310000] NET: Registered protocol family 1
+[    0.320000] rt-timer 10000100.timer: maximum frequency is 7324Hz
+[    0.330000] alarmtimer alarmtimer: no of_node; not parsing pinctrl DT
+[    0.330000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.360000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.370000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.390000] msgmni has been set to 56
+[    0.430000] io scheduler noop registered
+[    0.440000] io scheduler deadline registered (default)
+[    0.450000] ralink-usb-phy usbphy: invalid resource
+[    0.460000] rt2880-pinmux pinctrl: request pin 12 (io12) for pio:12
+[    0.460000] rt2880-pinmux pinctrl: request pin 14 (io14) for pio:14
+[    0.460000] gpio-export gpio_export: 2 gpio(s) exported
+[    0.470000] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    0.490000] serial8250 serial8250: no of_node; not parsing pinctrl DT
+[    0.490000] pinctrl core: add 1 pinmux maps
+[    0.490000] rt2880-pinmux pinctrl: found group selector 3 for uartlite
+[    0.490000] rt2880-pinmux pinctrl: request pin 15 (io15) for 10000c00.uartlite
+[    0.490000] rt2880-pinmux pinctrl: request pin 16 (io16) for 10000c00.uartlite
+[    0.490000] console [ttyS0] disabled
+[    0.490000] 10000c00.uartlite: ttyS0 at MMIO 0x10000c00 (irq = 20, base_baud = 2500000) is a 16550A
+[    0.510000] console [ttyS0] enabled
+[    0.530000] bootconsole [early0] disabled
+[    0.540000] pinctrl core: add 1 pinmux maps
+[    0.540000] pinctrl core: add 1 pinmux maps
+[    0.540000] rt2880-pinmux pinctrl: found group selector 1 for spi
+[    0.540000] rt2880-pinmux pinctrl: found group selector 6 for spi_cs1
+[    0.540000] rt2880-pinmux pinctrl: request pin 3 (io3) for 10000b00.spi
+[    0.540000] rt2880-pinmux pinctrl: request pin 4 (io4) for 10000b00.spi
+[    0.550000] rt2880-pinmux pinctrl: request pin 5 (io5) for 10000b00.spi
+[    0.550000] rt2880-pinmux pinctrl: request pin 6 (io6) for 10000b00.spi
+[    0.550000] rt2880-pinmux pinctrl: request pin 27 (io27) for 10000b00.spi
+[    0.560000] m25p80 spi32766.0: s25fl064k (8192 Kbytes)
+[    0.570000] 4 ofpart partitions found on MTD device spi32766.0
+[    0.580000] Creating 4 MTD partitions on "spi32766.0":
+[    0.590000] 0x000000000000-0x000000030000 : "u-boot"
+[    0.600000] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.610000] 0x000000040000-0x000000050000 : "factory"
+[    0.620000] 0x000000050000-0x000000800000 : "firmware"
+[    0.700000] 2 uimage-fw partitions found on MTD device firmware
+[    0.710000] 0x000000050000-0x000000159184 : "kernel"
+[    0.730000] 0x000000159184-0x000000800000 : "rootfs"
+[    0.740000] mtd: device 5 (rootfs) set to be root filesystem
+[    0.750000] 1 squashfs-split partitions found on MTD device rootfs
+[    0.760000] 0x0000003f0000-0x000000800000 : "rootfs_data"
+[    0.780000] ralink_soc_eth 10100000.ethernet: generated random MAC address b6:98:a4:87:77:51
+[    0.800000] ralink_soc_eth 10100000.ethernet eth0: ralink at 0xb0100000, irq 5
+[    0.810000] rt2880_wdt 10000120.watchdog: Initialized
+[    0.830000] TCP: cubic registered
+[    0.830000] NET: Registered protocol family 17
+[    0.840000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load.
+[    0.870000] 8021q: 802.1Q VLAN Support v1.8
+[    0.910000] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    0.930000] Freeing unused kernel memory: 188K (802f1000 - 80320000)
+[    3.940000] init: Console is alive
+[    3.940000] init: - watchdog -
+[    8.610000] usbcore: registered new interface driver usbfs
+[    8.620000] usbcore: registered new interface driver hub
+[    8.640000] usbcore: registered new device driver usb
+[    8.720000] SCSI subsystem initialized
+[    8.740000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    8.750000] ehci-platform: EHCI generic platform driver
+[    8.780000] phy phy-usbphy.0: remote usb device wakeup disabled
+[    8.790000] phy phy-usbphy.0: UTMI 16bit 30MHz
+[    8.800000] ehci-platform 101c0000.ehci: EHCI Host Controller
+[    8.810000] ehci-platform 101c0000.ehci: new USB bus registered, assigned bus number 1
+[    8.820000] ehci-platform 101c0000.ehci: irq 26, io mem 0x101c0000
+[    8.860000] ehci-platform 101c0000.ehci: USB 2.0 started, EHCI 1.00
+[    8.870000] usb usb1: no of_node; not parsing pinctrl DT
+[    8.870000] hub 1-0:1.0: no of_node; not parsing pinctrl DT
+[    8.870000] hub 1-0:1.0: USB hub found
+[    8.880000] hub 1-0:1.0: 1 port detected
+[    8.890000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    8.910000] ohci-platform: OHCI generic platform driver
+[    8.920000] ohci-platform 101c1000.ohci: Generic Platform OHCI controller
+[    8.930000] ohci-platform 101c1000.ohci: new USB bus registered, assigned bus number 2
+[    8.950000] ohci-platform 101c1000.ohci: irq 26, io mem 0x101c1000
+[    9.020000] usb usb2: no of_node; not parsing pinctrl DT
+[    9.020000] hub 2-0:1.0: no of_node; not parsing pinctrl DT
+[    9.020000] hub 2-0:1.0: USB hub found
+[    9.030000] hub 2-0:1.0: 1 port detected
+[    9.050000] usbcore: registered new interface driver usb-storage
+[    9.960000] init: - preinit -
+[   11.650000] rt305x-esw 10110000.esw: link changed 0x00
+[   11.980000] random: procd urandom read with 18 bits of entropy available
+[   15.390000] mount_root: loading kmods from internal overlay
+[   16.410000] block: attempting to load /etc/config/fstab
+[   16.420000] block: unable to load configuration (fstab: Entry not found)
+[   16.440000] block: no usable configuration
+[   16.450000] mount_root: jffs2 not ready yet, using temporary tmpfs overlay
+[   16.500000] procd: - early -
+[   16.510000] procd: - watchdog -
+[   17.470000] procd: - ubus -
+[   18.480000] procd: - init -
+[   20.070000] NET: Registered protocol family 10
+[   20.110000] RPC: Registered named UNIX socket transport module.
+[   20.130000] RPC: Registered udp transport module.
+[   20.140000] RPC: Registered tcp transport module.
+[   20.140000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   20.220000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   20.260000] i2c /dev entries driver
+[   20.270000] pinctrl core: add 1 pinmux maps
+[   20.270000] rt2880-pinmux pinctrl: found group selector 0 for i2c
+[   20.270000] rt2880-pinmux pinctrl: request pin 1 (io1) for 10000900.i2c
+[   20.270000] rt2880-pinmux pinctrl: request pin 2 (io2) for 10000900.i2c
+[   20.270000] i2c-ralink 10000900.i2c: loaded
+[   20.280000] Loading modules backported from Linux version master-2015-03-09-0-g141f155
+[   20.300000] Backport generated by backports.git backports-20150129-0-gdd4a670
+[   20.320000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   20.360000] nf_conntrack version 0.5.0 (456 buckets, 1824 max)
+[   20.440000] xt_time: kernel timezone is -0000
+[   20.510000] cfg80211: Calling CRDA to update world regulatory domain
+[   20.540000] cfg80211: World regulatory domain updated:
+[   20.550000] cfg80211:  DFS Master region: unset
+[   20.550000] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   20.570000] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   20.590000] cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz, 92000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+[   20.610000] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+[   20.630000] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+[   20.640000] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+[   20.660000] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+[   20.680000] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   20.700000] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+[   20.820000] PPP generic driver version 2.4.2
+[   20.840000] NET: Registered protocol family 24
+[   20.900000] ieee80211 phy0: rt2x00_set_rt: Info - RT chipset 5350, rev 0500 detected
+[   20.920000] ieee80211 phy0: rt2x00_set_rf: Info - RF chipset 5350 detected
+[   20.930000] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+[   34.580000] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
+[   34.610000] jffs2_build_filesystem(): unlocking the mtd device... done.
+[   34.620000] jffs2_build_filesystem(): erasing all blocks after the end marker...
+[   37.350000] device eth0.1 entered promiscuous mode
+[   37.360000] device eth0 entered promiscuous mode
+[   37.450000] br-lan: port 1(eth0.1) entered forwarding state
+[   37.460000] br-lan: port 1(eth0.1) entered forwarding state
+[   39.460000] br-lan: port 1(eth0.1) entered forwarding state
+[   65.650000] done.
+[   65.650000] jffs2: notice: (1001) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum.
+[   75.240000] random: nonblocking pool is initialized
+

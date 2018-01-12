@@ -242,3 +242,6 @@ i2cdetect -r -y 0
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- --
 
+#dd seek skip
+dd if=ifile of=ofile bs=1 seek=10 #modify from offset 10 byte of ofile
+dd if=ifile of=ofile bs=1 skip=10 #skip 10 bytes of ifile
