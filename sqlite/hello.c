@@ -1,5 +1,5 @@
 //check http://blog.csdn.net/u012385733/article/details/41379855
-
+//https://www.cnblogs.com/xia-weiwen/archive/2017/05/04/6806709.html
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <sqlite3.h>  
@@ -46,7 +46,7 @@ int main( void )
 		sqlite3_close(db);  
 		exit(1);  
 	}  
-	else printf("You have opened a sqlite3 database named hello.db successfully!/nCongratulations! Have fun !  ^-^ \n");  
+	else printf("You have opened a sqlite3 database named hello.db successfully!\nCongratulations! Have fun !  ^-^ \n");  
 
 	//sqlite3_close(db); //关闭数据库  
 

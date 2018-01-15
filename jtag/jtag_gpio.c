@@ -152,7 +152,7 @@ void gpio_set(int gpio_num, int value)
     snprintf(cmd, sizeof(cmd), "gpio write %d %d", gpio_num, value);
     system(cmd);
     if (gpio_get(gpio_num) != value) {
-        printf("error: gpio set fail \n");
+        printf("error: gpio %d set %d fail \n", gpio_num, value);
         exit(-1);
     }
 
