@@ -22,6 +22,9 @@ sed -i 's/[ \t]*$//g' file
 #sed 文件顶部增加一行
 sed -i '1s/^/abcdefg\n/' file
 
+# change the whole match  line
+sed -i '/this/cthat' file
+
 #递归搜索，替换
 find . -type f -name '*.txt' -exec sed -i 's/this/that/g' {} +
 
@@ -64,6 +67,11 @@ https://www.cnblogs.com/liangzai-cool/p/5821138.html
 #delete the untracked file
 git clean -fd  
 git clean -nfd   #like make -n, just show what will be done, not actually do.
+
+#get git last tag
+git describe --tags `git rev-list --tags --max-count=1`  
+git tag -a x.x.x -m "msg"
+git push origin --tags
 
 #gcc predefined macro
 gcc -dM -E - < /dev/null
@@ -245,3 +253,10 @@ i2cdetect -r -y 0
 #dd seek skip
 dd if=ifile of=ofile bs=1 seek=10 #modify from offset 10 byte of ofile
 dd if=ifile of=ofile bs=1 skip=10 #skip 10 bytes of ifile
+
+#get file size
+stat -c %s file
+
+#china ntp server
+http://www.ntp.org.cn/
+ntpdate cn.ntp.org.cn
