@@ -260,3 +260,7 @@ stat -c %s file
 #china ntp server
 http://www.ntp.org.cn/
 ntpdate cn.ntp.org.cn
+
+#calc
+A=32
+B=$(($A + 2))
