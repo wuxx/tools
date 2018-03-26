@@ -392,6 +392,8 @@ int main()
     }
 
     free(idcode);
+
+    tap_reset();
     return 0;
 }
 

@@ -264,3 +264,7 @@ ntpdate cn.ntp.org.cn
 #calc
 A=32
 B=$(($A + 2))
+
+dtc -I dtb -O dts waveshare32b-overlay.dtb > waveshare32b-overlay.dts
+dtc -I dts -O dtb -o waveshare32b.dtbo.new waveshare32b.dts
+
