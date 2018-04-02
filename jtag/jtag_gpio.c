@@ -349,7 +349,9 @@ int main()
         printf("%d", b);
     }
     printf("\nTap Num: %d\n", tap_num);
-
+    if (tap_num == 32) {
+        return -1;
+    }
 
     idcode = malloc(tap_num * sizeof(u32));
 
