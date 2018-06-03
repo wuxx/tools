@@ -268,3 +268,16 @@ B=$(($A + 2))
 dtc -I dtb -O dts waveshare32b-overlay.dtb > waveshare32b-overlay.dts
 dtc -I dts -O dtb -o waveshare32b.dtbo.new waveshare32b.dts
 
+#nmap
+nmap -sP 192.168.0.1-254
+nmap -O 192.168.0.16
+#fping
+fping -g 192.168.0.0 192.168.0.254
+
+#port map, visit the ipternet_ip:1234
+ssh -N -f -R 1234:127.0.0.1:8020 root@internet_ip
+
+#count the file num opened by process
+lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr | grep 415
+
+lsof -n|awk '{print $2}'| grep 415 | wc -l
