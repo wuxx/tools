@@ -251,8 +251,13 @@ i2cdetect -r -y 0
 70: -- -- -- -- -- -- -- --
 
 #dd seek skip
-dd if=ifile of=ofile bs=1 seek=10 #modify from offset 10 byte of ofile
-dd if=ifile of=ofile bs=1 skip=10 #skip 10 bytes of ifile
+dd if=ifile of=ofile bs=1 seek=10 #[seek OFILE] modify from offset 10 byte of ofile
+dd if=ifile of=ofile bs=1 skip=10 #[skip IFILE] skip 10 bytes of ifile
+
+dd if=ifile of=ofile bs=1 skip=10 count=1024
+dd if=zImage of=part1_kernel.new.bin bs=1 conv=notrunc count=2355248
+
+dd if=A of=B bs=200 conv=sync
 
 #get file size
 stat -c %s file
