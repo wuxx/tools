@@ -286,3 +286,6 @@ ssh -N -f -R 1234:127.0.0.1:8020 root@internet_ip
 lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr | grep 415
 
 lsof -n|awk '{print $2}'| grep 415 | wc -l
+
+#raspberry pi set wallpaper
+pcmanfm --set-wallpaper /home/pi/Dashboard.png --wallpaper-mode=fit

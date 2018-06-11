@@ -17,6 +17,8 @@ set tags+=./../../../tags
 set tags+=./../../../../tags
 set tags+=./../../../../../tags
 
+hi Comment ctermfg = blue
+
 "让vim记忆上次编辑的位置
 autocmd BufReadPost *
             \ if line("'\"")>0&&line("'\"")<=line("$") |
