@@ -289,3 +289,22 @@ lsof -n|awk '{print $2}'| grep 415 | wc -l
 
 #raspberry pi set wallpaper
 pcmanfm --set-wallpaper /home/pi/Dashboard.png --wallpaper-mode=fit
+
+#samba
+[home]
+   public = yes
+   browseable = yes
+   path = /home/
+   guest ok = no
+   create mask = 0755
+   writable = yes
+smbpasswd -a user-name
+
+#extundelete
+https://www.cnblogs.com/yuhuLin/p/7027253.html
+
+#find
+find . -newermt `date +%F` | sort
+
+#date
+date -d '1 days ago' +%F
