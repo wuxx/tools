@@ -308,3 +308,22 @@ find . -newermt `date +%F` | sort
 
 #date
 date -d '1 days ago' +%F
+
+#convert
+https://superuser.com/questions/294270/how-to-view-raw-binary-data-as-an-image-with-given-width-and-height
+
+printf '\xFF\x00\x00\x00\xFF\x00\x00\x00\xFF' > f
+convert -depth 8 -size 3x1+0 rgb:f out.png
+
+printf '\x00\xFF\x88\xFF\x00\xFF' > f
+convert -depth 8 -size 3x2+0 gray:f out.png
+
+
+#gitlab zh
+sudo cp -r /opt/gitlab/embedded/service/gitlab-rails{,.ori}
+sudo cp -rf gitlab-10-8-stable-zh/* /opt/gitlab/embedded/service/gitlab-rails/
+sudo gitlab-ctl reconfigure
+sudo gitlab-ctl restart
+
+#remote command
+ssh xxx@xx.xx.xx.xx "ls"
