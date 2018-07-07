@@ -28,6 +28,9 @@ sed -i '/this/cthat' file
 #递归搜索，替换
 find . -type f -name '*.txt' -exec sed -i 's/this/that/g' {} +
 
+#delete comment txt
+cat xxx.gcode | grep -v "^;" | sed 's/;.*//g' 
+
 #git
 git config --global user.name "wuxx"
 git config --global user.email "wujianhua0924@gmail.com"
@@ -330,3 +333,12 @@ sudo gitlab-ctl restart
 #remote command
 ssh xxx@xx.xx.xx.xx "ls"
 
+#connect wifi
+wpa_supplicant -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan1
+dhclient wlan1
+
+#get ip
+ifconfig wlan0 | grep "inet " | awk '{ print $2}'
+
+#dd progress
+sudo dd if=/dev/mmcblk0 of=/dev/sda status=progress

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#IP=$(ifconfig wlan0 | grep "inet " | awk '{ print $2}')
+#rm /home/pi/Desktop/ip_*.txt
+#ifconfig wlan0 >> /home/pi/Desktop/test.txt
+#touch /home/pi/Desktop/ip_${IP}.txt
+
 while [ 1 ]; do
 
     echo "check ssh tunnel"
