@@ -279,6 +279,9 @@ dtc -I dts -O dtb -o waveshare32b.dtbo.new waveshare32b.dts
 #nmap
 nmap -sP 192.168.0.1-254
 nmap -O 192.168.0.16
+nmap -A -T4 192.168.1.1-254
+sudo nmap -sT 192.168.1.0/24
+
 #fping
 fping -g 192.168.0.0 192.168.0.254
 
@@ -342,3 +345,9 @@ ifconfig wlan0 | grep "inet " | awk '{ print $2}'
 
 #dd progress
 sudo dd if=/dev/mmcblk0 of=/dev/sda status=progress
+
+#statvfs
+https://blog.csdn.net/papiping/article/details/6980573
+
+#bash while
+while [ 1 ]; do sleep 1; free; done
