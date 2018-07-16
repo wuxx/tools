@@ -5,7 +5,7 @@
 #include <math.h>
 
 #define DIM_WIDTH   (2560)
-#define DIM_HEIGHT  (1600)
+#define DIM_HEIGHT  (1440)
 
 #define _sq(x) ((x)*(x)) // square
 #define _cb(x) abs((x)*(x)*(x)) // absolute value of cube
@@ -15,27 +15,15 @@ unsigned char GR(int,int);
 unsigned char BL(int,int);
 
 unsigned char RD(int x,int y){
-    if ( x < (DIM_WIDTH / 2)) {
-        return 255;
-    } else {
-        return 0;
-    }
+    return 0;
 }
  
 unsigned char GR(int x,int y){
-    if ( x < (DIM_WIDTH / 2)) {
-        return 255;
-    } else {
-        return 0;
-    }
+    return 0;
 }
  
 unsigned char BL(int x,int y){
-    if ( x < (DIM_WIDTH / 2)) {
-        return 255;
-    } else {
-        return 0;
-    }
+    return 0;
 }
 
 

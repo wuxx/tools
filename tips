@@ -76,6 +76,8 @@ git describe --tags `git rev-list --tags --max-count=1`
 git tag -a x.x.x -m "msg"
 git push origin --tags
 
+git fsck --full
+
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
