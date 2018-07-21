@@ -353,3 +353,6 @@ https://blog.csdn.net/papiping/article/details/6980573
 
 #bash while
 while [ 1 ]; do sleep 1; free; done
+
+#toilet
+toilet -f standard -F metal abc
