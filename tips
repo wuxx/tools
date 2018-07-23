@@ -356,3 +356,11 @@ while [ 1 ]; do sleep 1; free; done
 
 #toilet
 toilet -f standard -F metal abc
+
+#rpi3b fsck
+https://raspberrypi.stackexchange.com/questions/61723/raspberry-pi-3-and-raspbian-jessie-how-to-run-fsck-at-boot
+https://www.raspberrypi.org/forums/viewtopic.php?p=459652
+
+git submodule add git@github.com:xxx/deploy.git deploy
+git submodule update
+https://www.jianshu.com/p/f8a55b972972
