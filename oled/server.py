@@ -17,7 +17,6 @@ term = terminal(device, None)
 @route('/log/<log_string>')
 def log(log_string='Stranger'):
     log_str = "%s" %(log_string)
-    term.println("log")
     term.println(log_str)
     return ("log %s ok" %(log_str))
 
@@ -31,7 +30,7 @@ def make_font(name, size):
     return ImageFont.truetype(font_path, size)
 
 def oled_init():
-    term.println("oled_init")
+    term.println("oled_init [ok]")
 
 
 if __name__ == "__main__":
