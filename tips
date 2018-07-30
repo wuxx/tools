@@ -362,6 +362,7 @@ https://raspberrypi.stackexchange.com/questions/61723/raspberry-pi-3-and-raspbia
 https://www.raspberrypi.org/forums/viewtopic.php?p=459652
 
 git submodule add git@github.com:xxx/deploy.git deploy
+git submodule init
 git submodule update
 https://www.jianshu.com/p/f8a55b972972
 
@@ -370,3 +371,29 @@ git submodule init
 git submodule update
 
 git clone --recursive /path/to/repos/foo.git
+
+#git delete commit history
+1.Checkout
+
+   git checkout --orphan latest_branch
+
+2. Add all the files
+
+   git add -A
+
+3. Commit the changes
+
+   git commit -am "commit message"
+
+
+4. Delete the branch
+
+   git branch -D master
+
+5.Rename the current branch to master
+
+   git branch -m master
+
+6.Finally, force update your repository
+
+   git push -f origin master
