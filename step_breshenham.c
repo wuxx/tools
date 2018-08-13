@@ -81,7 +81,7 @@ void loop() {
       //delayMicroseconds(300);//脉冲间隔
   }
 
-   while(1);
+   //while(1);
 }
 
 int main()
