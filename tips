@@ -409,6 +409,10 @@ cat /dev/urandom >/dev/fb0
 
 #convert rgba to rgb
 https://stackoverflow.com/questions/34305379/how-to-convert-gray-scale-png-image-to-rgb-from-comand-line-using-image-magick
+convert in.png -define png:color-type=2 out.png
+convert -rotate 270 in.png out.png
+
+convert -define png:color-type=2 -rotate 270 in.png out.png
 
 #install convert
 sudo apt-get install imagemagick

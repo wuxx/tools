@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#sudo openocd -f tcl/target/stm32f1x_sysfsgpio.cfg -c 'init; halt; resume; '
+sudo openocd -f tcl/target/stm32f1x_sysfsgpio.cfg -c 'init; halt; resume; '
 
+sleep 1000
 sudo openocd -f tcl/target/stm32f1x_sysfsgpio.cfg -c \
 "   init;
     halt;
