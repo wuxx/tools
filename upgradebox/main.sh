@@ -31,15 +31,18 @@ while [ 1 ]; do
         log "upgrade%20start"
         $FLASH_DIR/flash.sh $FLASH_DIR/LED_1000.hex
         if [ $? -eq 0 ]; then
-            log "upgrade%20end%20succ"
+            log "upgrade%20end"
+            log "SUCC"
         else
-            log "upgrade%20end%20fail"
+            log "upgrade%20end"
+            log "FAIL"
         fi
 
         REQ_RESTART=$(gpio read 7)
         echo $REQ_RESTART
         if [ ${REQ_RESTART} -eq 0 ]; then
             log "restart..."
+            log "-------------------"
             exit 0
         fi
         log "------READY--------"
