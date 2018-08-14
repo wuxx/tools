@@ -18,7 +18,7 @@ term = terminal(device, None)
 def log(log_string='Stranger'):
     log_str = "%s" %(log_string)
     term.println(log_str)
-    return ("log %s ok" %(log_str))
+    #return ("log %s ok" %(log_str))
 
 @route('/hello/<name>')
 def greet(name='Stranger'):
