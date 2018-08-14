@@ -22,22 +22,27 @@ log "IP:$IP"
 
 log "VER:$TAG"
 
-while [ 1 ]; do
+log "------READY--------"
 
+while [ 1 ]; do
 
     REQ_UPGRADE=$(gpio read 7)
     if [ ${REQ_UPGRADE} -eq 0 ]; then
         log "upgrade%20start"
         $FLASH_DIR/flash.sh $FLASH_DIR/LED_1000.hex
-        log "upgrade%20end"
-        log "succ"
+        if [ $? -eq 0 ]; then
+            log "upgrade%20end%20succ"
+        else
+            log "upgrade%20end%20fail"
+        fi
 
         REQ_RESTART=$(gpio read 7)
         echo $REQ_RESTART
         if [ ${REQ_RESTART} -eq 0 ]; then
-            log "restart"
+            log "restart..."
             exit 0
         fi
+        log "------READY--------"
     fi
 
 done
