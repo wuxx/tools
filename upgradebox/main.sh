@@ -20,6 +20,7 @@ IP=$(hostname -I)
 log "SSID:$SSID"
 log "IP:$IP"
 
+log "UV_CHAMBER"
 log "VER:$TAG"
 
 log "------READY--------"
