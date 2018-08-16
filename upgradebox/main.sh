@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UV_CHAMBER_DIR=/home/pi/private/git/uv_chamber
+UV_CHAMBER_DIR=/home/pi/private/git/uv_chamber_release
 FLASH_DIR=/home/pi/oss/tools/jtag/stm32
 
 log() {
@@ -10,7 +10,14 @@ log() {
 
 cd $UV_CHAMBER_DIR
 
-git pull
+:'
+curl https://status.github.com/api/status.json
+if [ $? -eq 0 ]; then
+    log "wifi%20online"
+    git pull
+else
+    log "wifi%20offline"
+fi '
 
 TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
 
@@ -19,7 +26,6 @@ IP=$(hostname -I)
 
 log "SSID:$SSID"
 log "IP:$IP"
-
 log "UV_CHAMBER"
 log "VER:$TAG"
 
@@ -30,7 +36,7 @@ while [ 1 ]; do
     REQ_UPGRADE=$(gpio read 7)
     if [ ${REQ_UPGRADE} -eq 0 ]; then
         log "upgrade%20start"
-        $FLASH_DIR/flash.sh $FLASH_DIR/LED_1000.hex
+        $FLASH_DIR/flash_write.sh ${UV_CHAMBER_DIR}/flash_image.bin
         if [ $? -eq 0 ]; then
             log "upgrade%20end"
             log "SUCC"

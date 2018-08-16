@@ -427,3 +427,11 @@ echo 'vm.swappiness=10' >> /etc/sysctl.conf
 #nmcli
 nmcli dev dis wlan0
 https://blog.csdn.net/hrl7752/article/details/78549907
+
+#gdb dump stm32 flash memory
+$telnet localhost 4444
+halt
+
+$gdb
+target remote localhost:3333
+dump binary memory flash_128k.bin 0x08000000 0x08020000 #128K
