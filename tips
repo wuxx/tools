@@ -78,6 +78,8 @@ git push origin --tags
 
 git fsck --full
 
+git log --name-status
+
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
