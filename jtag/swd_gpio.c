@@ -113,13 +113,11 @@ void set_bit(u32 *x, u32 bit_index, u32 b)
 
 void __gpio_init(int gpio_num, char *direct)
 {
-#if 1
     char cmd[512];
 
     snprintf(cmd, sizeof(cmd), "gpio mode %d %s", gpio_num, direct);
     printf("cmd: %s\n", cmd);
     system(cmd);
-#endif
 }
 
 int gpio_get(int gpio_num)
@@ -183,6 +181,11 @@ void gpio_init()
     __gpio_init(SWD_CLK, "out");
     printf("SWD_IO: ");
     __gpio_init(SWD_IO, "out");
+}
+
+void gpio_mode(int gpio_num, char *direct)
+{
+    __gpio_init(gpio_num, direct);
 }
 
 void swd_clk()
@@ -270,6 +273,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
     do
     {
         // Turnaround or idle cycle, makes or keeps SWDIO an output
+        gpio_mode(SWD_IO, "out");
 		gpio_set(SWD_IO, 0);
 		swd_clk();
 
@@ -284,7 +288,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
         // Shift in the 3-bit acknowledge response
         io_byte = 0;
 
-        __gpio_init(SWD_IO, "in");
+        gpio_mode(SWD_IO, "in");
         b0 = gpio_get(SWD_IO);  swd_clk();
         b1 = gpio_get(SWD_IO);  swd_clk();
         b2 = gpio_get(SWD_IO);  swd_clk();
@@ -318,6 +322,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
     {
         if (request & SW_REQ_RnW)
         {
+            gpio_mode(SWD_IO, "in");
             // Swap endian order while shifting in 32-bits of data
             byte_array[0] = SW_ShiftByteIn();
             byte_array[1] = SW_ShiftByteIn();
@@ -337,6 +342,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
         else
         {
             // Turnaround cycle makes SWDIO an output
+            gpio_mode(SWD_IO, "out");
             swd_clk();
 
             // Swap endian order while shifting out 32-bits of data
@@ -353,6 +359,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
     // TODO: Add error (FAULT, line, parity) handling here?  RESEND on parity error?
 
     // Turnaround or idle cycle, always leave SWDIO an output
+    gpio_mode(SWD_IO, "out");
 	gpio_set(SWD_IO, 0);
 	swd_clk();
 
