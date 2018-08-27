@@ -40,6 +40,11 @@
 #define DAP_CMD_APnDP           0x01
 #define DAP_CMD_MASK            0x0F
 
+/*
+b0: APnDP  0: DP;    1: AP
+b1: RnW    0: Write; 1: Read
+*/
+
 
 #define DAP_RETRY_COUNT         255
 
@@ -74,8 +79,11 @@
 #define CHIPAP_BANK_F  0x0A0000F0      // BANK F => None, None, None, ID
 
 // MEMAP register addresses
-#define MEMAP_CSW  0x01
-#define MEMAP_TAR  0x05
+#define MEMAP_CSW_WR  0x01
+#define MEMAP_CSW_RD  0x03
+
+#define MEMAP_TAR_WR  0x05
+
 #define MEMAP_DRW_WR  0x0D
 #define MEMAP_DRW_RD  0x0F
 
@@ -578,10 +586,25 @@ u8 SWD_ClearErrors(void)
     return SW_Response(ack);
 }
 
-void target_write(u32 addr, u32 data)
+void target_mem_write(u32 addr, u32 data)
 {
-    SWD_DAP_Move(0, MEMAP_TAR, &addr);
+    SWD_DAP_Move(0, MEMAP_TAR_WR, &addr);
     SWD_DAP_Move(0, MEMAP_DRW_WR, &data);
+}
+
+u32 target_mem_read(u32 addr)
+{
+    u32 data = 0;
+
+    u32 csw = 0x23000002;
+    SWD_DAP_Move(0, MEMAP_CSW_WR, &csw);
+
+    SWD_DAP_Move(0, MEMAP_TAR_WR, &addr);
+    SWD_DAP_Move(0, MEMAP_DRW_RD, &data);
+
+    printf("[0x%08x]: 0x%08x\n", addr, data);
+
+    return data;
 }
 
 void connect_and_halt_core()
@@ -611,32 +634,32 @@ void connect_and_halt_core()
 
     // 32 bit memory access, auto increment
     rw_data = 0x23000002;
-    SWD_DAP_Move(0, MEMAP_CSW, &rw_data);
+    SWD_DAP_Move(0, MEMAP_CSW_WR, &rw_data);
 
     // DHCSR.C_DEBUGEN = 1
     rw_data = DHCSR;
-    SWD_DAP_Move(0, MEMAP_TAR, &rw_data);
+    SWD_DAP_Move(0, MEMAP_TAR_WR, &rw_data);
     rw_data = 0xA05F0001;
     SWD_DAP_Move(0, MEMAP_DRW_WR, &rw_data);
 
     // DEMCR.VC_CORERESET = 1
     rw_data = DEMCR;
-    SWD_DAP_Move(0, MEMAP_TAR, &rw_data);
+    SWD_DAP_Move(0, MEMAP_TAR_WR, &rw_data);
     rw_data = 0x1;
     SWD_DAP_Move(0, MEMAP_DRW_WR, &rw_data);
 
     while(1) {
         printf("---------------%s-%d-------------\n", __func__, __LINE__);
-        target_write(0x40010C0C, 0xFFFFFFFF);
+        target_mem_write(0x40010C0C, 0xFFFFFFFF);
         usleep(1000000);
 
-        target_write(0x40010C0C, 0x0);
+        target_mem_write(0x40010C0C, 0x0);
         usleep(1000000);
     }
 
     // reset the core
     rw_data = AIRCR;
-    SWD_DAP_Move(0, MEMAP_TAR, &rw_data);
+    SWD_DAP_Move(0, MEMAP_TAR_WR, &rw_data);
     rw_data = 0xFA050004;
     SWD_DAP_Move(0, MEMAP_DRW_WR, &rw_data);
 
@@ -742,6 +765,25 @@ int main()
     SWD_DAP_Move(0, MEMAP_ID_RD, &transfer_data);
     printf("%s-%d MEMAP_ID_RD: 0x%x\n", __func__, __LINE__, transfer_data);
 
+    transfer_data = 0x00;   /* select AP-0x0, BANK-0x00 */
+    SWD_DAP_Move(0, DAP_SELECT_WR, &transfer_data);
+    printf("%s-%d \n", __func__, __LINE__);
+
+
+    target_mem_write(DHCSR, 0xA05F0003);
+
+    target_mem_read(0x08000000);
+
+    while(1) {
+        printf("%s-%d\n", __func__, __LINE__);
+
+        target_mem_write(0x40010C0C, 0xFFFFFFFF);
+        usleep(1000000);
+
+        target_mem_write(0x40010C0C, 0x0);
+        usleep(1000000);
+    }
+
     while(1);
     //transfer_data = 0x00;
     //SWD_DAP_Move(0, MEMAP_CSW, &transfer_data);
@@ -758,13 +800,6 @@ int main()
     connect_and_halt_core();
     printf("%s-%d\n", __func__, __LINE__);
 
-    while(1) {
-        target_write(0x40010C0C, 0xFFFFFFFF);
-        usleep(1000000);
-
-        target_write(0x40010C0C, 0x0);
-        usleep(1000000);
-    }
 
     return 0;
 }
