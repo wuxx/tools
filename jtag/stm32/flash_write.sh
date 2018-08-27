@@ -35,7 +35,7 @@ else
 fi
 
 
-sudo openocd -f ${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio.cfg -c \
+sudo openocd -f ${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg -c \
 "   init;
     halt;
     reset halt;

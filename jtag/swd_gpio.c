@@ -53,6 +53,40 @@
 #define HOST_DP_NOT_CONNECTED   0x85
 
 
+
+
+
+// Cortex M3 Debug Registers (AHB addresses)
+#define DDFSR   0xE000ED30      // Debug Fault StatusRegister
+#define DHCSR   0xE000EDF0      // Debug Halting Control and Status Register
+#define DCRSR   0xE000EDF4      // Debug Core Register Selector Register
+#define DCRDR   0xE000EDF8      // Debug Core Register Data Register
+#define DEMCR   0xE000EDFC      // Debug Exception and Monitor Control Register
+#define AIRCR   0xE000ED0C      // The Application Interrupt and Reset Control Register
+
+//  Cortex M3 Memory Access Port
+#define MEMAP_BANK_0  0x00000000       // BANK 0 => CSW, TAR, Reserved, DRW
+#define MEMAP_BANK_1  0x00000010       // BANK 1 => BD0, BD1, BD2, BD3
+
+// SiM3 Chip Access Port (SiLabs specific Debug Access Port)
+#define CHIPAP_BANK_0  0x0A000000      // BANK 0 => CTRL1, CTRL2, LOCK, CRC
+#define CHIPAP_BANK_1  0x0A000010      // BANK 1 => INIT_STAT, DAP_IN, DAP_OUT, None
+#define CHIPAP_BANK_F  0x0A0000F0      // BANK F => None, None, None, ID
+
+// MEMAP register addresses
+#define MEMAP_CSW  0x01
+#define MEMAP_TAR  0x05
+#define MEMAP_DRW_WR  0x0D
+#define MEMAP_DRW_RD  0x0F
+
+// CHIPAP register addresses
+#define CHIPAP_CTRL1_WR     0x01
+#define CHIPAP_CTRL2_WR     0x05
+#define CHIPAP_ID_WR        0x0D
+#define CHIPAP_ID_RD        0x0F
+
+#define MEMAP_ID_RD        0xFF
+
 typedef unsigned int u32;
 typedef   signed int s32;
 
@@ -116,7 +150,7 @@ void __gpio_init(int gpio_num, char *direct)
     char cmd[512];
 
     snprintf(cmd, sizeof(cmd), "gpio mode %d %s", gpio_num, direct);
-    printf("cmd: %s\n", cmd);
+    //printf("cmd: %s\n", cmd);
     system(cmd);
 }
 
@@ -163,8 +197,6 @@ void gpio_set(int gpio_num, int value)
 {
     char cmd[512];
 
-    //__gpio_init(gpio_num, "out");
-
     snprintf(cmd, sizeof(cmd), "gpio write %d %d", gpio_num, value);
     system(cmd);
     if (gpio_get(gpio_num) != value) {
@@ -177,9 +209,9 @@ void gpio_set(int gpio_num, int value)
 
 void gpio_init()
 {
-    printf("SWD_CLK: ");
+    printf("SWD_CLK: gpio mode %d out\n", SWD_CLK);
     __gpio_init(SWD_CLK, "out");
-    printf("SWD_IO: ");
+    printf("SWD_IO:  gpio mode %d out\n", SWD_IO);
     __gpio_init(SWD_IO, "out");
 }
 
@@ -191,9 +223,9 @@ void gpio_mode(int gpio_num, char *direct)
 void swd_clk()
 {
 	gpio_set(SWD_CLK, 1);
-	usleep(1);
+	//usleep(1);
 	gpio_set(SWD_CLK, 0);
-	usleep(1);
+	//usleep(1);
 }
 
 void SW_ShiftReset(void)
@@ -251,7 +283,11 @@ u8 SW_CalcDataParity(u8 *byte_array)
 
     // Use lookup table to get parity on 4 remaining bits. The cast (bit)
     // converts any non-zero value to 1.
-    return (u8)even_parity[parity & 0xF];
+    if (even_parity[parity & 0xF]) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 u8 ack_error;
@@ -280,11 +316,11 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
         // Shift out the 8-bit packet request
         SW_ShiftByteOut(request);
 
-        printf("%s-%d\n", __func__, __LINE__);
+        //printf("%s-%d\n", __func__, __LINE__);
         // Turnaround cycle makes SWDIO an input
 		swd_clk();
 
-        printf("%s-%d\n", __func__, __LINE__);
+        //printf("%s-%d\n", __func__, __LINE__);
         // Shift in the 3-bit acknowledge response
         io_byte = 0;
 
@@ -299,7 +335,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
 
 		ack = io_byte;
 
-        printf("%s-%d ack %d\n", __func__, __LINE__, ack);
+        //printf("%s-%d ack %d\n", __func__, __LINE__, ack);
 
         // Check if we need to retry the request
         if ((ack == SW_ACK_WAIT) && --retry)
@@ -314,7 +350,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
     }
     while (1);
 
-    printf("ack: %d\n", ack);
+    //printf("ack: %d\n", ack);
 
     // If the request was accepted, do the data transfer phase (turnaround if
     // writing, 32-bit data, and parity)
@@ -352,7 +388,8 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
             SW_ShiftByteOut(byte_array[3]);
 
             // Shift out the parity bit
-            gpio_set(SWD_IO, SW_CalcDataParity(byte_array)); 
+            gpio_set(SWD_IO, get_bit(SW_CalcDataParity(byte_array), 0)); 
+            //gpio_set(SWD_IO, 0); 
 			swd_clk();
         }
     }
@@ -373,6 +410,7 @@ u8 SW_ShiftPacket(u8 request, u8 retry)
 
 u8 SW_Response(u8 SW_Ack)
 {
+    //printf("%s-%d SW_Ack: 0x%x\n", __func__, __LINE__, SW_Ack);
     switch (SW_Ack)
 	{
 		case SW_ACK_OK:     return HOST_COMMAND_OK;
@@ -390,15 +428,15 @@ u8 SWD_LineReset(void)
     SW_ShiftReset();
     SW_ShiftByteOut(0);
 
-    printf("%s-%d\n", __func__, __LINE__);
+    //printf("%s-%d\n", __func__, __LINE__);
     // Now read the DPIDR register to move the SWD out of reset
     ack = SW_ShiftPacket(SW_IDCODE_RD, 1);
 
-    printf("%s-%d %d\n", __func__, __LINE__, ack);
+    //printf("%s-%d %d\n", __func__, __LINE__, ack);
 
     SW_ShiftByteOut(0);
 
-    printf("%s-%d\n", __func__, __LINE__);
+    //printf("%s-%d\n", __func__, __LINE__);
 
     return SW_Response(ack);
 }
@@ -457,6 +495,7 @@ void SW_DAP_Write(u8 cnt, u8 DAP_Addr, u32 * write_data, u8 final)
     // Perform the requested number of writes
     do
     {
+        //printf("%s-%d\n", __func__, __LINE__);
         io_word = *write_data;
         write_data++;
 #if 0
@@ -493,6 +532,7 @@ void SW_DAP_Write(u8 cnt, u8 DAP_Addr, u32 * write_data, u8 final)
 
 u8 SWD_DAP_Move(u8 cnt, u8 dap, u32 * transfer_data)
 {
+    u8 resp;
     // Reset global error accumulator
     ack_error = SW_ACK_OK;
 
@@ -500,10 +540,12 @@ u8 SWD_DAP_Move(u8 cnt, u8 dap, u32 * transfer_data)
     if (dap & DAP_CMD_RnW)
     {
         // Perform the requested number of reads
+        printf("DAP Read\n");
         SW_DAP_Read(cnt, dap, transfer_data);
     }
     else
     {
+        printf("DAP Write\n");
         SW_DAP_Write(cnt, dap, transfer_data, 1);
     }
 
@@ -511,7 +553,102 @@ u8 SWD_DAP_Move(u8 cnt, u8 dap, u32 * transfer_data)
     SW_ShiftByteOut(0);
 
     // Return the accumulated error result
-    return SW_Response(ack_error);
+    resp = SW_Response(ack_error);
+    printf("%s resp: 0x%x\n", __func__, resp);
+    return resp;
+}
+
+u8 SWD_ClearErrors(void)
+{
+    u8 ack;
+
+    // First read the DP-CSR register and send the value to the host.
+    SW_ShiftPacket(SW_CTRLSTAT_RD, 1);
+    //SendLongToHost(io_word.U32);
+
+    // Clear all error/sticky bits by writing to the abort register.
+    io_word = 0x1E;
+    SW_ShiftPacket(SW_ABORT_WR, 1);
+
+    // Read the DP-CSR register again and send the results to the host.
+    ack = SW_ShiftPacket(SW_CTRLSTAT_RD, 1);
+    SW_ShiftByteOut(0);
+    //SendLongToHost(io_word.U32);
+
+    return SW_Response(ack);
+}
+
+void target_write(u32 addr, u32 data)
+{
+    SWD_DAP_Move(0, MEMAP_TAR, &addr);
+    SWD_DAP_Move(0, MEMAP_DRW_WR, &data);
+}
+
+void connect_and_halt_core()
+{
+    u32 rw_data;
+
+#if 0
+    rw_data = CHIPAP_BANK_F;
+    SWD_DAP_Move(0, DAP_SELECT_WR, &rw_data);
+    SWD_DAP_Move(0, CHIPAP_ID_RD, &rw_data);
+
+    if (rw_data != 0x2430002) {
+        printf("%s-%d: rw_data: 0x%x\n", __func__, __LINE__, rw_data);
+        return;
+    }
+
+    // CTRL1.core_reset_ap = 1
+    rw_data = CHIPAP_BANK_0;
+    SWD_DAP_Move(0, DAP_SELECT_WR, &rw_data);
+    rw_data = 0x08;
+    SWD_DAP_Move(0, CHIPAP_CTRL1_WR, &rw_data);
+#endif
+
+    // Select MEM BANK 0
+    rw_data = MEMAP_BANK_0;
+    SWD_DAP_Move(0, DAP_SELECT_WR, &rw_data);
+
+    // 32 bit memory access, auto increment
+    rw_data = 0x23000002;
+    SWD_DAP_Move(0, MEMAP_CSW, &rw_data);
+
+    // DHCSR.C_DEBUGEN = 1
+    rw_data = DHCSR;
+    SWD_DAP_Move(0, MEMAP_TAR, &rw_data);
+    rw_data = 0xA05F0001;
+    SWD_DAP_Move(0, MEMAP_DRW_WR, &rw_data);
+
+    // DEMCR.VC_CORERESET = 1
+    rw_data = DEMCR;
+    SWD_DAP_Move(0, MEMAP_TAR, &rw_data);
+    rw_data = 0x1;
+    SWD_DAP_Move(0, MEMAP_DRW_WR, &rw_data);
+
+    while(1) {
+        printf("---------------%s-%d-------------\n", __func__, __LINE__);
+        target_write(0x40010C0C, 0xFFFFFFFF);
+        usleep(1000000);
+
+        target_write(0x40010C0C, 0x0);
+        usleep(1000000);
+    }
+
+    // reset the core
+    rw_data = AIRCR;
+    SWD_DAP_Move(0, MEMAP_TAR, &rw_data);
+    rw_data = 0xFA050004;
+    SWD_DAP_Move(0, MEMAP_DRW_WR, &rw_data);
+
+    // CTRL1.core_reset_ap = 0
+    rw_data = CHIPAP_BANK_0;
+    SWD_DAP_Move(0, DAP_SELECT_WR, &rw_data);
+    rw_data = 0;
+    SWD_DAP_Move(0, CHIPAP_CTRL1_WR, &rw_data);
+
+    // Select MEM BANK 0
+    rw_data = MEMAP_BANK_0;
+    SWD_DAP_Move(0, DAP_SELECT_WR, &rw_data);
 }
 
 
@@ -519,6 +656,7 @@ int main()
 {
     u8 rv;
     u32 idcode;
+    u32 transfer_data;
 
     gpio_init();
     printf("%s-%d\n", __func__, __LINE__);
@@ -540,6 +678,93 @@ int main()
 	SWD_DAP_Move(0, DAP_IDCODE_RD, &idcode);
 
     printf("idcode: [0x%08x]\n", idcode);
+
+
+    printf("%s-%d\n", __func__, __LINE__);
+
+    //transfer_data = 0;
+    //SWD_DAP_Move(0, DAP_CTRLSTAT_RD, &transfer_data);
+    //printf("%s-%d DAP_CTRLSTAT: 0x%x\n", __func__, __LINE__, transfer_data);
+
+    io_word = 0x1E;
+    SW_ShiftPacket(SW_ABORT_WR, 1);
+
+    transfer_data = 0x00;   /* select AP-0x0, BANK-0x00 */
+    SWD_DAP_Move(0, DAP_SELECT_WR, &transfer_data);
+    printf("%s-%d \n", __func__, __LINE__);
+
+    transfer_data = 0x50000000;
+    SWD_DAP_Move(0, DAP_CTRLSTAT_WR, &transfer_data);
+    printf("%s-%d\n", __func__, __LINE__);
+
+    transfer_data = 0;
+    SWD_DAP_Move(0, DAP_CTRLSTAT_RD, &transfer_data);
+    printf("%s-%d DAP_CTRLSTAT: 0x%x\n", __func__, __LINE__, transfer_data);
+
+    transfer_data = 0;
+    SWD_DAP_Move(0, DAP_CTRLSTAT_RD, &transfer_data);
+    printf("%s-%d DAP_CTRLSTAT: 0x%x\n", __func__, __LINE__, transfer_data);
+
+    transfer_data = 0x50000F00;
+    SWD_DAP_Move(0, DAP_CTRLSTAT_WR, &transfer_data);
+    printf("%s-%d\n", __func__, __LINE__);
+
+
+#if 0
+    transfer_data = 0x00;   /* select AP-0x0, BANK-0x00 */
+    SWD_DAP_Move(0, DAP_SELECT_WR, &transfer_data);
+    printf("%s-%d \n", __func__, __LINE__);
+
+    transfer_data = 0x50000000;
+    //transfer_data = 0xf0000041;
+    SWD_DAP_Move(0, DAP_CTRLSTAT_WR, &transfer_data);
+    printf("%s-%d\n", __func__, __LINE__);
+
+    transfer_data = 0;
+    SWD_DAP_Move(0, DAP_CTRLSTAT_RD, &transfer_data);
+    printf("%s-%d DAP_CTRLSTAT: 0x%x\n", __func__, __LINE__, transfer_data);
+
+
+    //transfer_data = 0x54000000;
+    //SWD_DAP_Move(0, DAP_CTRLSTAT_WR, &transfer_data);
+    //printf("%s-%d\n", __func__, __LINE__);
+
+    transfer_data = 0x00;   /* select AP-0x0, BANK-0x0 */
+    SWD_DAP_Move(0, DAP_SELECT_WR, &transfer_data);
+    printf("%s-%d \n", __func__, __LINE__);
+#endif
+
+    transfer_data = 0xF0;   /* select AP-0x0, BANK-0x0F */
+    SWD_DAP_Move(0, DAP_SELECT_WR, &transfer_data);
+    printf("%s-%d \n", __func__, __LINE__);
+
+    transfer_data = 0x00;
+    SWD_DAP_Move(0, MEMAP_ID_RD, &transfer_data);
+    printf("%s-%d MEMAP_ID_RD: 0x%x\n", __func__, __LINE__, transfer_data);
+
+    while(1);
+    //transfer_data = 0x00;
+    //SWD_DAP_Move(0, MEMAP_CSW, &transfer_data);
+
+    //transfer_data = 0;
+    //SWD_DAP_Move(0, 0xC, &transfer_data);
+    //SWD_DAP_Move(0, 0xC, &transfer_data);
+    //printf("%s-%d data: 0x%x\n", __func__, __LINE__, transfer_data);
+
+    //rv = SWD_ClearErrors();
+
+    //printf("%s-%d rv: 0x%x\n", __func__, __LINE__, rv);
+
+    connect_and_halt_core();
+    printf("%s-%d\n", __func__, __LINE__);
+
+    while(1) {
+        target_write(0x40010C0C, 0xFFFFFFFF);
+        usleep(1000000);
+
+        target_write(0x40010C0C, 0x0);
+        usleep(1000000);
+    }
 
     return 0;
 }
