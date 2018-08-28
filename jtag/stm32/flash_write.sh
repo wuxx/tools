@@ -34,8 +34,10 @@ else
     exit 1
 fi
 
+#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg
+CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
 
-sudo openocd -f ${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg -c \
+sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
 "   init;
     halt;
     reset halt;
