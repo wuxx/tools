@@ -10,6 +10,10 @@
 FLASH_ADDR=0x08000000
 FLASH_SIZE=0x00010000 #64KB
 
+#stm32f030c8t6
+#FLASH_ADDR=0x08000000
+#FLASH_SIZE=0x00010000 #64KB
+
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 
 sudo openocd -f ${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg -c \

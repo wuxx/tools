@@ -376,6 +376,8 @@ git submodule update
 
 git pull --recurse-submodules
 
+git pull -p
+
 git clone --recursive /path/to/repos/foo.git
 
 
