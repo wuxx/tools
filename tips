@@ -439,3 +439,6 @@ halt
 $gdb
 target remote localhost:3333
 dump binary memory flash_128k.bin 0x08000000 0x08020000 #128K
+
+#zip
+zip -q -r html.zip *
