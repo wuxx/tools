@@ -13,6 +13,9 @@ fi
 
 echo "${HEX_FILE}"
 
+#ok
 avrdude -v -p m2560 -P /dev/ttyUSB0 -b 115200 -c wiring -D -U flash:w:${HEX_FILE}:i
 
+#avrdude -v -p m2560 -P /dev/ttyS0 -b 115200 -c wiring -D -U flash:w:${HEX_FILE}:i
 
+#avrdude -v -p m2560 -P /dev/ttyS0 -b 57600 -c wiring -D -U flash:w:${HEX_FILE}:i
