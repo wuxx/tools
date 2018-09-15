@@ -131,6 +131,7 @@ ssh pi@127.0.0.1 -p 2222
 
 #delete file accord the inum
 find ./ -inum 919102 -exec rm -rfi {} \;
+find ./ -inum 919102 -exec rm {} \;
 
 #search head file
 apt-file search xxx.h
@@ -442,3 +443,10 @@ dump binary memory flash_128k.bin 0x08000000 0x08020000 #128K
 
 #zip
 zip -q -r html.zip *
+
+#flashrom detect
+flashrom -p linux_spi:dev=/dev/spidev0.0,spispeed=1000
+#flashrom read
+flashrom -p linux_spi:dev=/dev/spidev0.0 -r flash_image.bin
+#flashrom write
+flashrom -p linux_spi:dev=/dev/spidev0.0 -VVV -w flash_image.bin
