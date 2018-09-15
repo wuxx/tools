@@ -10,15 +10,6 @@ log() {
 
 cd $UV_CHAMBER_DIR
 
-:'
-curl https://status.github.com/api/status.json
-if [ $? -eq 0 ]; then
-    log "wifi%20online"
-    git pull
-else
-    log "wifi%20offline"
-fi '
-
 TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
 
 SSID=$(iwgetid -r)
@@ -35,13 +26,13 @@ while [ 1 ]; do
 
     REQ_UPGRADE=$(gpio read 7)
     if [ ${REQ_UPGRADE} -eq 0 ]; then
-        log "upgrade%20start"
+        log "us"
         $FLASH_DIR/flash_write.sh ${UV_CHAMBER_DIR}/flash_image.bin
         if [ $? -eq 0 ]; then
-            log "upgrade%20end"
+            #log "ue"
             log "SUCC"
         else
-            log "upgrade%20end"
+            #log "ue"
             log "FAIL"
         fi
 
@@ -52,7 +43,7 @@ while [ 1 ]; do
             log "-------------------"
             exit 0
         fi
-        log "------READY--------"
+        log "-RDY-"
     fi
 
 done
