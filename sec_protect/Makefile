@@ -1,7 +1,8 @@
 
 CC = gcc
 #CFLAGS = -m32 -g
-CFLAGS = -m32 -Wall -g
+#CFLAGS = -m32 -Wall -g
+CFLAGS = -Wall -g
 
 .PHONY: all
 

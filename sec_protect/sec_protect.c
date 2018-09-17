@@ -1186,21 +1186,29 @@ int aes_decrypt(uint8_t *in, uint8_t *out, uint8_t *key)
 
 /************* AES-128 END **********************************/
 
-int build_protect_data(unsigned char *indata, unsigned int inlen)
+unsigned char md5sum[16];
+unsigned char in[16];
+unsigned char out[16];
+
+int id_build(unsigned char *indata, unsigned int inlen, unsigned char *out)
 {
     int i;
-    unsigned char md5sum[16];
-    unsigned char in[16];
-    unsigned char out[16];
+    unsigned char dec[16];
 
 
 	/* 128 bits */
-	uint8_t key[] = {
+	uint8_t key[] = {   /* FIXME: derive the key */
 		0x2b, 0x7e, 0x15, 0x16,
 		0x28, 0xae, 0xd2, 0xa6,
 		0xab, 0xf7, 0x15, 0x88,
 		0x09, 0xcf, 0x4f, 0x3c };
 
+	printf("indata:\n");
+	for (i = 0; i < 4; i++) {
+		printf("%02x %02x %02x %02x ", indata[4*i+0], indata[4*i+1], indata[4*i+2], indata[4*i+3]);
+	}
+
+	printf("\n");
     /* 1 md5 */
     md5(indata, inlen, md5sum);
 
@@ -1213,7 +1221,7 @@ int build_protect_data(unsigned char *indata, unsigned int inlen)
     /* 2 aes encrypt */
 	aes_encrypt(md5sum, out, key);
 
-	printf("out:\n");
+	printf("encrypt:\n");
 
 	for (i = 0; i < 4; i++) {
 		printf("%02x %02x %02x %02x ", out[4*i+0], out[4*i+1], out[4*i+2], out[4*i+3]);
@@ -1221,25 +1229,58 @@ int build_protect_data(unsigned char *indata, unsigned int inlen)
 
 	printf("\n");
 
-	aes_decrypt(out, in, key);
-	printf("in:\n");
+	aes_decrypt(out, dec, key);
+	printf("decrypt:\n");
 	for (i = 0; i < 4; i++) {
-		printf("%02x %02x %02x %02x ", in[4*i+0], in[4*i+1], in[4*i+2], in[4*i+3]);
+		printf("%02x %02x %02x %02x ", dec[4*i+0], dec[4*i+1], dec[4*i+2], dec[4*i+3]);
 	}
 
-	printf("\n");
+	printf("\n\n");
     return 0;
+}
+
+int id_verify(unsigned char *indata, unsigned int inlen, unsigned char *out)
+{
+    uint32_t i;
+    uint8_t _out[16];
+
+    id_build(indata, inlen, _out);
+
+	printf("_out:\n");
+	for (i = 0; i < 4; i++) {
+		printf("%02x %02x %02x %02x ", _out[4*i+0], _out[4*i+1], _out[4*i+2], _out[4*i+3]);
+	}
+	printf("\n");
+
+	printf("out:\n");
+	for (i = 0; i < 4; i++) {
+		printf("%02x %02x %02x %02x ", out[4*i+0], out[4*i+1], out[4*i+2], out[4*i+3]);
+	}
+	printf("\n");
+
+    for(i = 0; i < sizeof(_out); i++) {
+        if (_out[i] != out[i]) {
+            printf("verify fail!\n");
+            return -1;
+        }
+    }
+
+    printf("verify succ!\n");
+    return 0;
+
 }
 
 int main()
 {
-	uint8_t in[] = {
+	uint8_t indata[] = {
 		0x00, 0x01, 0x02, 0x03,
 		0x04, 0x05, 0x06, 0x07,
 		0x08, 0x09, 0x0a, 0x0b,
 		0x0c, 0x0d, 0x0e, 0x0f };
 
-    build_protect_data(in, sizeof(in));
+    id_build(indata, sizeof(indata), out);
+
+    id_verify(indata, sizeof(indata), out);
 
     return 0;
 }
