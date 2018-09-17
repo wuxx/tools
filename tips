@@ -56,6 +56,7 @@ git checkout <SHA-1>
 #mov back to master
 git checkout master
 
+git branch --set-upstream-to=origin/master
 git branch --set-upstream-to=origin/master master
 
 #and work on the same branch with others and somebody already upload some commit and if you want to commit 
