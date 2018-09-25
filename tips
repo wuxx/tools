@@ -81,6 +81,9 @@ git fsck --full
 
 git log --name-status
 
+#git clone error on "filename too long"
+git config --global core.longpaths true
+
 #gcc predefined macro
 gcc -dM -E - < /dev/null
 
@@ -451,3 +454,4 @@ flashrom -p linux_spi:dev=/dev/spidev0.0,spispeed=1000
 flashrom -p linux_spi:dev=/dev/spidev0.0 -r flash_image.bin
 #flashrom write
 flashrom -p linux_spi:dev=/dev/spidev0.0 -VVV -w flash_image.bin
+
