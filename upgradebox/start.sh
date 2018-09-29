@@ -1,5 +1,5 @@
 #!/bin/bash
-
+exit 0
 OLED_DIR=/home/pi/oss/tools/oled
 
 CURRENT_DIR=$(cd $(dirname $0); pwd)
