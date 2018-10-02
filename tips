@@ -240,6 +240,11 @@ set -o errexit
 
 #minicom usage
 minicom -D /dev/ttyUSB0 -b 115200
+minicom -D /dev/ttyACM0 -b 115200
+#rz
+rz in minicom
+use ctrl-A S choose the send file.
+
 #howto exit
 #ctrl-A X
 
