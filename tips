@@ -240,11 +240,13 @@ set -o errexit
 
 #minicom usage
 minicom -D /dev/ttyUSB0 -b 115200
+<<<<<<< HEAD
 minicom -D /dev/ttyACM0 -b 115200
 #rz
 rz in minicom
 use ctrl-A S choose the send file.
 
+minicom -D /dev/ttyS0 -b 115200
 #howto exit
 #ctrl-A X
 
@@ -460,3 +462,11 @@ flashrom -p linux_spi:dev=/dev/spidev0.0 -r flash_image.bin
 #flashrom write
 flashrom -p linux_spi:dev=/dev/spidev0.0 -VVV -w flash_image.bin
 
+#unbuffer
+sudo apt-get install expect
+
+#disassemble Cortex-M3
+arm-none-eabi-objdump -Mforce-thumb -marm -b binary -D LED.bin
+
+#perl string operation
+perl -e 'print "a" x 10'

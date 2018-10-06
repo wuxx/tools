@@ -328,13 +328,13 @@ int main(int argc, char **argv)
                 mode = EDIT_MODE;
                 break;
             case ('n'):
-                len = strtol(optarg, NULL, 0);
+                len = strtoul(optarg, NULL, 0);
                 break;
             case ('o'):
-                offset = strtol(optarg, NULL, 0);
+                offset = strtoul(optarg, NULL, 0);
                 break;
             case ('v'):
-                value = strtol(optarg, NULL, 0);
+                value = strtoul(optarg, NULL, 0);
                 break;
             case ('C'):
                 canonical = 1;

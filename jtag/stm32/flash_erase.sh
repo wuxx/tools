@@ -7,7 +7,9 @@ FLASH_SIZE=0x00020000 #128KB
 
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 
-sudo openocd -f ${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio.cfg -c \
+CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
+
+sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
 "   init;
     halt;
     reset halt;
