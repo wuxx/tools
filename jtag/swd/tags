@@ -1,0 +1,172 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AIRCR	swd.h	73;"	d
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -I$(INCLUDE) $/;"	m
+CHIPAP_BANK_0	swd.h	80;"	d
+CHIPAP_BANK_1	swd.h	81;"	d
+CHIPAP_BANK_F	swd.h	82;"	d
+CHIPAP_CTRL1_WR	swd.h	94;"	d
+CHIPAP_CTRL2_WR	swd.h	95;"	d
+CHIPAP_ID_RD	swd.h	97;"	d
+CHIPAP_ID_WR	swd.h	96;"	d
+DAP_ABORT_WR	swd.h	33;"	d
+DAP_CMD_A32	swd.h	41;"	d
+DAP_CMD_APnDP	swd.h	43;"	d
+DAP_CMD_MASK	swd.h	44;"	d
+DAP_CMD_PACKED	swd.h	40;"	d
+DAP_CMD_RnW	swd.h	42;"	d
+DAP_CTRLSTAT_RD	swd.h	34;"	d
+DAP_CTRLSTAT_WR	swd.h	35;"	d
+DAP_IDCODE_RD	swd.h	32;"	d
+DAP_RDBUFF_RD	swd.h	37;"	d
+DAP_RETRY_COUNT	swd.h	52;"	d
+DAP_SELECT_WR	swd.h	36;"	d
+DCRDR	swd.h	71;"	d
+DCRSR	swd.h	70;"	d
+DDFSR	swd.h	68;"	d
+DEMCR	swd.h	72;"	d
+DHCSR	swd.h	69;"	d
+FALSE	locallib/include/wiringPi/wiringPi.h	33;"	d
+GPIO_CLOCK	locallib/include/wiringPi/wiringPi.h	61;"	d
+HIGH	locallib/include/wiringPi/wiringPi.h	67;"	d
+HOST_ACK_FAULT	swd.h	60;"	d
+HOST_AP_TIMEOUT	swd.h	58;"	d
+HOST_COMMAND_FAILED	swd.h	57;"	d
+HOST_COMMAND_OK	swd.h	55;"	d
+HOST_DP_NOT_CONNECTED	swd.h	61;"	d
+HOST_INVALID_COMMAND	swd.h	56;"	d
+HOST_WIRE_ERROR	swd.h	59;"	d
+INCLUDE	Makefile	/^INCLUDE=$(ROOT)\/locallib\/include\/raspidmx$/;"	m
+INPUT	locallib/include/wiringPi/wiringPi.h	58;"	d
+INT_EDGE_BOTH	locallib/include/wiringPi/wiringPi.h	85;"	d
+INT_EDGE_FALLING	locallib/include/wiringPi/wiringPi.h	83;"	d
+INT_EDGE_RISING	locallib/include/wiringPi/wiringPi.h	84;"	d
+INT_EDGE_SETUP	locallib/include/wiringPi/wiringPi.h	82;"	d
+LOW	locallib/include/wiringPi/wiringPi.h	66;"	d
+MEMAP_BANK_0	swd.h	76;"	d
+MEMAP_BANK_1	swd.h	77;"	d
+MEMAP_CSW_RD	swd.h	86;"	d
+MEMAP_CSW_WR	swd.h	85;"	d
+MEMAP_DRW_RD	swd.h	91;"	d
+MEMAP_DRW_WR	swd.h	90;"	d
+MEMAP_ID_RD	swd.h	99;"	d
+MEMAP_TAR_WR	swd.h	88;"	d
+OUTPUT	locallib/include/wiringPi/wiringPi.h	59;"	d
+PI_ALPHA	locallib/include/wiringPi/wiringPi.h	95;"	d
+PI_GPIO_MASK	locallib/include/wiringPi/wiringPi.h	43;"	d
+PI_MAKER_EGOMAN	locallib/include/wiringPi/wiringPi.h	109;"	d
+PI_MAKER_EMBEST	locallib/include/wiringPi/wiringPi.h	110;"	d
+PI_MAKER_SONY	locallib/include/wiringPi/wiringPi.h	108;"	d
+PI_MAKER_UNKNOWN	locallib/include/wiringPi/wiringPi.h	111;"	d
+PI_MODEL_07	locallib/include/wiringPi/wiringPi.h	97;"	d
+PI_MODEL_2	locallib/include/wiringPi/wiringPi.h	94;"	d
+PI_MODEL_3	locallib/include/wiringPi/wiringPi.h	98;"	d
+PI_MODEL_A	locallib/include/wiringPi/wiringPi.h	90;"	d
+PI_MODEL_AP	locallib/include/wiringPi/wiringPi.h	92;"	d
+PI_MODEL_B	locallib/include/wiringPi/wiringPi.h	91;"	d
+PI_MODEL_BP	locallib/include/wiringPi/wiringPi.h	93;"	d
+PI_MODEL_CM	locallib/include/wiringPi/wiringPi.h	96;"	d
+PI_MODEL_CM3	locallib/include/wiringPi/wiringPi.h	100;"	d
+PI_MODEL_ZERO	locallib/include/wiringPi/wiringPi.h	99;"	d
+PI_MODEL_ZERO_W	locallib/include/wiringPi/wiringPi.h	101;"	d
+PI_THREAD	locallib/include/wiringPi/wiringPi.h	123;"	d
+PI_VERSION_1	locallib/include/wiringPi/wiringPi.h	103;"	d
+PI_VERSION_1_1	locallib/include/wiringPi/wiringPi.h	104;"	d
+PI_VERSION_1_2	locallib/include/wiringPi/wiringPi.h	105;"	d
+PI_VERSION_2	locallib/include/wiringPi/wiringPi.h	106;"	d
+PUD_DOWN	locallib/include/wiringPi/wiringPi.h	72;"	d
+PUD_OFF	locallib/include/wiringPi/wiringPi.h	71;"	d
+PUD_UP	locallib/include/wiringPi/wiringPi.h	73;"	d
+PWM_MODE_BAL	locallib/include/wiringPi/wiringPi.h	78;"	d
+PWM_MODE_MS	locallib/include/wiringPi/wiringPi.h	77;"	d
+PWM_OUTPUT	locallib/include/wiringPi/wiringPi.h	60;"	d
+PWM_TONE_OUTPUT	locallib/include/wiringPi/wiringPi.h	64;"	d
+ROOT	Makefile	/^ROOT = .$/;"	m
+SOFT_PWM_OUTPUT	locallib/include/wiringPi/wiringPi.h	62;"	d
+SOFT_TONE_OUTPUT	locallib/include/wiringPi/wiringPi.h	63;"	d
+SWD_CLK	swd.h	121;"	d
+SWD_ClearErrors	swd.c	/^u8 SWD_ClearErrors(void)$/;"	f
+SWD_DAP_Move	swd.c	/^u8 SWD_DAP_Move(u8 cnt, u8 dap, u32 * transfer_data)$/;"	f
+SWD_IO	swd.h	122;"	d
+SWD_LineReset	swd.c	/^u8 SWD_LineReset(void)$/;"	f
+SW_ABORT_WR	swd.h	11;"	d
+SW_ACK_FAULT	swd.h	28;"	d
+SW_ACK_OK	swd.h	26;"	d
+SW_ACK_PARITY_ERR	swd.h	29;"	d
+SW_ACK_WAIT	swd.h	27;"	d
+SW_CTRLSTAT_RD	swd.h	12;"	d
+SW_CTRLSTAT_WR	swd.h	13;"	d
+SW_CalcDataParity	swd.c	/^u8 SW_CalcDataParity(u8 *byte_array)$/;"	f
+SW_DAP_Read	swd.c	/^void SW_DAP_Read(u8 cnt, u8 DAP_Addr, u32 * read_data)$/;"	f
+SW_DAP_Write	swd.c	/^void SW_DAP_Write(u8 cnt, u8 DAP_Addr, u32 * write_data, u8 final)$/;"	f
+SW_IDCODE_RD	swd.h	10;"	d
+SW_RDBUFF_RD	swd.h	16;"	d
+SW_REQ_A32	swd.h	21;"	d
+SW_REQ_APnDP	swd.h	23;"	d
+SW_REQ_PARITY	swd.h	20;"	d
+SW_REQ_PARK_START	swd.h	19;"	d
+SW_REQ_RnW	swd.h	22;"	d
+SW_RESEND_RD	swd.h	14;"	d
+SW_Request	swd.c	/^u8 SW_Request(u8 DAP_Addr)$/;"	f
+SW_Response	swd.c	/^u8 SW_Response(u8 SW_Ack)$/;"	f
+SW_SELECT_WR	swd.h	15;"	d
+SW_ShiftByteIn	swd.c	/^u8 SW_ShiftByteIn(void)$/;"	f
+SW_ShiftByteOut	swd.c	/^void SW_ShiftByteOut(u8 byte)$/;"	f
+SW_ShiftPacket	swd.c	/^u8 SW_ShiftPacket(u8 request, u8 retry)$/;"	f
+SW_ShiftReset	swd.c	/^void SW_ShiftReset(void)$/;"	f
+TRUE	locallib/include/wiringPi/wiringPi.h	32;"	d
+UNU	locallib/include/wiringPi/wiringPi.h	38;"	d
+USE_wiringPi	gpio.c	9;"	d	file:
+WPI_ALMOST	locallib/include/wiringPi/wiringPi.h	128;"	d
+WPI_FATAL	locallib/include/wiringPi/wiringPi.h	127;"	d
+WPI_MODE_GPIO	locallib/include/wiringPi/wiringPi.h	50;"	d
+WPI_MODE_GPIO_SYS	locallib/include/wiringPi/wiringPi.h	51;"	d
+WPI_MODE_PHYS	locallib/include/wiringPi/wiringPi.h	52;"	d
+WPI_MODE_PIFACE	locallib/include/wiringPi/wiringPi.h	53;"	d
+WPI_MODE_PINS	locallib/include/wiringPi/wiringPi.h	49;"	d
+WPI_MODE_UNINITIALISED	locallib/include/wiringPi/wiringPi.h	54;"	d
+__SWD_H__	swd.h	2;"	d
+__WIRING_PI_H__	locallib/include/wiringPi/wiringPi.h	25;"	d
+__gpio_init	gpio.c	/^void __gpio_init(int gpio_num, char *direct)$/;"	f
+ack_error	swd.c	/^u8 ack_error;$/;"	v
+analogRead	locallib/include/wiringPi/wiringPi.h	/^           int    (*analogRead)       (struct wiringPiNodeStruct *node, int pin) ;$/;"	m	struct:wiringPiNodeStruct
+analogWrite	locallib/include/wiringPi/wiringPi.h	/^           void   (*analogWrite)      (struct wiringPiNodeStruct *node, int pin, int value) ;$/;"	m	struct:wiringPiNodeStruct
+connect_and_halt_core	swd.c	/^void connect_and_halt_core()$/;"	f
+data0	locallib/include/wiringPi/wiringPi.h	/^  unsigned int data0 ;	\/\/  ditto$/;"	m	struct:wiringPiNodeStruct
+data1	locallib/include/wiringPi/wiringPi.h	/^  unsigned int data1 ;	\/\/  ditto$/;"	m	struct:wiringPiNodeStruct
+data2	locallib/include/wiringPi/wiringPi.h	/^  unsigned int data2 ;	\/\/  ditto$/;"	m	struct:wiringPiNodeStruct
+data3	locallib/include/wiringPi/wiringPi.h	/^  unsigned int data3 ;	\/\/  ditto$/;"	m	struct:wiringPiNodeStruct
+digitalRead	locallib/include/wiringPi/wiringPi.h	/^           int    (*digitalRead)      (struct wiringPiNodeStruct *node, int pin) ;$/;"	m	struct:wiringPiNodeStruct
+digitalWrite	locallib/include/wiringPi/wiringPi.h	/^           void   (*digitalWrite)     (struct wiringPiNodeStruct *node, int pin, int value) ;$/;"	m	struct:wiringPiNodeStruct
+even_parity	swd.c	/^const u8 even_parity[] =$/;"	v
+fd	locallib/include/wiringPi/wiringPi.h	/^  int          fd ;	\/\/ Node specific$/;"	m	struct:wiringPiNodeStruct
+get_bit	swd.c	19;"	d	file:
+gpio_get	gpio.c	/^int gpio_get(int gpio_num)$/;"	f
+gpio_init	gpio.c	/^void gpio_init()$/;"	f
+gpio_mode	gpio.c	/^void gpio_mode(int gpio_num, char *direct)$/;"	f
+gpio_set	gpio.c	/^void gpio_set(int gpio_num, int value)$/;"	f
+io_byte	swd.c	/^u8 io_byte;$/;"	v
+io_word	swd.c	/^u32 io_word;$/;"	v
+main	swd.c	/^int main()$/;"	f
+next	locallib/include/wiringPi/wiringPi.h	/^  struct wiringPiNodeStruct *next ;$/;"	m	struct:wiringPiNodeStruct	typeref:struct:wiringPiNodeStruct::wiringPiNodeStruct
+pinBase	locallib/include/wiringPi/wiringPi.h	/^  int     pinBase ;$/;"	m	struct:wiringPiNodeStruct
+pinMax	locallib/include/wiringPi/wiringPi.h	/^  int     pinMax ;$/;"	m	struct:wiringPiNodeStruct
+pinMode	locallib/include/wiringPi/wiringPi.h	/^           void   (*pinMode)          (struct wiringPiNodeStruct *node, int pin, int mode) ;$/;"	m	struct:wiringPiNodeStruct
+pullUpDnControl	locallib/include/wiringPi/wiringPi.h	/^           void   (*pullUpDnControl)  (struct wiringPiNodeStruct *node, int pin, int mode) ;$/;"	m	struct:wiringPiNodeStruct
+pwmWrite	locallib/include/wiringPi/wiringPi.h	/^           void   (*pwmWrite)         (struct wiringPiNodeStruct *node, int pin, int value) ;$/;"	m	struct:wiringPiNodeStruct
+s16	swd.h	/^typedef   signed short s16;$/;"	t
+s32	swd.h	/^typedef   signed int s32;$/;"	t
+s8	swd.h	/^typedef   signed char s8;$/;"	t
+set_bit	swd.c	/^void set_bit(u32 *x, u32 bit_index, u32 b)$/;"	f
+swd_clk	swd.c	/^void swd_clk()$/;"	f
+target_mem_read	swd.c	/^u32 target_mem_read(u32 addr)$/;"	f
+target_mem_write	swd.c	/^void target_mem_write(u32 addr, u32 data)$/;"	f
+u16	swd.h	/^typedef unsigned short u16;$/;"	t
+u32	swd.h	/^typedef unsigned int u32;$/;"	t
+u8	swd.h	/^typedef unsigned char u8;$/;"	t
+wiringPiNodeStruct	locallib/include/wiringPi/wiringPi.h	/^struct wiringPiNodeStruct$/;"	s

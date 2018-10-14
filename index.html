@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script>
+var funDownload = function (content, filename) {
+
+    var eleLink = document.createElement('a');
+    eleLink.download = filename;
+    eleLink.style.display = 'none';
+
+    var blob = new Blob([content]);
+    eleLink.href = URL.createObjectURL(blob);
+
+    document.body.appendChild(eleLink);
+    eleLink.click();
+
+    document.body.removeChild(eleLink);
+};
+
+function gen_json()
+{
+	var index;
+
+	var filename = document.getElementsByName('filename')[0];
+	
+	/* filetype */
+	var filetype_elem = document.getElementsByName('select_file_type')[0];
+	var filetype_text;
+	index = filetype_elem.selectedIndex;
+	filetype_text = filetype_elem.options[index].text; 
+
+	/* class */
+	var class_elem  = document.getElementsByName('select_class')[0];
+	var class_text;
+	index = class_elem.selectedIndex;
+	class_text = class_elem.options[index].text; 
+
+	/* model */
+	var model = document.getElementsByName('model')[0];
+	//options[document.getElementById('select').selectedIndex].text;
+
+	/* interface */
+	var interface_elem = document.getElementsByName('select_interface')[0];
+	var interface_text;
+	index = interface_elem.selectedIndex;
+	interface_text = interface_elem.options[index].text; 
+
+	/* mode */
+	var mode_elem = document.getElementsByName('select_mode')[0];
+	var mode_text;
+	index = mode_elem.selectedIndex;
+	mode_text = mode_elem.options[index].text; 
+
+	/* lifetime */
+	var lifetime = document.getElementsByName('lifetime')[0];
+
+	/* flash_addr */
+	var flash_addr = document.getElementsByName('flash_addr')[0];
+
+	/* rolling_code_addr */
+	var rolling_code_addr = document.getElementsByName('rolling_code_addr')[0];
+
+	/* rolling_code_value */
+	var rolling_code_value = document.getElementsByName('rolling_code_value')[0];
+	
+	//var blob = new Blob([filename1[0].value], {type: "text/plain;charset=utf-8"});
+
+	json = "{\n";
+	json = json + "\t\"type\":"               + "\"" + filetype_text    + "\",\n";
+	json = json + "\t\"name\":"               + "\"" + filename.value   + "\",\n";
+	json = json + "\t\"class\":"              + "\"" + class_text       + "\",\n";
+	json = json + "\t\"model\":"              + "\"" + model.value      + "\",\n";
+	json = json + "\t\"interface\":"          + "\"" + interface_text   + "\",\n";
+	json = json + "\t\"mode\":"               + "\"" + mode_text        + "\",\n";
+	json = json + "\t\"lifetime\":"           + "\"" + lifetime.value   + "\",\n";
+	json = json + "\t\"flash_addr\":"         + "\"" + flash_addr.value + "\",\n";
+	json = json + "\t\"rolling_code_addr\":"  + "\"" + rolling_code_addr.value  + "\",\n";	
+	json = json + "\t\"rolling_code_value\":" + "\"" + rolling_code_value.value + "\"\n";	
+	json = json + "}";
+
+	name = filename.value.substring(0, filename.value.lastIndexOf("."))
+
+	json_name = name + ".json";
+	funDownload(json, json_name);
+}
+</script>
+</head>
+
+<body>
+
+<form name="form_file_name">
+file_name: <input type="text" id=filename name="filename" value="xxx.hex">
+</form>
+<p>
+
+<form name="form_file_type">
+<label>file_type: </label>
+<select name="select_file_type">
+  <option value="hex">hex</option>
+  <option value="bin">bin</option>
+</select>
+<p>
+
+
+<form name="form_class">
+<label>class: </label>
+<select name="select_class">
+  <option value="stm32f1x">stm32f1x</option>
+  <option value="stm32f0x">stm32f0x</option>
+  <option value="stm32f2x">stm32f2x</option>
+  <option value="stm32f3x">stm32f3x</option>
+  <option value="stm32f4x">stm32f4x</option>
+  <option value="stm32f7x">stm32f7x</option>
+  <option value="stm32l0">stm32l0</option>
+  <option value="stm32l4x">stm32l4x</option>
+  <option value="stm32h7x">stm32h7x</option>
+</select>
+<p>
+
+<form name="form_model">
+model: <input type="text" name="model" value="stm32f103c8t6">
+</form>
+<p>
+
+<form name="form_interface">
+<label>interface: </label>
+<select name="select_interface">
+  <option value="hex">swd</option>
+  <option value="bin">jtag</option>
+  <option value="bin">icsp</option>
+</select>
+<p>
+
+<form name="form_mode">
+<label>mode: </label>
+<select name="select_mode">
+  <option value="auto">auto</option>
+  <option value="manual">manual</option>
+</select>
+<p>
+
+<form name="form_lifetime">
+lifetime: <input type="text" name="lifetime" value="10000">
+</form>
+<p>
+
+<form name="form_flash_addr">
+flash_addr: <input type="text" name="flash_addr" value="0x08000000">
+</form>
+<p>
+
+<form name="form_rolling_code_addr">
+rolling_code_addr: <input type="text" name="rolling_code_addr" value="-1">
+</form>
+<p>
+
+<form name="form_rolling_code_value">
+rolling_code_value: <input type="text" name="rolling_code_value" value="-1">
+</form>
+<p>
+
+<button type="button" onclick="gen_json()">finish</button>
+
+</body>
+</html>

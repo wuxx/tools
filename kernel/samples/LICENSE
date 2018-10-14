@@ -1,0 +1,18 @@
+
+
+License:
+
+    The files in ./hello inherit a dual BSD/GPL license from 
+Linux Device Drivers, Third Edition, by Jonathan Corbet, 
+Alessanfdro Rubini, and Greg Kroah-Hartman.Copyright
+2005 O’Reilly Media, Inc., 0-596-00590-3.
+
+    The files in ./module-tools inherit the GPL from module-init-tools.
+You'll find a copy of the license in module-init-tools/COPYING.
+
+    The files in ./kobject inherit the GPL from the kernel sources.
+See GNU_GPL file for more.
+
+
+Enjoy
+/Harris Wang <wstoneh@126.com>

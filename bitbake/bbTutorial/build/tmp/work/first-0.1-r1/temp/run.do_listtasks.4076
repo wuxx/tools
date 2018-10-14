@@ -1,0 +1,8 @@
+def do_listtasks(d):
+	import sys
+	for e in bb.data.keys(d):
+		if d.getVarFlag(e, 'task', False):
+			bb.plain("%s" % e)
+
+do_listtasks(d)
+

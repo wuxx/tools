@@ -1,0 +1,3576 @@
+
+Cura_SteamEngine version DEV
+Copyright (C) 2017 Ultimaker
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+Loading /home/share/oss/Cura/resources/definitions/prusa_i3.def.json...
+Loading /home/share/oss/Cura/resources/definitions/fdmprinter.def.json...
+Loading ./cube1.stl from disk...
+Loading /home/share/oss/Cura/resources/definitions/fdmextruder.def.json...
+loading './cube1.stl' took 0.000 seconds
+Loaded from disk in 0.019s
+[WARNING]  -s mesh_position_z="0" -s center_object="false" -s speed_ironing="20" -s ironing_only_highest_layer="false" -s ironing_enabled="false" -s wireframe_nozzle_clearance="1" -s wireframe_roof_drag_along="0.8" -s wireframe_roof_fall_down="2" -s wireframe_straight_before_down="20" -s wireframe_strategy="compensate" -s wireframe_top_jump="0.6" -s wireframe_flat_delay="0.1" -s wireframe_flow_flat="100" -s wireframe_printspeed_flat="5" -s wireframe_printspeed_down="5" -s wireframe_printspeed_up="5" -s wireframe_printspeed_bottom="5" -s wireframe_height="3" -s magic_fuzzy_skin_thickness="0.3" -s magic_fuzzy_skin_enabled="false" -s support_conical_angle="30" -s support_conical_enabled="false" -s spaghetti_flow="20" -s spaghetti_max_height="2" -s spaghetti_max_infill_angle="10" -s spaghetti_infill_enabled="false" -s coasting_min_volume="0.8" -s coasting_volume="0.064" -s coasting_enable="false" -s ironing_pattern="zigzag" -s conical_overhang_enabled="false" -s draft_shield_dist="10" -s draft_shield_enabled="false" -s optimize_wall_printing_order="false" -s relative_extrusion="false" -s magic_mesh_surface_mode="normal" -s support_mesh_drop_down="true" -s mold_roof_height="0.5" -s mold_enabled="false" -s meshfix_union_all_remove_holes="false" -s meshfix_union_all="true" -s raft_base_fan_speed="0" -s support_skip_some_zags="on" -s raft_interface_fan_speed="0" -s raft_surface_fan_speed="0" -s raft_base_jerk="20" -s raft_interface_acceleration="3000" -s anti_overhang_mesh="false" -s raft_surface_acceleration="3000" -s raft_base_speed="15" -s raft_interface_speed="15" -s raft_base_line_spacing="1.6" -s raft_base_thickness="0.3" -s raft_interface_line_width="0.7" -s raft_interface_thickness="0.15" -s raft_surface_thickness="0.1" -s raft_surface_layers="2" -s support_mesh="false" -s raft_airgap="0.3" -s prime_tower_position_x="200" -s raft_margin="15" -s raft_surface_speed="20" -s z_offset_taper_layers="0" -s draft_shield_height_limitation="full" -s z_offset_layer_0="0" -s skirt_gap="3" -s adhesion_type="brim" -s extruder_prime_pos_y="0" -s prime_blob_enable="true" -s infill_mesh_order="0" -s support_minimal_diameter="3" -s support_tower_diameter="3" -s prime_tower_wipe_enabled="true" -s support_use_towers="true" -s support_roof_pattern="concentric" -s support_bottom_line_distance="0.4" -s support_roof_line_distance="0.4" -s support_interface_skip_height="0.3" -s support_roof_height="1" -s support_bottom_enable="false" -s support_roof_enable="false" -s gradual_support_infill_steps="0" -s mold_width="5" -s support_infill_sparse_thickness="0.1" -s support_join_distance="2" -s support_bottom_stair_step_width="5" -s support_bottom_stair_step_height="0.3" -s support_xy_overrides_z="z_overrides_xy" -s support_xy_distance="0.7" -s wireframe_roof_inset="3" -s dual_pre_wipe="true" -s support_line_distance="2.66" -s support_pattern="zigzag" -s support_angle="30" -s support_type="everywhere" -s support_bottom_extruder_nr="0" -s support_roof_extruder_nr="0" -s infill_hollow="false" -s raft_surface_line_spacing="0.4" -s skirt_line_count="1" -s support_extruder_nr_layer_0="0" -s support_infill_extruder_nr="0" -s retraction_hop_enabled="false" -s prime_tower_flow="100" -s sub_div_rad_add="0.4" -s alternate_carve_order="true" -s machine_max_feedrate_x="500" -s ironing_inset="0.35" -s gradual_support_infill_step_height="1" -s acceleration_roofing="3000" -s infill_extruder_nr="-1" -s material_standby_temperature="150" -s coasting_speed="90" -s infill_pattern="grid" -s material_extrusion_cool_down_speed="0.7" -s acceleration_topbottom="3000" -s skin_outline_count="1" -s infill_mesh="false" -s print_sequence="all_at_once" -s default_material_print_temperature="210" -s retraction_min_travel="1.5" -s z_seam_y="100" -s xy_offset_layer_0="0" -s material_flow="100" -s skirt_brim_speed="30" -s carve_multiple_volumes="true" -s xy_offset="0" -s skin_angles="[ ]" -s jerk_infill="20" -s cool_fan_speed_0="0" -s ironing_flow="10" -s fill_outline_gaps="false" -s jerk_support_bottom="20" -s support_top_distance="0.1" -s fill_perimeter_gaps="everywhere" -s raft_base_line_width="0.8" -s z_seam_x="100" -s travel_compensate_overlapping_walls_x_enabled="true" -s mold_angle="40" -s skin_overlap_mm="0.02" -s speed_equalize_flow_enabled="false" -s z_seam_corner="z_seam_corner_inner" -s raft_interface_jerk="20" -s skin_line_width="0.4" -s smooth_spiralized_contours="true" -s wall_0_inset="0" -s support_line_width="0.4" -s top_bottom_pattern="lines" -s cool_fan_speed_max="100" -s wall_0_wipe_dist="0.2" -s raft_surface_line_width="0.4" -s wall_line_width_x="0.4" -s wall_line_count="2" -s cool_min_layer_time="5" -s machine_gcode_flavor="RepRap (Marlin/Sprinter)" -s prime_tower_line_width="0.4" -s bottom_layers="6" -s magic_fuzzy_skin_point_dist="0.8" -s retraction_count_max="90" -s cool_fan_enabled="true" -s cool_fan_full_layer="2" -s speed_travel="120" -s machine_shape="rectangular" -s z_seam_relative="false" -s jerk_skirt_brim="20" -s roofing_line_width="0.4" -s acceleration_ironing="3000" -s extruder_prime_pos_z="0" -s skin_alternate_rotation="false" -s acceleration_enabled="false" -s wall_line_width_0="0.4" -s top_bottom_pattern_0="lines" -s machine_center_is_zero="false" -s retraction_combing="all" -s raft_interface_line_spacing="0.9" -s infill_overlap_mm="0.04" -s outer_inset_first="false" -s wireframe_flow_connection="100" -s layer_start_y="0" -s material_initial_print_temperature="200" -s raft_base_acceleration="3000" -s switch_extruder_prime_speed="20" -s acceleration_infill="3000" -s acceleration_print_layer_0="3000" -s machine_filament_park_distance="16" -s machine_nozzle_head_distance="3" -s machine_acceleration="4000" -s brim_line_count="20" -s skirt_brim_line_width="0.4" -s infill_line_distance="2" -s jerk_support_infill="20" -s brim_outside_only="true" -s wall_x_extruder_nr="-1" -s spaghetti_inset="0.2" -s support_connect_zigzags="true" -s machine_height="200" -s machine_nozzle_tip_outer_diameter="1" -s ironing_line_spacing="0.1" -s magic_spiralize="false" -s infill_wipe_dist="0.04" -s spaghetti_infill_extra_volume="0" -s machine_min_cool_heat_time_window="50" -s machine_nozzle_expansion_angle="45" -s machine_max_acceleration_z="100" -s top_bottom_extruder_nr="-1" -s material_diameter="1.75" -s meshfix_extensive_stitching="false" -s infill_line_width="0.4" -s multiple_mesh_overlap="0.15" -s raft_surface_jerk="20" -s acceleration_travel="5000" -s wireframe_up_half_speed="0.3" -s speed_topbottom="30" -s machine_start_gcode="G21 ;metric values
+G90 ;absolute positioning
+M82 ;set extruder to absolute mode
+M107 ;start with the fan off
+G28 X0 Y0 ;move X/Y to min endstops
+G28 Z0 ;move Z to min endstops
+G1 Z15.0 F9000 ;move the platform down 15mm
+G92 E0 ;zero the extruded length
+G1 F200 E3 ;extrude 3mm of feed stock
+G92 E0 ;zero the extruded length again
+G1 F9000
+;Put printing message on LCD screen
+M117 Printing..." -s machine_nozzle_cool_down_speed="2" -s roofing_pattern="lines" -s material_print_temp_wait="true" -s support_conical_min_width="5" -s layer_height_0="0.3" -s machine_nozzle_id="unknown" -s speed_equalize_flow_max="150" -s support_bottom_height="1" -s machine_max_acceleration_e="10000" -s z_seam_type="sharpest_corner" -s machine_name="Prusa i3" -s mesh_position_x="0" -s meshfix_keep_open_polygons="false" -s gradual_infill_step_height="1.5" -s top_layers="8" -s machine_width="200" -s initial_layer_line_width_factor="100" -s jerk_travel_layer_0="20" -s cool_min_layer_time_fan_speed_max="10" -s material_flow_temp_graph="[[3.5,200],[7.0,240]]" -s wall_0_extruder_nr="-1" -s retraction_hop_after_extruder_switch="true" -s wireframe_bottom_delay="0" -s layer_0_z_overlap="0.22" -s gantry_height="55" -s switch_extruder_retraction_speed="20" -s roofing_extruder_nr="-1" -s machine_heated_bed="true" -s bottom_skin_expand_distance="2.8" -s machine_max_jerk_xy="20" -s wireframe_drag_along="0.6" -s roofing_layer_count="0" -s cutting_mesh="false" -s ooze_shield_dist="2" -s machine_end_gcode="M104 S0 ;extruder heater off
+M140 S0 ;heated bed heater off (if you have it)
+G91 ;relative positioning
+G1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+G1 Z+0.5 E-5 X-20 Y-20 F9000 ;move Z up a bit and retract filament even more
+G28 X0 Y0 ;move X/Y to min endstops, so the head is out of the way
+M84 ;steppers off
+G90 ;absolute positioning" -s machine_heat_zone_length="16" -s speed_prime_tower="60" -s machine_nozzle_size="0.4" -s roofing_angles="[ ]" -s alternate_extra_perimeter="false" -s machine_nozzle_temp_enabled="true" -s machine_show_variants="false" -s machine_max_acceleration_y="9000" -s support_roof_line_width="0.4" -s prime_tower_purge_volume="0" -s machine_max_feedrate_y="500" -s layer_height="0.1" -s speed_print_layer_0="30" -s machine_extruder_count="1" -s acceleration_travel_layer_0="3000" -s machine_max_feedrate_z="5" -s acceleration_skirt_brim="3000" -s zig_zaggify_infill="true" -s machine_max_jerk_z="0.4" -s wireframe_top_delay="0" -s speed_support_roof="40" -s machine_depth="200" -s material_bed_temp_prepend="true" -s travel_compensate_overlapping_walls_0_enabled="true" -s machine_max_feedrate_e="2.99792e+11" -s cross_infill_apply_pockets_alternatingly="true" -s infill_angles="[ ]" -s machine_minimum_feedrate="0" -s infill_sparse_thickness="0.1" -s support_tower_roof_angle="65" -s gradual_infill_steps="0" -s infill_before_walls="true" -s ooze_shield_enabled="false" -s min_infill_area="0" -s adhesion_extruder_nr="0" -s top_skin_preshrink="0" -s support_xy_distance_overhang="0.2" -s bottom_skin_preshrink="0" -s top_skin_expand_distance="2.8" -s speed_travel_layer_0="60" -s min_skin_width_for_expansion="2.24" -s material_flow_dependent_temperature="false" -s draft_shield_height="10" -s support_zag_skip_count="5" -s jerk_topbottom="20" -s material_print_temperature="210" -s extruder_prime_pos_abs="false" -s material_print_temperature_layer_0="215" -s cross_infill_pocket_size="2" -s material_final_print_temperature="195" -s mesh_position_y="0" -s material_bed_temp_wait="true" -s retraction_extra_prime_amount="0" -s machine_max_acceleration_x="9000" -s travel_avoid_distance="0.625" -s jerk_ironing="20" -s retraction_enable="true" -s retract_at_layer_change="false" -s retraction_amount="6.5" -s ooze_shield_angle="60" -s extruder_prime_pos_x="0" -s machine_nozzle_heat_up_speed="2" -s retraction_retract_speed="25" -s retraction_prime_speed="25" -s mesh_rotation_matrix="[[1,0,0], [0,1,0], [0,0,1]]" -s acceleration_wall_0="3000" -s retraction_extrusion_window="4.5" -s wireframe_enabled="false" -s cool_fan_speed_min="100" -s prime_tower_size="20" -s switch_extruder_retraction_amount="20" -s prime_tower_wall_thickness="2" -s speed_infill="60" -s speed_wall_0="30" -s speed_wall_x="60" -s layer_start_x="0" -s skin_no_small_gaps_heuristic="true" -s speed_roofing="25" -s acceleration_support_bottom="3000" -s support_enable="1" -s conical_overhang_angle="50" -s raft_smoothing="5" -s skirt_brim_minimal_length="250" -s material_bed_temperature="60" -s speed_support_infill="60" -s speed_support_bottom="40" -s max_feedrate_z_override="0" -s support_bottom_pattern="concentric" -s cool_min_speed="10" -s support_bottom_line_width="0.4" -s speed_slowdown_layers="2" -s acceleration_wall_x="3000" -s acceleration_prime_tower="3000" -s acceleration_support_infill="3000" -s wireframe_roof_outer_delay="0.2" -s prime_tower_position_y="200" -s prime_tower_enable="false" -s acceleration_support_roof="3000" -s jerk_enabled="false" -s machine_max_jerk_e="5" -s material_bed_temperature_layer_0="60" -s jerk_wall_0="20" -s jerk_wall_x="20" -s spaghetti_infill_stepped="true" -s support_offset="0.2" -s support_bottom_distance="0.1" -s jerk_roofing="20" -s jerk_travel="30" -s material_print_temp_prepend="true" -s jerk_print_layer_0="20" -s jerk_support_roof="20" -s travel_retract_before_outer_wall="false" -s travel_avoid_other_parts="true" -s jerk_prime_tower="20" -s start_layers_at_same_position="false" -s wireframe_fall_down="0.5" -s retraction_hop_only_when_collides="false" -s machine_use_extruder_offset_to_offset_coords="true" -s retraction_hop="1" -s cool_lift_head="false" -g -e0 -s extruder_prime_pos_y="0" -s extruder_prime_pos_z="0" -s machine_extruder_end_pos_y="0" -s machine_extruder_end_pos_x="0" -s machine_extruder_end_pos_abs="false" -s machine_nozzle_size="0.4" -s machine_nozzle_offset_x="0" -s machine_nozzle_id="unknown" -s extruder_nr="0" -s machine_nozzle_offset_y="0" -s machine_extruder_start_pos_abs="false" -s machine_extruder_start_pos_x="0" -s extruder_prime_pos_x="0" -s machine_extruder_start_pos_y="0" -e0 -l "0"
+Progress: start accomplished in 0.000s
+Starting slice...
+Slicing model...
+slice of mesh took 0.003 seconds
+slice make polygons took 0.008 seconds
+Progress:slice:1:1 	0.018531%
+Progress: slice accomplished in 0.011s
+Starting layerparts...
+Progress:layerparts:1:1 	0.023922%
+Progress: layerparts accomplished in 0.008s
+Starting inset+skin...
+[DEBUG] Processing insets for layer 0 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 1 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 2 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 3 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 4 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 5 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 6 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 7 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 8 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 9 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 10 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 11 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 12 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 13 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 14 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 15 of 500
+Progress:inset+skin:0:100 	0.023922%
+[DEBUG] Processing insets for layer 16 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 17 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 18 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 19 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 20 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 21 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 22 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 23 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 24 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 25 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 26 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 27 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 28 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 29 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 30 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 31 of 500
+Progress:inset+skin:1:100 	0.026447%
+[DEBUG] Processing insets for layer 32 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 33 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 34 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 35 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 36 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 37 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 38 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 39 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 40 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 41 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 42 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 43 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 44 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 45 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 46 of 500
+Progress:inset+skin:2:100 	0.028973%
+[DEBUG] Processing insets for layer 47 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 48 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 49 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 50 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 51 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 52 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 53 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 54 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 55 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 56 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 57 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 58 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 59 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 60 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 61 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 62 of 500
+Progress:inset+skin:3:100 	0.031498%
+[DEBUG] Processing insets for layer 63 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 64 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 65 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 66 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 67 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 68 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 69 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 70 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 71 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 72 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 73 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 74 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 75 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 76 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 77 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 78 of 500
+Progress:inset+skin:4:100 	0.034024%
+[DEBUG] Processing insets for layer 79 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 80 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 81 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 82 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 83 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 84 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 85 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 86 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 87 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 88 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 89 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 90 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 91 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 92 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 93 of 500
+Progress:inset+skin:5:100 	0.036549%
+[DEBUG] Processing insets for layer 94 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 95 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 96 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 97 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 98 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 99 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 100 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 101 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 102 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 103 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 104 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 105 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 106 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 107 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 108 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 109 of 500
+Progress:inset+skin:6:100 	0.039075%
+[DEBUG] Processing insets for layer 110 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 111 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 112 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 113 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 114 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 115 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 116 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 117 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 118 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 119 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 120 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 121 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 122 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 123 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 124 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 125 of 500
+Progress:inset+skin:7:100 	0.041601%
+[DEBUG] Processing insets for layer 126 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 127 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 128 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 129 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 130 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 131 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 132 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 133 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 134 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 135 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 136 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 137 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 138 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 139 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 140 of 500
+Progress:inset+skin:8:100 	0.044126%
+[DEBUG] Processing insets for layer 141 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 142 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 143 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 144 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 145 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 146 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 147 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 148 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 149 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 150 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 151 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 152 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 153 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 154 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 155 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 156 of 500
+Progress:inset+skin:9:100 	0.046652%
+[DEBUG] Processing insets for layer 157 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 158 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 159 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 160 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 161 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 162 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 163 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 164 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 165 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 166 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 167 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 168 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 169 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 170 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 171 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 172 of 500
+Progress:inset+skin:10:100 	0.049177%
+[DEBUG] Processing insets for layer 173 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 174 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 175 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 176 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 177 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 178 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 179 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 180 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 181 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 182 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 183 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 184 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 185 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 186 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 187 of 500
+Progress:inset+skin:11:100 	0.051703%
+[DEBUG] Processing insets for layer 188 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 189 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 190 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 191 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 192 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 193 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 194 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 195 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 196 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 197 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 198 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 199 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 200 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 201 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 202 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 203 of 500
+Progress:inset+skin:12:100 	0.054228%
+[DEBUG] Processing insets for layer 204 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 205 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 206 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 207 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 208 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 209 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 210 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 211 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 212 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 213 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 214 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 215 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 216 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 217 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 218 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 219 of 500
+Progress:inset+skin:13:100 	0.056754%
+[DEBUG] Processing insets for layer 220 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 221 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 222 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 223 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 224 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 225 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 226 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 227 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 228 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 229 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 230 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 231 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 232 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 233 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 234 of 500
+Progress:inset+skin:14:100 	0.059279%
+[DEBUG] Processing insets for layer 235 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 236 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 237 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 238 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 239 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 240 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 241 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 242 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 243 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 244 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 245 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 246 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 247 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 248 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 249 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 250 of 500
+Progress:inset+skin:15:100 	0.061805%
+[DEBUG] Processing insets for layer 251 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 252 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 253 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 254 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 255 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 256 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 257 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 258 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 259 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 260 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 261 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 262 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 263 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 264 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 265 of 500
+Progress:inset+skin:16:100 	0.064330%
+[DEBUG] Processing insets for layer 266 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 267 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 268 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 269 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 270 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 271 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 272 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 273 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 274 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 275 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 276 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 277 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 278 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 279 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 280 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 281 of 500
+Progress:inset+skin:17:100 	0.066856%
+[DEBUG] Processing insets for layer 282 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 283 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 284 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 285 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 286 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 287 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 288 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 289 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 290 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 291 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 292 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 293 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 294 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 295 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 296 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 297 of 500
+Progress:inset+skin:18:100 	0.069381%
+[DEBUG] Processing insets for layer 298 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 299 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 300 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 301 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 302 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 303 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 304 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 305 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 306 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 307 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 308 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 309 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 310 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 311 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 312 of 500
+Progress:inset+skin:19:100 	0.071907%
+[DEBUG] Processing insets for layer 313 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 314 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 315 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 316 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 317 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 318 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 319 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 320 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 321 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 322 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 323 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 324 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 325 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 326 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 327 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 328 of 500
+Progress:inset+skin:20:100 	0.074432%
+[DEBUG] Processing insets for layer 329 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 330 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 331 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 332 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 333 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 334 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 335 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 336 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 337 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 338 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 339 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 340 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 341 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 342 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 343 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 344 of 500
+Progress:inset+skin:21:100 	0.076958%
+[DEBUG] Processing insets for layer 345 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 346 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 347 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 348 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 349 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 350 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 351 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 352 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 353 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 354 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 355 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 356 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 357 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 358 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 359 of 500
+Progress:inset+skin:22:100 	0.079483%
+[DEBUG] Processing insets for layer 360 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 361 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 362 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 363 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 364 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 365 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 366 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 367 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 368 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 369 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 370 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 371 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 372 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 373 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 374 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 375 of 500
+Progress:inset+skin:23:100 	0.082009%
+[DEBUG] Processing insets for layer 376 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 377 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 378 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 379 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 380 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 381 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 382 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 383 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 384 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 385 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 386 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 387 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 388 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 389 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 390 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 391 of 500
+Progress:inset+skin:24:100 	0.084534%
+[DEBUG] Processing insets for layer 392 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 393 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 394 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 395 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 396 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 397 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 398 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 399 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 400 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 401 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 402 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 403 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 404 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 405 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 406 of 500
+Progress:inset+skin:25:100 	0.087060%
+[DEBUG] Processing insets for layer 407 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 408 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 409 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 410 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 411 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 412 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 413 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 414 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 415 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 416 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 417 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 418 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 419 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 420 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 421 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 422 of 500
+Progress:inset+skin:26:100 	0.089585%
+[DEBUG] Processing insets for layer 423 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 424 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 425 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 426 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 427 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 428 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 429 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 430 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 431 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 432 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 433 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 434 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 435 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 436 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 437 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 438 of 500
+Progress:inset+skin:27:100 	0.092111%
+[DEBUG] Processing insets for layer 439 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 440 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 441 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 442 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 443 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 444 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 445 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 446 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 447 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 448 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 449 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 450 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 451 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 452 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 453 of 500
+Progress:inset+skin:28:100 	0.094636%
+[DEBUG] Processing insets for layer 454 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 455 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 456 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 457 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 458 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 459 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 460 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 461 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 462 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 463 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 464 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 465 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 466 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 467 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 468 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 469 of 500
+Progress:inset+skin:29:100 	0.097162%
+[DEBUG] Processing insets for layer 470 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 471 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 472 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 473 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 474 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 475 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 476 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 477 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 478 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 479 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 480 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 481 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 482 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 483 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 484 of 500
+Progress:inset+skin:30:100 	0.099687%
+[DEBUG] Processing insets for layer 485 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 486 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 487 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 488 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 489 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 490 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 491 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 492 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 493 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 494 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 495 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 496 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 497 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 498 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing insets for layer 499 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing skins and infill layer 0 of 500
+Progress:inset+skin:31:100 	0.102213%
+[DEBUG] Processing skins and infill layer 1 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 2 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 3 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 4 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 5 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 6 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 7 of 500
+Progress:inset+skin:32:100 	0.104738%
+[DEBUG] Processing skins and infill layer 8 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 9 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 10 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 11 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 12 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 13 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 14 of 500
+Progress:inset+skin:33:100 	0.107264%
+[DEBUG] Processing skins and infill layer 15 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 16 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 17 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 18 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 19 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 20 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 21 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 22 of 500
+Progress:inset+skin:34:100 	0.109789%
+[DEBUG] Processing skins and infill layer 23 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 24 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 25 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 26 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 27 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 28 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 29 of 500
+Progress:inset+skin:35:100 	0.112315%
+[DEBUG] Processing skins and infill layer 30 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 31 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 32 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 33 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 34 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 35 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 36 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 37 of 500
+Progress:inset+skin:36:100 	0.114840%
+[DEBUG] Processing skins and infill layer 38 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 39 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 40 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 41 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 42 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 43 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 44 of 500
+Progress:inset+skin:37:100 	0.117366%
+[DEBUG] Processing skins and infill layer 45 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 46 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 47 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 48 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 49 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 50 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 51 of 500
+Progress:inset+skin:38:100 	0.119891%
+[DEBUG] Processing skins and infill layer 52 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 53 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 54 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 55 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 56 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 57 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 58 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 59 of 500
+Progress:inset+skin:39:100 	0.122417%
+[DEBUG] Processing skins and infill layer 60 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 61 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 62 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 63 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 64 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 65 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 66 of 500
+Progress:inset+skin:40:100 	0.124943%
+[DEBUG] Processing skins and infill layer 67 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 68 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 69 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 70 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 71 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 72 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 73 of 500
+Progress:inset+skin:41:100 	0.127468%
+[DEBUG] Processing skins and infill layer 74 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 75 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 76 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 77 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 78 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 79 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 80 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 81 of 500
+Progress:inset+skin:42:100 	0.129994%
+[DEBUG] Processing skins and infill layer 82 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 83 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 84 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 85 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 86 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 87 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 88 of 500
+Progress:inset+skin:43:100 	0.132519%
+[DEBUG] Processing skins and infill layer 89 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 90 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 91 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 92 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 93 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 94 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 95 of 500
+Progress:inset+skin:44:100 	0.135045%
+[DEBUG] Processing skins and infill layer 96 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 97 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 98 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 99 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 100 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 101 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 102 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 103 of 500
+Progress:inset+skin:45:100 	0.137570%
+[DEBUG] Processing skins and infill layer 104 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 105 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 106 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 107 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 108 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 109 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 110 of 500
+Progress:inset+skin:46:100 	0.140096%
+[DEBUG] Processing skins and infill layer 111 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 112 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 113 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 114 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 115 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 116 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 117 of 500
+Progress:inset+skin:47:100 	0.142621%
+[DEBUG] Processing skins and infill layer 118 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 119 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 120 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 121 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 122 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 123 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 124 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 125 of 500
+Progress:inset+skin:48:100 	0.145147%
+[DEBUG] Processing skins and infill layer 126 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 127 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 128 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 129 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 130 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 131 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 132 of 500
+Progress:inset+skin:49:100 	0.147672%
+[DEBUG] Processing skins and infill layer 133 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 134 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 135 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 136 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 137 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 138 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 139 of 500
+Progress:inset+skin:50:100 	0.150198%
+[DEBUG] Processing skins and infill layer 140 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 141 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 142 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 143 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 144 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 145 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 146 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 147 of 500
+Progress:inset+skin:51:100 	0.152723%
+[DEBUG] Processing skins and infill layer 148 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 149 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 150 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 151 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 152 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 153 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 154 of 500
+Progress:inset+skin:52:100 	0.155249%
+[DEBUG] Processing skins and infill layer 155 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 156 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 157 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 158 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 159 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 160 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 161 of 500
+Progress:inset+skin:53:100 	0.157774%
+[DEBUG] Processing skins and infill layer 162 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 163 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 164 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 165 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 166 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 167 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 168 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 169 of 500
+Progress:inset+skin:54:100 	0.160300%
+[DEBUG] Processing skins and infill layer 170 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 171 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 172 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 173 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 174 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 175 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 176 of 500
+Progress:inset+skin:55:100 	0.162825%
+[DEBUG] Processing skins and infill layer 177 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 178 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 179 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 180 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 181 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 182 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 183 of 500
+Progress:inset+skin:56:100 	0.165351%
+[DEBUG] Processing skins and infill layer 184 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 185 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 186 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 187 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 188 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 189 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 190 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 191 of 500
+Progress:inset+skin:57:100 	0.167876%
+[DEBUG] Processing skins and infill layer 192 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 193 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 194 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 195 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 196 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 197 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 198 of 500
+Progress:inset+skin:58:100 	0.170402%
+[DEBUG] Processing skins and infill layer 199 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 200 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 201 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 202 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 203 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 204 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 205 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 206 of 500
+Progress:inset+skin:59:100 	0.172927%
+[DEBUG] Processing skins and infill layer 207 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 208 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 209 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 210 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 211 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 212 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 213 of 500
+Progress:inset+skin:60:100 	0.175453%
+[DEBUG] Processing skins and infill layer 214 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 215 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 216 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 217 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 218 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 219 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 220 of 500
+Progress:inset+skin:61:100 	0.177978%
+[DEBUG] Processing skins and infill layer 221 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 222 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 223 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 224 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 225 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 226 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 227 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 228 of 500
+Progress:inset+skin:62:100 	0.180504%
+[DEBUG] Processing skins and infill layer 229 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 230 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 231 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 232 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 233 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 234 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 235 of 500
+Progress:inset+skin:63:100 	0.183029%
+[DEBUG] Processing skins and infill layer 236 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 237 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 238 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 239 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 240 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 241 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 242 of 500
+Progress:inset+skin:64:100 	0.185555%
+[DEBUG] Processing skins and infill layer 243 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 244 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 245 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 246 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 247 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 248 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 249 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 250 of 500
+Progress:inset+skin:65:100 	0.188080%
+[DEBUG] Processing skins and infill layer 251 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 252 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 253 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 254 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 255 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 256 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 257 of 500
+Progress:inset+skin:66:100 	0.190606%
+[DEBUG] Processing skins and infill layer 258 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 259 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 260 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 261 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 262 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 263 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 264 of 500
+Progress:inset+skin:67:100 	0.193131%
+[DEBUG] Processing skins and infill layer 265 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 266 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 267 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 268 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 269 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 270 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 271 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 272 of 500
+Progress:inset+skin:68:100 	0.195657%
+[DEBUG] Processing skins and infill layer 273 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 274 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 275 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 276 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 277 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 278 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 279 of 500
+Progress:inset+skin:69:100 	0.198182%
+[DEBUG] Processing skins and infill layer 280 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 281 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 282 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 283 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 284 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 285 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 286 of 500
+Progress:inset+skin:70:100 	0.200708%
+[DEBUG] Processing skins and infill layer 287 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 288 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 289 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 290 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 291 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 292 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 293 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 294 of 500
+Progress:inset+skin:71:100 	0.203233%
+[DEBUG] Processing skins and infill layer 295 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 296 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 297 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 298 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 299 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 300 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 301 of 500
+Progress:inset+skin:72:100 	0.205759%
+[DEBUG] Processing skins and infill layer 302 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 303 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 304 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 305 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 306 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 307 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 308 of 500
+Progress:inset+skin:73:100 	0.208284%
+[DEBUG] Processing skins and infill layer 309 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 310 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 311 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 312 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 313 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 314 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 315 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 316 of 500
+Progress:inset+skin:74:100 	0.210810%
+[DEBUG] Processing skins and infill layer 317 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 318 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 319 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 320 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 321 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 322 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 323 of 500
+Progress:inset+skin:75:100 	0.213336%
+[DEBUG] Processing skins and infill layer 324 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 325 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 326 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 327 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 328 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 329 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 330 of 500
+Progress:inset+skin:76:100 	0.215861%
+[DEBUG] Processing skins and infill layer 331 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 332 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 333 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 334 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 335 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 336 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 337 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 338 of 500
+Progress:inset+skin:77:100 	0.218387%
+[DEBUG] Processing skins and infill layer 339 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 340 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 341 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 342 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 343 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 344 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 345 of 500
+Progress:inset+skin:78:100 	0.220912%
+[DEBUG] Processing skins and infill layer 346 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 347 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 348 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 349 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 350 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 351 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 352 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 353 of 500
+Progress:inset+skin:79:100 	0.223438%
+[DEBUG] Processing skins and infill layer 354 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 355 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 356 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 357 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 358 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 359 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 360 of 500
+Progress:inset+skin:80:100 	0.225963%
+[DEBUG] Processing skins and infill layer 361 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 362 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 363 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 364 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 365 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 366 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 367 of 500
+Progress:inset+skin:81:100 	0.228489%
+[DEBUG] Processing skins and infill layer 368 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 369 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 370 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 371 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 372 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 373 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 374 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 375 of 500
+Progress:inset+skin:82:100 	0.231014%
+[DEBUG] Processing skins and infill layer 376 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 377 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 378 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 379 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 380 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 381 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 382 of 500
+Progress:inset+skin:83:100 	0.233540%
+[DEBUG] Processing skins and infill layer 383 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 384 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 385 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 386 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 387 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 388 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 389 of 500
+Progress:inset+skin:84:100 	0.236065%
+[DEBUG] Processing skins and infill layer 390 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 391 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 392 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 393 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 394 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 395 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 396 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 397 of 500
+Progress:inset+skin:85:100 	0.238591%
+[DEBUG] Processing skins and infill layer 398 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 399 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 400 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 401 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 402 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 403 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 404 of 500
+Progress:inset+skin:86:100 	0.241116%
+[DEBUG] Processing skins and infill layer 405 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 406 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 407 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 408 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 409 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 410 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 411 of 500
+Progress:inset+skin:87:100 	0.243642%
+[DEBUG] Processing skins and infill layer 412 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 413 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 414 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 415 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 416 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 417 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 418 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 419 of 500
+Progress:inset+skin:88:100 	0.246167%
+[DEBUG] Processing skins and infill layer 420 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 421 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 422 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 423 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 424 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 425 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 426 of 500
+Progress:inset+skin:89:100 	0.248693%
+[DEBUG] Processing skins and infill layer 427 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 428 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 429 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 430 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 431 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 432 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 433 of 500
+Progress:inset+skin:90:100 	0.251218%
+[DEBUG] Processing skins and infill layer 434 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 435 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 436 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 437 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 438 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 439 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 440 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 441 of 500
+Progress:inset+skin:91:100 	0.253744%
+[DEBUG] Processing skins and infill layer 442 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 443 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 444 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 445 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 446 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 447 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 448 of 500
+Progress:inset+skin:92:100 	0.256269%
+[DEBUG] Processing skins and infill layer 449 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 450 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 451 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 452 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 453 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 454 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 455 of 500
+Progress:inset+skin:93:100 	0.258795%
+[DEBUG] Processing skins and infill layer 456 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 457 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 458 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 459 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 460 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 461 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 462 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 463 of 500
+Progress:inset+skin:94:100 	0.261320%
+[DEBUG] Processing skins and infill layer 464 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 465 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 466 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 467 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 468 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 469 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 470 of 500
+Progress:inset+skin:95:100 	0.263846%
+[DEBUG] Processing skins and infill layer 471 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 472 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 473 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 474 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 475 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 476 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 477 of 500
+Progress:inset+skin:96:100 	0.266371%
+[DEBUG] Processing skins and infill layer 478 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 479 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 480 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 481 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 482 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 483 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 484 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 485 of 500
+Progress:inset+skin:97:100 	0.268897%
+[DEBUG] Processing skins and infill layer 486 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 487 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 488 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 489 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 490 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 491 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 492 of 500
+Progress:inset+skin:98:100 	0.271422%
+[DEBUG] Processing skins and infill layer 493 of 500
+Progress:inset+skin:99:100 	0.273948%
+[DEBUG] Processing skins and infill layer 494 of 500
+Progress:inset+skin:99:100 	0.273948%
+[DEBUG] Processing skins and infill layer 495 of 500
+Progress:inset+skin:99:100 	0.273948%
+[DEBUG] Processing skins and infill layer 496 of 500
+Progress:inset+skin:99:100 	0.273948%
+[DEBUG] Processing skins and infill layer 497 of 500
+Progress:inset+skin:99:100 	0.273948%
+[DEBUG] Processing skins and infill layer 498 of 500
+Progress:inset+skin:99:100 	0.273948%
+[DEBUG] Processing skins and infill layer 499 of 500
+Progress:inset+skin:99:100 	0.273948%
+Progress:inset+skin:1:1 	0.276473%
+Layer count: 500
+Progress: inset+skin accomplished in 0.395s
+Starting support...
+Progress:support:3:500 	0.277550%
+Progress:support:4:500 	0.277909%
+Progress:support:5:500 	0.278267%
+Progress:support:6:500 	0.278626%
+Progress:support:7:500 	0.278985%
+Progress:support:8:500 	0.279344%
+Progress:support:9:500 	0.279702%
+Progress:support:10:500 	0.280061%
+Progress:support:11:500 	0.280420%
+Progress:support:12:500 	0.280779%
+Progress:support:13:500 	0.281138%
+Progress:support:14:500 	0.281496%
+Progress:support:15:500 	0.281855%
+Progress:support:16:500 	0.282214%
+Progress:support:17:500 	0.282573%
+Progress:support:18:500 	0.282932%
+Progress:support:19:500 	0.283290%
+Progress:support:20:500 	0.283649%
+Progress:support:21:500 	0.284008%
+Progress:support:22:500 	0.284367%
+Progress:support:23:500 	0.284725%
+Progress:support:24:500 	0.285084%
+Progress:support:25:500 	0.285443%
+Progress:support:26:500 	0.285802%
+Progress:support:27:500 	0.286161%
+Progress:support:28:500 	0.286519%
+Progress:support:29:500 	0.286878%
+Progress:support:30:500 	0.287237%
+Progress:support:31:500 	0.287596%
+Progress:support:32:500 	0.287955%
+Progress:support:33:500 	0.288313%
+Progress:support:34:500 	0.288672%
+Progress:support:35:500 	0.289031%
+Progress:support:36:500 	0.289390%
+Progress:support:37:500 	0.289748%
+Progress:support:38:500 	0.290107%
+Progress:support:39:500 	0.290466%
+Progress:support:40:500 	0.290825%
+Progress:support:41:500 	0.291184%
+Progress:support:42:500 	0.291542%
+Progress:support:43:500 	0.291901%
+Progress:support:44:500 	0.292260%
+Progress:support:45:500 	0.292619%
+Progress:support:46:500 	0.292978%
+Progress:support:47:500 	0.293336%
+Progress:support:48:500 	0.293695%
+Progress:support:49:500 	0.294054%
+Progress:support:50:500 	0.294413%
+Progress:support:51:500 	0.294771%
+Progress:support:52:500 	0.295130%
+Progress:support:53:500 	0.295489%
+Progress:support:54:500 	0.295848%
+Progress:support:55:500 	0.296207%
+Progress:support:56:500 	0.296565%
+Progress:support:57:500 	0.296924%
+Progress:support:58:500 	0.297283%
+Progress:support:59:500 	0.297642%
+Progress:support:60:500 	0.298001%
+Progress:support:61:500 	0.298359%
+Progress:support:62:500 	0.298718%
+Progress:support:63:500 	0.299077%
+Progress:support:64:500 	0.299436%
+Progress:support:65:500 	0.299794%
+Progress:support:66:500 	0.300153%
+Progress:support:67:500 	0.300512%
+Progress:support:68:500 	0.300871%
+Progress:support:69:500 	0.301230%
+Progress:support:70:500 	0.301588%
+Progress:support:71:500 	0.301947%
+Progress:support:72:500 	0.302306%
+Progress:support:73:500 	0.302665%
+Progress:support:74:500 	0.303024%
+Progress:support:75:500 	0.303382%
+Progress:support:76:500 	0.303741%
+Progress:support:77:500 	0.304100%
+Progress:support:78:500 	0.304459%
+Progress:support:79:500 	0.304818%
+Progress:support:80:500 	0.305176%
+Progress:support:81:500 	0.305535%
+Progress:support:82:500 	0.305894%
+Progress:support:83:500 	0.306253%
+Progress:support:84:500 	0.306611%
+Progress:support:85:500 	0.306970%
+Progress:support:86:500 	0.307329%
+Progress:support:87:500 	0.307688%
+Progress:support:88:500 	0.308047%
+Progress:support:89:500 	0.308405%
+Progress:support:90:500 	0.308764%
+Progress:support:91:500 	0.309123%
+Progress:support:92:500 	0.309482%
+Progress:support:93:500 	0.309841%
+Progress:support:94:500 	0.310199%
+Progress:support:95:500 	0.310558%
+Progress:support:96:500 	0.310917%
+Progress:support:97:500 	0.311276%
+Progress:support:98:500 	0.311634%
+Progress:support:99:500 	0.311993%
+Progress:support:100:500 	0.312352%
+Progress:support:101:500 	0.312711%
+Progress:support:102:500 	0.313070%
+Progress:support:103:500 	0.313428%
+Progress:support:104:500 	0.313787%
+Progress:support:105:500 	0.314146%
+Progress:support:106:500 	0.314505%
+Progress:support:107:500 	0.314864%
+Progress:support:108:500 	0.315222%
+Progress:support:109:500 	0.315581%
+Progress:support:110:500 	0.315940%
+Progress:support:111:500 	0.316299%
+Progress:support:112:500 	0.316657%
+Progress:support:113:500 	0.317016%
+Progress:support:114:500 	0.317375%
+Progress:support:115:500 	0.317734%
+Progress:support:116:500 	0.318093%
+Progress:support:117:500 	0.318451%
+Progress:support:118:500 	0.318810%
+Progress:support:119:500 	0.319169%
+Progress:support:120:500 	0.319528%
+Progress:support:121:500 	0.319887%
+Progress:support:122:500 	0.320245%
+Progress:support:123:500 	0.320604%
+Progress:support:124:500 	0.320963%
+Progress:support:125:500 	0.321322%
+Progress:support:126:500 	0.321680%
+Progress:support:127:500 	0.322039%
+Progress:support:128:500 	0.322398%
+Progress:support:129:500 	0.322757%
+Progress:support:130:500 	0.323116%
+Progress:support:131:500 	0.323474%
+Progress:support:132:500 	0.323833%
+Progress:support:133:500 	0.324192%
+Progress:support:134:500 	0.324551%
+Progress:support:135:500 	0.324910%
+Progress:support:136:500 	0.325268%
+Progress:support:137:500 	0.325627%
+Progress:support:138:500 	0.325986%
+Progress:support:139:500 	0.326345%
+Progress:support:140:500 	0.326703%
+Progress:support:141:500 	0.327062%
+Progress:support:142:500 	0.327421%
+Progress:support:143:500 	0.327780%
+Progress:support:144:500 	0.328139%
+Progress:support:145:500 	0.328497%
+Progress:support:146:500 	0.328856%
+Progress:support:147:500 	0.329215%
+Progress:support:148:500 	0.329574%
+Progress:support:149:500 	0.329933%
+Progress:support:150:500 	0.330291%
+Progress:support:151:500 	0.330650%
+Progress:support:152:500 	0.331009%
+Progress:support:153:500 	0.331368%
+Progress:support:154:500 	0.331726%
+Progress:support:155:500 	0.332085%
+Progress:support:156:500 	0.332444%
+Progress:support:157:500 	0.332803%
+Progress:support:158:500 	0.333162%
+Progress:support:159:500 	0.333520%
+Progress:support:160:500 	0.333879%
+Progress:support:161:500 	0.334238%
+Progress:support:162:500 	0.334597%
+Progress:support:163:500 	0.334956%
+Progress:support:164:500 	0.335314%
+Progress:support:165:500 	0.335673%
+Progress:support:166:500 	0.336032%
+Progress:support:167:500 	0.336391%
+Progress:support:168:500 	0.336749%
+Progress:support:169:500 	0.337108%
+Progress:support:170:500 	0.337467%
+Progress:support:171:500 	0.337826%
+Progress:support:172:500 	0.338185%
+Progress:support:173:500 	0.338543%
+Progress:support:174:500 	0.338902%
+Progress:support:175:500 	0.339261%
+Progress:support:176:500 	0.339620%
+Progress:support:177:500 	0.339979%
+Progress:support:178:500 	0.340337%
+Progress:support:179:500 	0.340696%
+Progress:support:180:500 	0.341055%
+Progress:support:181:500 	0.341414%
+Progress:support:182:500 	0.341772%
+Progress:support:183:500 	0.342131%
+Progress:support:184:500 	0.342490%
+Progress:support:185:500 	0.342849%
+Progress:support:186:500 	0.343208%
+Progress:support:187:500 	0.343566%
+Progress:support:188:500 	0.343925%
+Progress:support:189:500 	0.344284%
+Progress:support:190:500 	0.344643%
+Progress:support:191:500 	0.345002%
+Progress:support:192:500 	0.345360%
+Progress:support:193:500 	0.345719%
+Progress:support:194:500 	0.346078%
+Progress:support:195:500 	0.346437%
+Progress:support:196:500 	0.346795%
+Progress:support:197:500 	0.347154%
+Progress:support:198:500 	0.347513%
+Progress:support:199:500 	0.347872%
+Progress:support:200:500 	0.348231%
+Progress:support:201:500 	0.348589%
+Progress:support:202:500 	0.348948%
+Progress:support:203:500 	0.349307%
+Progress:support:204:500 	0.349666%
+Progress:support:205:500 	0.350025%
+Progress:support:206:500 	0.350383%
+Progress:support:207:500 	0.350742%
+Progress:support:208:500 	0.351101%
+Progress:support:209:500 	0.351460%
+Progress:support:210:500 	0.351819%
+Progress:support:211:500 	0.352177%
+Progress:support:212:500 	0.352536%
+Progress:support:213:500 	0.352895%
+Progress:support:214:500 	0.353254%
+Progress:support:215:500 	0.353612%
+Progress:support:216:500 	0.353971%
+Progress:support:217:500 	0.354330%
+Progress:support:218:500 	0.354689%
+Progress:support:219:500 	0.355048%
+Progress:support:220:500 	0.355406%
+Progress:support:221:500 	0.355765%
+Progress:support:222:500 	0.356124%
+Progress:support:223:500 	0.356483%
+Progress:support:224:500 	0.356842%
+Progress:support:225:500 	0.357200%
+Progress:support:226:500 	0.357559%
+Progress:support:227:500 	0.357918%
+Progress:support:228:500 	0.358277%
+Progress:support:229:500 	0.358635%
+Progress:support:230:500 	0.358994%
+Progress:support:231:500 	0.359353%
+Progress:support:232:500 	0.359712%
+Progress:support:233:500 	0.360071%
+Progress:support:234:500 	0.360429%
+Progress:support:235:500 	0.360788%
+Progress:support:236:500 	0.361147%
+Progress:support:237:500 	0.361506%
+Progress:support:238:500 	0.361865%
+Progress:support:239:500 	0.362223%
+Progress:support:240:500 	0.362582%
+Progress:support:241:500 	0.362941%
+Progress:support:242:500 	0.363300%
+Progress:support:243:500 	0.363658%
+Progress:support:244:500 	0.364017%
+Progress:support:245:500 	0.364376%
+Progress:support:246:500 	0.364735%
+Progress:support:247:500 	0.365094%
+Progress:support:248:500 	0.365452%
+Progress:support:249:500 	0.365811%
+Progress:support:250:500 	0.366170%
+Progress:support:251:500 	0.366529%
+Progress:support:252:500 	0.366888%
+Progress:support:253:500 	0.367246%
+Progress:support:254:500 	0.367605%
+Progress:support:255:500 	0.367964%
+Progress:support:256:500 	0.368323%
+Progress:support:257:500 	0.368681%
+Progress:support:258:500 	0.369040%
+Progress:support:259:500 	0.369399%
+Progress:support:260:500 	0.369758%
+Progress:support:261:500 	0.370117%
+Progress:support:262:500 	0.370475%
+Progress:support:263:500 	0.370834%
+Progress:support:264:500 	0.371193%
+Progress:support:265:500 	0.371552%
+Progress:support:266:500 	0.371911%
+Progress:support:267:500 	0.372269%
+Progress:support:268:500 	0.372628%
+Progress:support:269:500 	0.372987%
+Progress:support:270:500 	0.373346%
+Progress:support:271:500 	0.373704%
+Progress:support:272:500 	0.374063%
+Progress:support:273:500 	0.374422%
+Progress:support:274:500 	0.374781%
+Progress:support:275:500 	0.375140%
+Progress:support:276:500 	0.375498%
+Progress:support:277:500 	0.375857%
+Progress:support:278:500 	0.376216%
+Progress:support:279:500 	0.376575%
+Progress:support:280:500 	0.376934%
+Progress:support:281:500 	0.377292%
+Progress:support:282:500 	0.377651%
+Progress:support:283:500 	0.378010%
+Progress:support:284:500 	0.378369%
+Progress:support:285:500 	0.378727%
+Progress:support:286:500 	0.379086%
+Progress:support:287:500 	0.379445%
+Progress:support:288:500 	0.379804%
+Progress:support:289:500 	0.380163%
+Progress:support:290:500 	0.380521%
+Progress:support:291:500 	0.380880%
+Progress:support:292:500 	0.381239%
+Progress:support:293:500 	0.381598%
+Progress:support:294:500 	0.381957%
+Progress:support:295:500 	0.382315%
+Progress:support:296:500 	0.382674%
+Progress:support:297:500 	0.383033%
+Progress:support:298:500 	0.383392%
+Progress:support:299:500 	0.383750%
+Progress:support:300:500 	0.384109%
+Progress:support:301:500 	0.384468%
+Progress:support:302:500 	0.384827%
+Progress:support:303:500 	0.385186%
+Progress:support:304:500 	0.385544%
+Progress:support:305:500 	0.385903%
+Progress:support:306:500 	0.386262%
+Progress:support:307:500 	0.386621%
+Progress:support:308:500 	0.386980%
+Progress:support:309:500 	0.387338%
+Progress:support:310:500 	0.387697%
+Progress:support:311:500 	0.388056%
+Progress:support:312:500 	0.388415%
+Progress:support:313:500 	0.388774%
+Progress:support:314:500 	0.389132%
+Progress:support:315:500 	0.389491%
+Progress:support:316:500 	0.389850%
+Progress:support:317:500 	0.390209%
+Progress:support:318:500 	0.390567%
+Progress:support:319:500 	0.390926%
+Progress:support:320:500 	0.391285%
+Progress:support:321:500 	0.391644%
+Progress:support:322:500 	0.392003%
+Progress:support:323:500 	0.392361%
+Progress:support:324:500 	0.392720%
+Progress:support:325:500 	0.393079%
+Progress:support:326:500 	0.393438%
+Progress:support:327:500 	0.393797%
+Progress:support:328:500 	0.394155%
+Progress:support:329:500 	0.394514%
+Progress:support:330:500 	0.394873%
+Progress:support:331:500 	0.395232%
+Progress:support:332:500 	0.395590%
+Progress:support:333:500 	0.395949%
+Progress:support:334:500 	0.396308%
+Progress:support:335:500 	0.396667%
+Progress:support:336:500 	0.397026%
+Progress:support:337:500 	0.397384%
+Progress:support:338:500 	0.397743%
+Progress:support:339:500 	0.398102%
+Progress:support:340:500 	0.398461%
+Progress:support:341:500 	0.398820%
+Progress:support:342:500 	0.399178%
+Progress:support:343:500 	0.399537%
+Progress:support:344:500 	0.399896%
+Progress:support:345:500 	0.400255%
+Progress:support:346:500 	0.400613%
+Progress:support:347:500 	0.400972%
+Progress:support:348:500 	0.401331%
+Progress:support:349:500 	0.401690%
+Progress:support:350:500 	0.402049%
+Progress:support:351:500 	0.402407%
+Progress:support:352:500 	0.402766%
+Progress:support:353:500 	0.403125%
+Progress:support:354:500 	0.403484%
+Progress:support:355:500 	0.403843%
+Progress:support:356:500 	0.404201%
+Progress:support:357:500 	0.404560%
+Progress:support:358:500 	0.404919%
+Progress:support:359:500 	0.405278%
+Progress:support:360:500 	0.405636%
+Progress:support:361:500 	0.405995%
+Progress:support:362:500 	0.406354%
+Progress:support:363:500 	0.406713%
+Progress:support:364:500 	0.407072%
+Progress:support:365:500 	0.407430%
+Progress:support:366:500 	0.407789%
+Progress:support:367:500 	0.408148%
+Progress:support:368:500 	0.408507%
+Progress:support:369:500 	0.408866%
+Progress:support:370:500 	0.409224%
+Progress:support:371:500 	0.409583%
+Progress:support:372:500 	0.409942%
+Progress:support:373:500 	0.410301%
+Progress:support:374:500 	0.410659%
+Progress:support:375:500 	0.411018%
+Progress:support:376:500 	0.411377%
+Progress:support:377:500 	0.411736%
+Progress:support:378:500 	0.412095%
+Progress:support:379:500 	0.412453%
+Progress:support:380:500 	0.412812%
+Progress:support:381:500 	0.413171%
+Progress:support:382:500 	0.413530%
+Progress:support:383:500 	0.413889%
+Progress:support:384:500 	0.414247%
+Progress:support:385:500 	0.414606%
+Progress:support:386:500 	0.414965%
+Progress:support:387:500 	0.415324%
+Progress:support:388:500 	0.415682%
+Progress:support:389:500 	0.416041%
+Progress:support:390:500 	0.416400%
+Progress:support:391:500 	0.416759%
+Progress:support:392:500 	0.417118%
+Progress:support:393:500 	0.417476%
+Progress:support:394:500 	0.417835%
+Progress:support:395:500 	0.418194%
+Progress:support:396:500 	0.418553%
+Progress:support:397:500 	0.418912%
+Progress:support:398:500 	0.419270%
+Progress:support:399:500 	0.419629%
+Progress:support:400:500 	0.419988%
+Progress:support:401:500 	0.420347%
+Progress:support:402:500 	0.420705%
+Progress:support:403:500 	0.421064%
+Progress:support:404:500 	0.421423%
+Progress:support:405:500 	0.421782%
+Progress:support:406:500 	0.422141%
+Progress:support:407:500 	0.422499%
+Progress:support:408:500 	0.422858%
+Progress:support:409:500 	0.423217%
+Progress:support:410:500 	0.423576%
+Progress:support:411:500 	0.423935%
+Progress:support:412:500 	0.424293%
+Progress:support:413:500 	0.424652%
+Progress:support:414:500 	0.425011%
+Progress:support:415:500 	0.425370%
+Progress:support:416:500 	0.425728%
+Progress:support:417:500 	0.426087%
+Progress:support:418:500 	0.426446%
+Progress:support:419:500 	0.426805%
+Progress:support:420:500 	0.427164%
+Progress:support:421:500 	0.427522%
+Progress:support:422:500 	0.427881%
+Progress:support:423:500 	0.428240%
+Progress:support:424:500 	0.428599%
+Progress:support:425:500 	0.428958%
+Progress:support:426:500 	0.429316%
+Progress:support:427:500 	0.429675%
+Progress:support:428:500 	0.430034%
+Progress:support:429:500 	0.430393%
+Progress:support:430:500 	0.430752%
+Progress:support:431:500 	0.431110%
+Progress:support:432:500 	0.431469%
+Progress:support:433:500 	0.431828%
+Progress:support:434:500 	0.432187%
+Progress:support:435:500 	0.432545%
+Progress:support:436:500 	0.432904%
+Progress:support:437:500 	0.433263%
+Progress:support:438:500 	0.433622%
+Progress:support:439:500 	0.433981%
+Progress:support:440:500 	0.434339%
+Progress:support:441:500 	0.434698%
+Progress:support:442:500 	0.435057%
+Progress:support:443:500 	0.435416%
+Progress:support:444:500 	0.435775%
+Progress:support:445:500 	0.436133%
+Progress:support:446:500 	0.436492%
+Progress:support:447:500 	0.436851%
+Progress:support:448:500 	0.437210%
+Progress:support:449:500 	0.437568%
+Progress:support:450:500 	0.437927%
+Progress:support:451:500 	0.438286%
+Progress:support:452:500 	0.438645%
+Progress:support:453:500 	0.439004%
+Progress:support:454:500 	0.439362%
+Progress:support:455:500 	0.439721%
+Progress:support:456:500 	0.440080%
+Progress:support:457:500 	0.440439%
+Progress:support:458:500 	0.440798%
+Progress:support:459:500 	0.441156%
+Progress:support:460:500 	0.441515%
+Progress:support:461:500 	0.441874%
+Progress:support:462:500 	0.442233%
+Progress:support:463:500 	0.442591%
+Progress:support:464:500 	0.442950%
+Progress:support:465:500 	0.443309%
+Progress:support:466:500 	0.443668%
+Progress:support:467:500 	0.444027%
+Progress:support:468:500 	0.444385%
+Progress:support:469:500 	0.444744%
+Progress:support:470:500 	0.445103%
+Progress:support:471:500 	0.445462%
+Progress:support:472:500 	0.445821%
+Progress:support:473:500 	0.446179%
+Progress:support:474:500 	0.446538%
+Progress:support:475:500 	0.446897%
+Progress:support:476:500 	0.447256%
+Progress:support:477:500 	0.447614%
+Progress:support:478:500 	0.447973%
+Progress:support:479:500 	0.448332%
+Progress:support:480:500 	0.448691%
+Progress:support:481:500 	0.449050%
+Progress:support:482:500 	0.449408%
+Progress:support:483:500 	0.449767%
+Progress:support:484:500 	0.450126%
+Progress:support:485:500 	0.450485%
+Progress:support:486:500 	0.450844%
+Progress:support:487:500 	0.451202%
+Progress:support:488:500 	0.451561%
+Progress:support:489:500 	0.451920%
+Progress:support:490:500 	0.452279%
+Progress:support:491:500 	0.452637%
+Progress:support:492:500 	0.452996%
+Progress:support:493:500 	0.453355%
+Progress:support:494:500 	0.453714%
+Progress:support:495:500 	0.454073%
+Progress:support:496:500 	0.454431%
+Progress:support:497:500 	0.454790%
+Progress:support:498:500 	0.455149%
+Progress:support:499:500 	0.455508%
+Progress:support:500:500 	0.455867%
+[DEBUG] Processing ooze shield
+[DEBUG] Processing draft shield
+[DEBUG] Processing platform adhesion
+Progress: support accomplished in 3.622s
+Starting export...
+Multithreading GcodeLayerThreader with 1 threads.
+[DEBUG] GcodeWriter processing layer 0 of 500
+Progress:export:1:500 	0.456954%
+[DEBUG] GcodeWriter processing layer 1 of 500
+Progress:export:2:500 	0.458042%
+[DEBUG] GcodeWriter processing layer 2 of 500
+Progress:export:3:500 	0.459129%
+[DEBUG] GcodeWriter processing layer 3 of 500
+Progress:export:4:500 	0.460217%
+[DEBUG] GcodeWriter processing layer 4 of 500
+Progress:export:5:500 	0.461304%
+[DEBUG] GcodeWriter processing layer 5 of 500
+Progress:export:6:500 	0.462392%
+[DEBUG] GcodeWriter processing layer 6 of 500
+Progress:export:7:500 	0.463479%
+[DEBUG] GcodeWriter processing layer 7 of 500
+Progress:export:8:500 	0.464567%
+[DEBUG] GcodeWriter processing layer 8 of 500
+Progress:export:9:500 	0.465655%
+[DEBUG] GcodeWriter processing layer 9 of 500
+Progress:export:10:500 	0.466742%
+[DEBUG] GcodeWriter processing layer 10 of 500
+Progress:export:11:500 	0.467830%
+[DEBUG] GcodeWriter processing layer 11 of 500
+Progress:export:12:500 	0.468917%
+[DEBUG] GcodeWriter processing layer 12 of 500
+Progress:export:13:500 	0.470005%
+[DEBUG] GcodeWriter processing layer 13 of 500
+Progress:export:14:500 	0.471092%
+[DEBUG] GcodeWriter processing layer 14 of 500
+Progress:export:15:500 	0.472180%
+[DEBUG] GcodeWriter processing layer 15 of 500
+Progress:export:16:500 	0.473268%
+[DEBUG] GcodeWriter processing layer 16 of 500
+Progress:export:17:500 	0.474355%
+[DEBUG] GcodeWriter processing layer 17 of 500
+Progress:export:18:500 	0.475443%
+[DEBUG] GcodeWriter processing layer 18 of 500
+Progress:export:19:500 	0.476530%
+[DEBUG] GcodeWriter processing layer 19 of 500
+Progress:export:20:500 	0.477618%
+[DEBUG] GcodeWriter processing layer 20 of 500
+Progress:export:21:500 	0.478705%
+[DEBUG] GcodeWriter processing layer 21 of 500
+Progress:export:22:500 	0.479793%
+[DEBUG] GcodeWriter processing layer 22 of 500
+Progress:export:23:500 	0.480880%
+[DEBUG] GcodeWriter processing layer 23 of 500
+Progress:export:24:500 	0.481968%
+[DEBUG] GcodeWriter processing layer 24 of 500
+Progress:export:25:500 	0.483056%
+[DEBUG] GcodeWriter processing layer 25 of 500
+Progress:export:26:500 	0.484143%
+[DEBUG] GcodeWriter processing layer 26 of 500
+Progress:export:27:500 	0.485231%
+[DEBUG] GcodeWriter processing layer 27 of 500
+Progress:export:28:500 	0.486318%
+[DEBUG] GcodeWriter processing layer 28 of 500
+Progress:export:29:500 	0.487406%
+[DEBUG] GcodeWriter processing layer 29 of 500
+Progress:export:30:500 	0.488493%
+[DEBUG] GcodeWriter processing layer 30 of 500
+Progress:export:31:500 	0.489581%
+[DEBUG] GcodeWriter processing layer 31 of 500
+Progress:export:32:500 	0.490669%
+[DEBUG] GcodeWriter processing layer 32 of 500
+Progress:export:33:500 	0.491756%
+[DEBUG] GcodeWriter processing layer 33 of 500
+Progress:export:34:500 	0.492844%
+[DEBUG] GcodeWriter processing layer 34 of 500
+Progress:export:35:500 	0.493931%
+[DEBUG] GcodeWriter processing layer 35 of 500
+Progress:export:36:500 	0.495019%
+[DEBUG] GcodeWriter processing layer 36 of 500
+Progress:export:37:500 	0.496106%
+[DEBUG] GcodeWriter processing layer 37 of 500
+Progress:export:38:500 	0.497194%
+[DEBUG] GcodeWriter processing layer 38 of 500
+Progress:export:39:500 	0.498282%
+[DEBUG] GcodeWriter processing layer 39 of 500
+Progress:export:40:500 	0.499369%
+[DEBUG] GcodeWriter processing layer 40 of 500
+Progress:export:41:500 	0.500457%
+[DEBUG] GcodeWriter processing layer 41 of 500
+Progress:export:42:500 	0.501544%
+[DEBUG] GcodeWriter processing layer 42 of 500
+Progress:export:43:500 	0.502632%
+[DEBUG] GcodeWriter processing layer 43 of 500
+Progress:export:44:500 	0.503719%
+[DEBUG] GcodeWriter processing layer 44 of 500
+Progress:export:45:500 	0.504807%
+[DEBUG] GcodeWriter processing layer 45 of 500
+Progress:export:46:500 	0.505894%
+[DEBUG] GcodeWriter processing layer 46 of 500
+Progress:export:47:500 	0.506982%
+[DEBUG] GcodeWriter processing layer 47 of 500
+Progress:export:48:500 	0.508070%
+[DEBUG] GcodeWriter processing layer 48 of 500
+Progress:export:49:500 	0.509157%
+[DEBUG] GcodeWriter processing layer 49 of 500
+Progress:export:50:500 	0.510245%
+[DEBUG] GcodeWriter processing layer 50 of 500
+Progress:export:51:500 	0.511332%
+[DEBUG] GcodeWriter processing layer 51 of 500
+Progress:export:52:500 	0.512420%
+[DEBUG] GcodeWriter processing layer 52 of 500
+Progress:export:53:500 	0.513507%
+[DEBUG] GcodeWriter processing layer 53 of 500
+Progress:export:54:500 	0.514595%
+[DEBUG] GcodeWriter processing layer 54 of 500
+Progress:export:55:500 	0.515683%
+[DEBUG] GcodeWriter processing layer 55 of 500
+Progress:export:56:500 	0.516770%
+[DEBUG] GcodeWriter processing layer 56 of 500
+Progress:export:57:500 	0.517858%
+[DEBUG] GcodeWriter processing layer 57 of 500
+Progress:export:58:500 	0.518945%
+[DEBUG] GcodeWriter processing layer 58 of 500
+Progress:export:59:500 	0.520033%
+[DEBUG] GcodeWriter processing layer 59 of 500
+Progress:export:60:500 	0.521120%
+[DEBUG] GcodeWriter processing layer 60 of 500
+Progress:export:61:500 	0.522208%
+[DEBUG] GcodeWriter processing layer 61 of 500
+Progress:export:62:500 	0.523295%
+[DEBUG] GcodeWriter processing layer 62 of 500
+Progress:export:63:500 	0.524383%
+[DEBUG] GcodeWriter processing layer 63 of 500
+Progress:export:64:500 	0.525471%
+[DEBUG] GcodeWriter processing layer 64 of 500
+Progress:export:65:500 	0.526558%
+[DEBUG] GcodeWriter processing layer 65 of 500
+Progress:export:66:500 	0.527646%
+[DEBUG] GcodeWriter processing layer 66 of 500
+Progress:export:67:500 	0.528733%
+[DEBUG] GcodeWriter processing layer 67 of 500
+Progress:export:68:500 	0.529821%
+[DEBUG] GcodeWriter processing layer 68 of 500
+Progress:export:69:500 	0.530908%
+[DEBUG] GcodeWriter processing layer 69 of 500
+Progress:export:70:500 	0.531996%
+[DEBUG] GcodeWriter processing layer 70 of 500
+Progress:export:71:500 	0.533084%
+[DEBUG] GcodeWriter processing layer 71 of 500
+Progress:export:72:500 	0.534171%
+[DEBUG] GcodeWriter processing layer 72 of 500
+Progress:export:73:500 	0.535259%
+[DEBUG] GcodeWriter processing layer 73 of 500
+Progress:export:74:500 	0.536346%
+[DEBUG] GcodeWriter processing layer 74 of 500
+Progress:export:75:500 	0.537434%
+[DEBUG] GcodeWriter processing layer 75 of 500
+Progress:export:76:500 	0.538521%
+[DEBUG] GcodeWriter processing layer 76 of 500
+Progress:export:77:500 	0.539609%
+[DEBUG] GcodeWriter processing layer 77 of 500
+Progress:export:78:500 	0.540697%
+[DEBUG] GcodeWriter processing layer 78 of 500
+Progress:export:79:500 	0.541784%
+[DEBUG] GcodeWriter processing layer 79 of 500
+Progress:export:80:500 	0.542872%
+[DEBUG] GcodeWriter processing layer 80 of 500
+Progress:export:81:500 	0.543959%
+[DEBUG] GcodeWriter processing layer 81 of 500
+Progress:export:82:500 	0.545047%
+[DEBUG] GcodeWriter processing layer 82 of 500
+Progress:export:83:500 	0.546134%
+[DEBUG] GcodeWriter processing layer 83 of 500
+Progress:export:84:500 	0.547222%
+[DEBUG] GcodeWriter processing layer 84 of 500
+Progress:export:85:500 	0.548309%
+[DEBUG] GcodeWriter processing layer 85 of 500
+Progress:export:86:500 	0.549397%
+[DEBUG] GcodeWriter processing layer 86 of 500
+Progress:export:87:500 	0.550485%
+[DEBUG] GcodeWriter processing layer 87 of 500
+Progress:export:88:500 	0.551572%
+[DEBUG] GcodeWriter processing layer 88 of 500
+Progress:export:89:500 	0.552660%
+[DEBUG] GcodeWriter processing layer 89 of 500
+Progress:export:90:500 	0.553747%
+[DEBUG] GcodeWriter processing layer 90 of 500
+Progress:export:91:500 	0.554835%
+[DEBUG] GcodeWriter processing layer 91 of 500
+Progress:export:92:500 	0.555922%
+[DEBUG] GcodeWriter processing layer 92 of 500
+Progress:export:93:500 	0.557010%
+[DEBUG] GcodeWriter processing layer 93 of 500
+Progress:export:94:500 	0.558097%
+[DEBUG] GcodeWriter processing layer 94 of 500
+Progress:export:95:500 	0.559185%
+[DEBUG] GcodeWriter processing layer 95 of 500
+Progress:export:96:500 	0.560273%
+[DEBUG] GcodeWriter processing layer 96 of 500
+Progress:export:97:500 	0.561360%
+[DEBUG] GcodeWriter processing layer 97 of 500
+Progress:export:98:500 	0.562448%
+[DEBUG] GcodeWriter processing layer 98 of 500
+Progress:export:99:500 	0.563535%
+[DEBUG] GcodeWriter processing layer 99 of 500
+Progress:export:100:500 	0.564623%
+[DEBUG] GcodeWriter processing layer 100 of 500
+Progress:export:101:500 	0.565710%
+[DEBUG] GcodeWriter processing layer 101 of 500
+Progress:export:102:500 	0.566798%
+[DEBUG] GcodeWriter processing layer 102 of 500
+Progress:export:103:500 	0.567886%
+[DEBUG] GcodeWriter processing layer 103 of 500
+Progress:export:104:500 	0.568973%
+[DEBUG] GcodeWriter processing layer 104 of 500
+Progress:export:105:500 	0.570061%
+[DEBUG] GcodeWriter processing layer 105 of 500
+Progress:export:106:500 	0.571148%
+[DEBUG] GcodeWriter processing layer 106 of 500
+Progress:export:107:500 	0.572236%
+[DEBUG] GcodeWriter processing layer 107 of 500
+Progress:export:108:500 	0.573323%
+[DEBUG] GcodeWriter processing layer 108 of 500
+Progress:export:109:500 	0.574411%
+[DEBUG] GcodeWriter processing layer 109 of 500
+Progress:export:110:500 	0.575499%
+[DEBUG] GcodeWriter processing layer 110 of 500
+Progress:export:111:500 	0.576586%
+[DEBUG] GcodeWriter processing layer 111 of 500
+Progress:export:112:500 	0.577674%
+[DEBUG] GcodeWriter processing layer 112 of 500
+Progress:export:113:500 	0.578761%
+[DEBUG] GcodeWriter processing layer 113 of 500
+Progress:export:114:500 	0.579849%
+[DEBUG] GcodeWriter processing layer 114 of 500
+Progress:export:115:500 	0.580936%
+[DEBUG] GcodeWriter processing layer 115 of 500
+Progress:export:116:500 	0.582024%
+[DEBUG] GcodeWriter processing layer 116 of 500
+Progress:export:117:500 	0.583111%
+[DEBUG] GcodeWriter processing layer 117 of 500
+Progress:export:118:500 	0.584199%
+[DEBUG] GcodeWriter processing layer 118 of 500
+Progress:export:119:500 	0.585287%
+[DEBUG] GcodeWriter processing layer 119 of 500
+Progress:export:120:500 	0.586374%
+[DEBUG] GcodeWriter processing layer 120 of 500
+Progress:export:121:500 	0.587462%
+[DEBUG] GcodeWriter processing layer 121 of 500
+Progress:export:122:500 	0.588549%
+[DEBUG] GcodeWriter processing layer 122 of 500
+Progress:export:123:500 	0.589637%
+[DEBUG] GcodeWriter processing layer 123 of 500
+Progress:export:124:500 	0.590724%
+[DEBUG] GcodeWriter processing layer 124 of 500
+Progress:export:125:500 	0.591812%
+[DEBUG] GcodeWriter processing layer 125 of 500
+Progress:export:126:500 	0.592900%
+[DEBUG] GcodeWriter processing layer 126 of 500
+Progress:export:127:500 	0.593987%
+[DEBUG] GcodeWriter processing layer 127 of 500
+Progress:export:128:500 	0.595075%
+[DEBUG] GcodeWriter processing layer 128 of 500
+Progress:export:129:500 	0.596162%
+[DEBUG] GcodeWriter processing layer 129 of 500
+Progress:export:130:500 	0.597250%
+[DEBUG] GcodeWriter processing layer 130 of 500
+Progress:export:131:500 	0.598337%
+[DEBUG] GcodeWriter processing layer 131 of 500
+Progress:export:132:500 	0.599425%
+[DEBUG] GcodeWriter processing layer 132 of 500
+Progress:export:133:500 	0.600513%
+[DEBUG] GcodeWriter processing layer 133 of 500
+Progress:export:134:500 	0.601600%
+[DEBUG] GcodeWriter processing layer 134 of 500
+Progress:export:135:500 	0.602688%
+[DEBUG] GcodeWriter processing layer 135 of 500
+Progress:export:136:500 	0.603775%
+[DEBUG] GcodeWriter processing layer 136 of 500
+Progress:export:137:500 	0.604863%
+[DEBUG] GcodeWriter processing layer 137 of 500
+Progress:export:138:500 	0.605950%
+[DEBUG] GcodeWriter processing layer 138 of 500
+Progress:export:139:500 	0.607038%
+[DEBUG] GcodeWriter processing layer 139 of 500
+Progress:export:140:500 	0.608125%
+[DEBUG] GcodeWriter processing layer 140 of 500
+Progress:export:141:500 	0.609213%
+[DEBUG] GcodeWriter processing layer 141 of 500
+Progress:export:142:500 	0.610301%
+[DEBUG] GcodeWriter processing layer 142 of 500
+Progress:export:143:500 	0.611388%
+[DEBUG] GcodeWriter processing layer 143 of 500
+Progress:export:144:500 	0.612476%
+[DEBUG] GcodeWriter processing layer 144 of 500
+Progress:export:145:500 	0.613563%
+[DEBUG] GcodeWriter processing layer 145 of 500
+Progress:export:146:500 	0.614651%
+[DEBUG] GcodeWriter processing layer 146 of 500
+Progress:export:147:500 	0.615738%
+[DEBUG] GcodeWriter processing layer 147 of 500
+Progress:export:148:500 	0.616826%
+[DEBUG] GcodeWriter processing layer 148 of 500
+Progress:export:149:500 	0.617913%
+[DEBUG] GcodeWriter processing layer 149 of 500
+Progress:export:150:500 	0.619001%
+[DEBUG] GcodeWriter processing layer 150 of 500
+Progress:export:151:500 	0.620089%
+[DEBUG] GcodeWriter processing layer 151 of 500
+Progress:export:152:500 	0.621176%
+[DEBUG] GcodeWriter processing layer 152 of 500
+Progress:export:153:500 	0.622264%
+[DEBUG] GcodeWriter processing layer 153 of 500
+Progress:export:154:500 	0.623351%
+[DEBUG] GcodeWriter processing layer 154 of 500
+Progress:export:155:500 	0.624439%
+[DEBUG] GcodeWriter processing layer 155 of 500
+Progress:export:156:500 	0.625526%
+[DEBUG] GcodeWriter processing layer 156 of 500
+Progress:export:157:500 	0.626614%
+[DEBUG] GcodeWriter processing layer 157 of 500
+Progress:export:158:500 	0.627702%
+[DEBUG] GcodeWriter processing layer 158 of 500
+Progress:export:159:500 	0.628789%
+[DEBUG] GcodeWriter processing layer 159 of 500
+Progress:export:160:500 	0.629877%
+[DEBUG] GcodeWriter processing layer 160 of 500
+Progress:export:161:500 	0.630964%
+[DEBUG] GcodeWriter processing layer 161 of 500
+Progress:export:162:500 	0.632052%
+[DEBUG] GcodeWriter processing layer 162 of 500
+Progress:export:163:500 	0.633139%
+[DEBUG] GcodeWriter processing layer 163 of 500
+Progress:export:164:500 	0.634227%
+[DEBUG] GcodeWriter processing layer 164 of 500
+Progress:export:165:500 	0.635315%
+[DEBUG] GcodeWriter processing layer 165 of 500
+Progress:export:166:500 	0.636402%
+[DEBUG] GcodeWriter processing layer 166 of 500
+Progress:export:167:500 	0.637490%
+[DEBUG] GcodeWriter processing layer 167 of 500
+Progress:export:168:500 	0.638577%
+[DEBUG] GcodeWriter processing layer 168 of 500
+Progress:export:169:500 	0.639665%
+[DEBUG] GcodeWriter processing layer 169 of 500
+Progress:export:170:500 	0.640752%
+[DEBUG] GcodeWriter processing layer 170 of 500
+Progress:export:171:500 	0.641840%
+[DEBUG] GcodeWriter processing layer 171 of 500
+Progress:export:172:500 	0.642927%
+[DEBUG] GcodeWriter processing layer 172 of 500
+Progress:export:173:500 	0.644015%
+[DEBUG] GcodeWriter processing layer 173 of 500
+Progress:export:174:500 	0.645103%
+[DEBUG] GcodeWriter processing layer 174 of 500
+Progress:export:175:500 	0.646190%
+[DEBUG] GcodeWriter processing layer 175 of 500
+Progress:export:176:500 	0.647278%
+[DEBUG] GcodeWriter processing layer 176 of 500
+Progress:export:177:500 	0.648365%
+[DEBUG] GcodeWriter processing layer 177 of 500
+Progress:export:178:500 	0.649453%
+[DEBUG] GcodeWriter processing layer 178 of 500
+Progress:export:179:500 	0.650540%
+[DEBUG] GcodeWriter processing layer 179 of 500
+Progress:export:180:500 	0.651628%
+[DEBUG] GcodeWriter processing layer 180 of 500
+Progress:export:181:500 	0.652716%
+[DEBUG] GcodeWriter processing layer 181 of 500
+Progress:export:182:500 	0.653803%
+[DEBUG] GcodeWriter processing layer 182 of 500
+Progress:export:183:500 	0.654891%
+[DEBUG] GcodeWriter processing layer 183 of 500
+Progress:export:184:500 	0.655978%
+[DEBUG] GcodeWriter processing layer 184 of 500
+Progress:export:185:500 	0.657066%
+[DEBUG] GcodeWriter processing layer 185 of 500
+Progress:export:186:500 	0.658153%
+[DEBUG] GcodeWriter processing layer 186 of 500
+Progress:export:187:500 	0.659241%
+[DEBUG] GcodeWriter processing layer 187 of 500
+Progress:export:188:500 	0.660328%
+[DEBUG] GcodeWriter processing layer 188 of 500
+Progress:export:189:500 	0.661416%
+[DEBUG] GcodeWriter processing layer 189 of 500
+Progress:export:190:500 	0.662504%
+[DEBUG] GcodeWriter processing layer 190 of 500
+Progress:export:191:500 	0.663591%
+[DEBUG] GcodeWriter processing layer 191 of 500
+Progress:export:192:500 	0.664679%
+[DEBUG] GcodeWriter processing layer 192 of 500
+Progress:export:193:500 	0.665766%
+[DEBUG] GcodeWriter processing layer 193 of 500
+Progress:export:194:500 	0.666854%
+[DEBUG] GcodeWriter processing layer 194 of 500
+Progress:export:195:500 	0.667941%
+[DEBUG] GcodeWriter processing layer 195 of 500
+Progress:export:196:500 	0.669029%
+[DEBUG] GcodeWriter processing layer 196 of 500
+Progress:export:197:500 	0.670117%
+[DEBUG] GcodeWriter processing layer 197 of 500
+Progress:export:198:500 	0.671204%
+[DEBUG] GcodeWriter processing layer 198 of 500
+Progress:export:199:500 	0.672292%
+[DEBUG] GcodeWriter processing layer 199 of 500
+Progress:export:200:500 	0.673379%
+[DEBUG] GcodeWriter processing layer 200 of 500
+Progress:export:201:500 	0.674467%
+[DEBUG] GcodeWriter processing layer 201 of 500
+Progress:export:202:500 	0.675554%
+[DEBUG] GcodeWriter processing layer 202 of 500
+Progress:export:203:500 	0.676642%
+[DEBUG] GcodeWriter processing layer 203 of 500
+Progress:export:204:500 	0.677729%
+[DEBUG] GcodeWriter processing layer 204 of 500
+Progress:export:205:500 	0.678817%
+[DEBUG] GcodeWriter processing layer 205 of 500
+Progress:export:206:500 	0.679905%
+[DEBUG] GcodeWriter processing layer 206 of 500
+Progress:export:207:500 	0.680992%
+[DEBUG] GcodeWriter processing layer 207 of 500
+Progress:export:208:500 	0.682080%
+[DEBUG] GcodeWriter processing layer 208 of 500
+Progress:export:209:500 	0.683167%
+[DEBUG] GcodeWriter processing layer 209 of 500
+Progress:export:210:500 	0.684255%
+[DEBUG] GcodeWriter processing layer 210 of 500
+Progress:export:211:500 	0.685342%
+[DEBUG] GcodeWriter processing layer 211 of 500
+Progress:export:212:500 	0.686430%
+[DEBUG] GcodeWriter processing layer 212 of 500
+Progress:export:213:500 	0.687518%
+[DEBUG] GcodeWriter processing layer 213 of 500
+Progress:export:214:500 	0.688605%
+[DEBUG] GcodeWriter processing layer 214 of 500
+Progress:export:215:500 	0.689693%
+[DEBUG] GcodeWriter processing layer 215 of 500
+Progress:export:216:500 	0.690780%
+[DEBUG] GcodeWriter processing layer 216 of 500
+Progress:export:217:500 	0.691868%
+[DEBUG] GcodeWriter processing layer 217 of 500
+Progress:export:218:500 	0.692955%
+[DEBUG] GcodeWriter processing layer 218 of 500
+Progress:export:219:500 	0.694043%
+[DEBUG] GcodeWriter processing layer 219 of 500
+Progress:export:220:500 	0.695131%
+[DEBUG] GcodeWriter processing layer 220 of 500
+Progress:export:221:500 	0.696218%
+[DEBUG] GcodeWriter processing layer 221 of 500
+Progress:export:222:500 	0.697306%
+[DEBUG] GcodeWriter processing layer 222 of 500
+Progress:export:223:500 	0.698393%
+[DEBUG] GcodeWriter processing layer 223 of 500
+Progress:export:224:500 	0.699481%
+[DEBUG] GcodeWriter processing layer 224 of 500
+Progress:export:225:500 	0.700568%
+[DEBUG] GcodeWriter processing layer 225 of 500
+Progress:export:226:500 	0.701656%
+[DEBUG] GcodeWriter processing layer 226 of 500
+Progress:export:227:500 	0.702743%
+[DEBUG] GcodeWriter processing layer 227 of 500
+Progress:export:228:500 	0.703831%
+[DEBUG] GcodeWriter processing layer 228 of 500
+Progress:export:229:500 	0.704919%
+[DEBUG] GcodeWriter processing layer 229 of 500
+Progress:export:230:500 	0.706006%
+[DEBUG] GcodeWriter processing layer 230 of 500
+Progress:export:231:500 	0.707094%
+[DEBUG] GcodeWriter processing layer 231 of 500
+Progress:export:232:500 	0.708181%
+[DEBUG] GcodeWriter processing layer 232 of 500
+Progress:export:233:500 	0.709269%
+[DEBUG] GcodeWriter processing layer 233 of 500
+Progress:export:234:500 	0.710356%
+[DEBUG] GcodeWriter processing layer 234 of 500
+Progress:export:235:500 	0.711444%
+[DEBUG] GcodeWriter processing layer 235 of 500
+Progress:export:236:500 	0.712532%
+[DEBUG] GcodeWriter processing layer 236 of 500
+Progress:export:237:500 	0.713619%
+[DEBUG] GcodeWriter processing layer 237 of 500
+Progress:export:238:500 	0.714707%
+[DEBUG] GcodeWriter processing layer 238 of 500
+Progress:export:239:500 	0.715794%
+[DEBUG] GcodeWriter processing layer 239 of 500
+Progress:export:240:500 	0.716882%
+[DEBUG] GcodeWriter processing layer 240 of 500
+Progress:export:241:500 	0.717969%
+[DEBUG] GcodeWriter processing layer 241 of 500
+Progress:export:242:500 	0.719057%
+[DEBUG] GcodeWriter processing layer 242 of 500
+Progress:export:243:500 	0.720144%
+[DEBUG] GcodeWriter processing layer 243 of 500
+Progress:export:244:500 	0.721232%
+[DEBUG] GcodeWriter processing layer 244 of 500
+Progress:export:245:500 	0.722320%
+[DEBUG] GcodeWriter processing layer 245 of 500
+Progress:export:246:500 	0.723407%
+[DEBUG] GcodeWriter processing layer 246 of 500
+Progress:export:247:500 	0.724495%
+[DEBUG] GcodeWriter processing layer 247 of 500
+Progress:export:248:500 	0.725582%
+[DEBUG] GcodeWriter processing layer 248 of 500
+Progress:export:249:500 	0.726670%
+[DEBUG] GcodeWriter processing layer 249 of 500
+Progress:export:250:500 	0.727757%
+[DEBUG] GcodeWriter processing layer 250 of 500
+Progress:export:251:500 	0.728845%
+[DEBUG] GcodeWriter processing layer 251 of 500
+Progress:export:252:500 	0.729933%
+[DEBUG] GcodeWriter processing layer 252 of 500
+Progress:export:253:500 	0.731020%
+[DEBUG] GcodeWriter processing layer 253 of 500
+Progress:export:254:500 	0.732108%
+[DEBUG] GcodeWriter processing layer 254 of 500
+Progress:export:255:500 	0.733195%
+[DEBUG] GcodeWriter processing layer 255 of 500
+Progress:export:256:500 	0.734283%
+[DEBUG] GcodeWriter processing layer 256 of 500
+Progress:export:257:500 	0.735370%
+[DEBUG] GcodeWriter processing layer 257 of 500
+Progress:export:258:500 	0.736458%
+[DEBUG] GcodeWriter processing layer 258 of 500
+Progress:export:259:500 	0.737545%
+[DEBUG] GcodeWriter processing layer 259 of 500
+Progress:export:260:500 	0.738633%
+[DEBUG] GcodeWriter processing layer 260 of 500
+Progress:export:261:500 	0.739721%
+[DEBUG] GcodeWriter processing layer 261 of 500
+Progress:export:262:500 	0.740808%
+[DEBUG] GcodeWriter processing layer 262 of 500
+Progress:export:263:500 	0.741896%
+[DEBUG] GcodeWriter processing layer 263 of 500
+Progress:export:264:500 	0.742983%
+[DEBUG] GcodeWriter processing layer 264 of 500
+Progress:export:265:500 	0.744071%
+[DEBUG] GcodeWriter processing layer 265 of 500
+Progress:export:266:500 	0.745158%
+[DEBUG] GcodeWriter processing layer 266 of 500
+Progress:export:267:500 	0.746246%
+[DEBUG] GcodeWriter processing layer 267 of 500
+Progress:export:268:500 	0.747334%
+[DEBUG] GcodeWriter processing layer 268 of 500
+Progress:export:269:500 	0.748421%
+[DEBUG] GcodeWriter processing layer 269 of 500
+Progress:export:270:500 	0.749509%
+[DEBUG] GcodeWriter processing layer 270 of 500
+Progress:export:271:500 	0.750596%
+[DEBUG] GcodeWriter processing layer 271 of 500
+Progress:export:272:500 	0.751684%
+[DEBUG] GcodeWriter processing layer 272 of 500
+Progress:export:273:500 	0.752771%
+[DEBUG] GcodeWriter processing layer 273 of 500
+Progress:export:274:500 	0.753859%
+[DEBUG] GcodeWriter processing layer 274 of 500
+Progress:export:275:500 	0.754947%
+[DEBUG] GcodeWriter processing layer 275 of 500
+Progress:export:276:500 	0.756034%
+[DEBUG] GcodeWriter processing layer 276 of 500
+Progress:export:277:500 	0.757122%
+[DEBUG] GcodeWriter processing layer 277 of 500
+Progress:export:278:500 	0.758209%
+[DEBUG] GcodeWriter processing layer 278 of 500
+Progress:export:279:500 	0.759297%
+[DEBUG] GcodeWriter processing layer 279 of 500
+Progress:export:280:500 	0.760384%
+[DEBUG] GcodeWriter processing layer 280 of 500
+Progress:export:281:500 	0.761472%
+[DEBUG] GcodeWriter processing layer 281 of 500
+Progress:export:282:500 	0.762559%
+[DEBUG] GcodeWriter processing layer 282 of 500
+Progress:export:283:500 	0.763647%
+[DEBUG] GcodeWriter processing layer 283 of 500
+Progress:export:284:500 	0.764735%
+[DEBUG] GcodeWriter processing layer 284 of 500
+Progress:export:285:500 	0.765822%
+[DEBUG] GcodeWriter processing layer 285 of 500
+Progress:export:286:500 	0.766910%
+[DEBUG] GcodeWriter processing layer 286 of 500
+Progress:export:287:500 	0.767997%
+[DEBUG] GcodeWriter processing layer 287 of 500
+Progress:export:288:500 	0.769085%
+[DEBUG] GcodeWriter processing layer 288 of 500
+Progress:export:289:500 	0.770172%
+[DEBUG] GcodeWriter processing layer 289 of 500
+Progress:export:290:500 	0.771260%
+[DEBUG] GcodeWriter processing layer 290 of 500
+Progress:export:291:500 	0.772348%
+[DEBUG] GcodeWriter processing layer 291 of 500
+Progress:export:292:500 	0.773435%
+[DEBUG] GcodeWriter processing layer 292 of 500
+Progress:export:293:500 	0.774523%
+[DEBUG] GcodeWriter processing layer 293 of 500
+Progress:export:294:500 	0.775610%
+[DEBUG] GcodeWriter processing layer 294 of 500
+Progress:export:295:500 	0.776698%
+[DEBUG] GcodeWriter processing layer 295 of 500
+Progress:export:296:500 	0.777785%
+[DEBUG] GcodeWriter processing layer 296 of 500
+Progress:export:297:500 	0.778873%
+[DEBUG] GcodeWriter processing layer 297 of 500
+Progress:export:298:500 	0.779960%
+[DEBUG] GcodeWriter processing layer 298 of 500
+Progress:export:299:500 	0.781048%
+[DEBUG] GcodeWriter processing layer 299 of 500
+Progress:export:300:500 	0.782136%
+[DEBUG] GcodeWriter processing layer 300 of 500
+Progress:export:301:500 	0.783223%
+[DEBUG] GcodeWriter processing layer 301 of 500
+Progress:export:302:500 	0.784311%
+[DEBUG] GcodeWriter processing layer 302 of 500
+Progress:export:303:500 	0.785398%
+[DEBUG] GcodeWriter processing layer 303 of 500
+Progress:export:304:500 	0.786486%
+[DEBUG] GcodeWriter processing layer 304 of 500
+Progress:export:305:500 	0.787573%
+[DEBUG] GcodeWriter processing layer 305 of 500
+Progress:export:306:500 	0.788661%
+[DEBUG] GcodeWriter processing layer 306 of 500
+Progress:export:307:500 	0.789749%
+[DEBUG] GcodeWriter processing layer 307 of 500
+Progress:export:308:500 	0.790836%
+[DEBUG] GcodeWriter processing layer 308 of 500
+Progress:export:309:500 	0.791924%
+[DEBUG] GcodeWriter processing layer 309 of 500
+Progress:export:310:500 	0.793011%
+[DEBUG] GcodeWriter processing layer 310 of 500
+Progress:export:311:500 	0.794099%
+[DEBUG] GcodeWriter processing layer 311 of 500
+Progress:export:312:500 	0.795186%
+[DEBUG] GcodeWriter processing layer 312 of 500
+Progress:export:313:500 	0.796274%
+[DEBUG] GcodeWriter processing layer 313 of 500
+Progress:export:314:500 	0.797361%
+[DEBUG] GcodeWriter processing layer 314 of 500
+Progress:export:315:500 	0.798449%
+[DEBUG] GcodeWriter processing layer 315 of 500
+Progress:export:316:500 	0.799537%
+[DEBUG] GcodeWriter processing layer 316 of 500
+Progress:export:317:500 	0.800624%
+[DEBUG] GcodeWriter processing layer 317 of 500
+Progress:export:318:500 	0.801712%
+[DEBUG] GcodeWriter processing layer 318 of 500
+Progress:export:319:500 	0.802799%
+[DEBUG] GcodeWriter processing layer 319 of 500
+Progress:export:320:500 	0.803887%
+[DEBUG] GcodeWriter processing layer 320 of 500
+Progress:export:321:500 	0.804974%
+[DEBUG] GcodeWriter processing layer 321 of 500
+Progress:export:322:500 	0.806062%
+[DEBUG] GcodeWriter processing layer 322 of 500
+Progress:export:323:500 	0.807150%
+[DEBUG] GcodeWriter processing layer 323 of 500
+Progress:export:324:500 	0.808237%
+[DEBUG] GcodeWriter processing layer 324 of 500
+Progress:export:325:500 	0.809325%
+[DEBUG] GcodeWriter processing layer 325 of 500
+Progress:export:326:500 	0.810412%
+[DEBUG] GcodeWriter processing layer 326 of 500
+Progress:export:327:500 	0.811500%
+[DEBUG] GcodeWriter processing layer 327 of 500
+Progress:export:328:500 	0.812587%
+[DEBUG] GcodeWriter processing layer 328 of 500
+Progress:export:329:500 	0.813675%
+[DEBUG] GcodeWriter processing layer 329 of 500
+Progress:export:330:500 	0.814763%
+[DEBUG] GcodeWriter processing layer 330 of 500
+Progress:export:331:500 	0.815850%
+[DEBUG] GcodeWriter processing layer 331 of 500
+Progress:export:332:500 	0.816938%
+[DEBUG] GcodeWriter processing layer 332 of 500
+Progress:export:333:500 	0.818025%
+[DEBUG] GcodeWriter processing layer 333 of 500
+Progress:export:334:500 	0.819113%
+[DEBUG] GcodeWriter processing layer 334 of 500
+Progress:export:335:500 	0.820200%
+[DEBUG] GcodeWriter processing layer 335 of 500
+Progress:export:336:500 	0.821288%
+[DEBUG] GcodeWriter processing layer 336 of 500
+Progress:export:337:500 	0.822375%
+[DEBUG] GcodeWriter processing layer 337 of 500
+Progress:export:338:500 	0.823463%
+[DEBUG] GcodeWriter processing layer 338 of 500
+Progress:export:339:500 	0.824551%
+[DEBUG] GcodeWriter processing layer 339 of 500
+Progress:export:340:500 	0.825638%
+[DEBUG] GcodeWriter processing layer 340 of 500
+Progress:export:341:500 	0.826726%
+[DEBUG] GcodeWriter processing layer 341 of 500
+Progress:export:342:500 	0.827813%
+[DEBUG] GcodeWriter processing layer 342 of 500
+Progress:export:343:500 	0.828901%
+[DEBUG] GcodeWriter processing layer 343 of 500
+Progress:export:344:500 	0.829988%
+[DEBUG] GcodeWriter processing layer 344 of 500
+Progress:export:345:500 	0.831076%
+[DEBUG] GcodeWriter processing layer 345 of 500
+Progress:export:346:500 	0.832164%
+[DEBUG] GcodeWriter processing layer 346 of 500
+Progress:export:347:500 	0.833251%
+[DEBUG] GcodeWriter processing layer 347 of 500
+Progress:export:348:500 	0.834339%
+[DEBUG] GcodeWriter processing layer 348 of 500
+Progress:export:349:500 	0.835426%
+[DEBUG] GcodeWriter processing layer 349 of 500
+Progress:export:350:500 	0.836514%
+[DEBUG] GcodeWriter processing layer 350 of 500
+Progress:export:351:500 	0.837601%
+[DEBUG] GcodeWriter processing layer 351 of 500
+Progress:export:352:500 	0.838689%
+[DEBUG] GcodeWriter processing layer 352 of 500
+Progress:export:353:500 	0.839776%
+[DEBUG] GcodeWriter processing layer 353 of 500
+Progress:export:354:500 	0.840864%
+[DEBUG] GcodeWriter processing layer 354 of 500
+Progress:export:355:500 	0.841952%
+[DEBUG] GcodeWriter processing layer 355 of 500
+Progress:export:356:500 	0.843039%
+[DEBUG] GcodeWriter processing layer 356 of 500
+Progress:export:357:500 	0.844127%
+[DEBUG] GcodeWriter processing layer 357 of 500
+Progress:export:358:500 	0.845214%
+[DEBUG] GcodeWriter processing layer 358 of 500
+Progress:export:359:500 	0.846302%
+[DEBUG] GcodeWriter processing layer 359 of 500
+Progress:export:360:500 	0.847389%
+[DEBUG] GcodeWriter processing layer 360 of 500
+Progress:export:361:500 	0.848477%
+[DEBUG] GcodeWriter processing layer 361 of 500
+Progress:export:362:500 	0.849565%
+[DEBUG] GcodeWriter processing layer 362 of 500
+Progress:export:363:500 	0.850652%
+[DEBUG] GcodeWriter processing layer 363 of 500
+Progress:export:364:500 	0.851740%
+[DEBUG] GcodeWriter processing layer 364 of 500
+Progress:export:365:500 	0.852827%
+[DEBUG] GcodeWriter processing layer 365 of 500
+Progress:export:366:500 	0.853915%
+[DEBUG] GcodeWriter processing layer 366 of 500
+Progress:export:367:500 	0.855002%
+[DEBUG] GcodeWriter processing layer 367 of 500
+Progress:export:368:500 	0.856090%
+[DEBUG] GcodeWriter processing layer 368 of 500
+Progress:export:369:500 	0.857177%
+[DEBUG] GcodeWriter processing layer 369 of 500
+Progress:export:370:500 	0.858265%
+[DEBUG] GcodeWriter processing layer 370 of 500
+Progress:export:371:500 	0.859353%
+[DEBUG] GcodeWriter processing layer 371 of 500
+Progress:export:372:500 	0.860440%
+[DEBUG] GcodeWriter processing layer 372 of 500
+Progress:export:373:500 	0.861528%
+[DEBUG] GcodeWriter processing layer 373 of 500
+Progress:export:374:500 	0.862615%
+[DEBUG] GcodeWriter processing layer 374 of 500
+Progress:export:375:500 	0.863703%
+[DEBUG] GcodeWriter processing layer 375 of 500
+Progress:export:376:500 	0.864790%
+[DEBUG] GcodeWriter processing layer 376 of 500
+Progress:export:377:500 	0.865878%
+[DEBUG] GcodeWriter processing layer 377 of 500
+Progress:export:378:500 	0.866966%
+[DEBUG] GcodeWriter processing layer 378 of 500
+Progress:export:379:500 	0.868053%
+[DEBUG] GcodeWriter processing layer 379 of 500
+Progress:export:380:500 	0.869141%
+[DEBUG] GcodeWriter processing layer 380 of 500
+Progress:export:381:500 	0.870228%
+[DEBUG] GcodeWriter processing layer 381 of 500
+Progress:export:382:500 	0.871316%
+[DEBUG] GcodeWriter processing layer 382 of 500
+Progress:export:383:500 	0.872403%
+[DEBUG] GcodeWriter processing layer 383 of 500
+Progress:export:384:500 	0.873491%
+[DEBUG] GcodeWriter processing layer 384 of 500
+Progress:export:385:500 	0.874578%
+[DEBUG] GcodeWriter processing layer 385 of 500
+Progress:export:386:500 	0.875666%
+[DEBUG] GcodeWriter processing layer 386 of 500
+Progress:export:387:500 	0.876754%
+[DEBUG] GcodeWriter processing layer 387 of 500
+Progress:export:388:500 	0.877841%
+[DEBUG] GcodeWriter processing layer 388 of 500
+Progress:export:389:500 	0.878929%
+[DEBUG] GcodeWriter processing layer 389 of 500
+Progress:export:390:500 	0.880016%
+[DEBUG] GcodeWriter processing layer 390 of 500
+Progress:export:391:500 	0.881104%
+[DEBUG] GcodeWriter processing layer 391 of 500
+Progress:export:392:500 	0.882191%
+[DEBUG] GcodeWriter processing layer 392 of 500
+Progress:export:393:500 	0.883279%
+[DEBUG] GcodeWriter processing layer 393 of 500
+Progress:export:394:500 	0.884367%
+[DEBUG] GcodeWriter processing layer 394 of 500
+Progress:export:395:500 	0.885454%
+[DEBUG] GcodeWriter processing layer 395 of 500
+Progress:export:396:500 	0.886542%
+[DEBUG] GcodeWriter processing layer 396 of 500
+Progress:export:397:500 	0.887629%
+[DEBUG] GcodeWriter processing layer 397 of 500
+Progress:export:398:500 	0.888717%
+[DEBUG] GcodeWriter processing layer 398 of 500
+Progress:export:399:500 	0.889804%
+[DEBUG] GcodeWriter processing layer 399 of 500
+Progress:export:400:500 	0.890892%
+[DEBUG] GcodeWriter processing layer 400 of 500
+Progress:export:401:500 	0.891980%
+[DEBUG] GcodeWriter processing layer 401 of 500
+Progress:export:402:500 	0.893067%
+[DEBUG] GcodeWriter processing layer 402 of 500
+Progress:export:403:500 	0.894155%
+[DEBUG] GcodeWriter processing layer 403 of 500
+Progress:export:404:500 	0.895242%
+[DEBUG] GcodeWriter processing layer 404 of 500
+Progress:export:405:500 	0.896330%
+[DEBUG] GcodeWriter processing layer 405 of 500
+Progress:export:406:500 	0.897417%
+[DEBUG] GcodeWriter processing layer 406 of 500
+Progress:export:407:500 	0.898505%
+[DEBUG] GcodeWriter processing layer 407 of 500
+Progress:export:408:500 	0.899592%
+[DEBUG] GcodeWriter processing layer 408 of 500
+Progress:export:409:500 	0.900680%
+[DEBUG] GcodeWriter processing layer 409 of 500
+Progress:export:410:500 	0.901768%
+[DEBUG] GcodeWriter processing layer 410 of 500
+Progress:export:411:500 	0.902855%
+[DEBUG] GcodeWriter processing layer 411 of 500
+Progress:export:412:500 	0.903943%
+[DEBUG] GcodeWriter processing layer 412 of 500
+Progress:export:413:500 	0.905030%
+[DEBUG] GcodeWriter processing layer 413 of 500
+Progress:export:414:500 	0.906118%
+[DEBUG] GcodeWriter processing layer 414 of 500
+Progress:export:415:500 	0.907205%
+[DEBUG] GcodeWriter processing layer 415 of 500
+Progress:export:416:500 	0.908293%
+[DEBUG] GcodeWriter processing layer 416 of 500
+Progress:export:417:500 	0.909381%
+[DEBUG] GcodeWriter processing layer 417 of 500
+Progress:export:418:500 	0.910468%
+[DEBUG] GcodeWriter processing layer 418 of 500
+Progress:export:419:500 	0.911556%
+[DEBUG] GcodeWriter processing layer 419 of 500
+Progress:export:420:500 	0.912643%
+[DEBUG] GcodeWriter processing layer 420 of 500
+Progress:export:421:500 	0.913731%
+[DEBUG] GcodeWriter processing layer 421 of 500
+Progress:export:422:500 	0.914818%
+[DEBUG] GcodeWriter processing layer 422 of 500
+Progress:export:423:500 	0.915906%
+[DEBUG] GcodeWriter processing layer 423 of 500
+Progress:export:424:500 	0.916993%
+[DEBUG] GcodeWriter processing layer 424 of 500
+Progress:export:425:500 	0.918081%
+[DEBUG] GcodeWriter processing layer 425 of 500
+Progress:export:426:500 	0.919169%
+[DEBUG] GcodeWriter processing layer 426 of 500
+Progress:export:427:500 	0.920256%
+[DEBUG] GcodeWriter processing layer 427 of 500
+Progress:export:428:500 	0.921344%
+[DEBUG] GcodeWriter processing layer 428 of 500
+Progress:export:429:500 	0.922431%
+[DEBUG] GcodeWriter processing layer 429 of 500
+Progress:export:430:500 	0.923519%
+[DEBUG] GcodeWriter processing layer 430 of 500
+Progress:export:431:500 	0.924606%
+[DEBUG] GcodeWriter processing layer 431 of 500
+Progress:export:432:500 	0.925694%
+[DEBUG] GcodeWriter processing layer 432 of 500
+Progress:export:433:500 	0.926782%
+[DEBUG] GcodeWriter processing layer 433 of 500
+Progress:export:434:500 	0.927869%
+[DEBUG] GcodeWriter processing layer 434 of 500
+Progress:export:435:500 	0.928957%
+[DEBUG] GcodeWriter processing layer 435 of 500
+Progress:export:436:500 	0.930044%
+[DEBUG] GcodeWriter processing layer 436 of 500
+Progress:export:437:500 	0.931132%
+[DEBUG] GcodeWriter processing layer 437 of 500
+Progress:export:438:500 	0.932219%
+[DEBUG] GcodeWriter processing layer 438 of 500
+Progress:export:439:500 	0.933307%
+[DEBUG] GcodeWriter processing layer 439 of 500
+Progress:export:440:500 	0.934394%
+[DEBUG] GcodeWriter processing layer 440 of 500
+Progress:export:441:500 	0.935482%
+[DEBUG] GcodeWriter processing layer 441 of 500
+Progress:export:442:500 	0.936570%
+[DEBUG] GcodeWriter processing layer 442 of 500
+Progress:export:443:500 	0.937657%
+[DEBUG] GcodeWriter processing layer 443 of 500
+Progress:export:444:500 	0.938745%
+[DEBUG] GcodeWriter processing layer 444 of 500
+Progress:export:445:500 	0.939832%
+[DEBUG] GcodeWriter processing layer 445 of 500
+Progress:export:446:500 	0.940920%
+[DEBUG] GcodeWriter processing layer 446 of 500
+Progress:export:447:500 	0.942007%
+[DEBUG] GcodeWriter processing layer 447 of 500
+Progress:export:448:500 	0.943095%
+[DEBUG] GcodeWriter processing layer 448 of 500
+Progress:export:449:500 	0.944183%
+[DEBUG] GcodeWriter processing layer 449 of 500
+Progress:export:450:500 	0.945270%
+[DEBUG] GcodeWriter processing layer 450 of 500
+Progress:export:451:500 	0.946358%
+[DEBUG] GcodeWriter processing layer 451 of 500
+Progress:export:452:500 	0.947445%
+[DEBUG] GcodeWriter processing layer 452 of 500
+Progress:export:453:500 	0.948533%
+[DEBUG] GcodeWriter processing layer 453 of 500
+Progress:export:454:500 	0.949620%
+[DEBUG] GcodeWriter processing layer 454 of 500
+Progress:export:455:500 	0.950708%
+[DEBUG] GcodeWriter processing layer 455 of 500
+Progress:export:456:500 	0.951796%
+[DEBUG] GcodeWriter processing layer 456 of 500
+Progress:export:457:500 	0.952883%
+[DEBUG] GcodeWriter processing layer 457 of 500
+Progress:export:458:500 	0.953971%
+[DEBUG] GcodeWriter processing layer 458 of 500
+Progress:export:459:500 	0.955058%
+[DEBUG] GcodeWriter processing layer 459 of 500
+Progress:export:460:500 	0.956146%
+[DEBUG] GcodeWriter processing layer 460 of 500
+Progress:export:461:500 	0.957233%
+[DEBUG] GcodeWriter processing layer 461 of 500
+Progress:export:462:500 	0.958321%
+[DEBUG] GcodeWriter processing layer 462 of 500
+Progress:export:463:500 	0.959408%
+[DEBUG] GcodeWriter processing layer 463 of 500
+Progress:export:464:500 	0.960496%
+[DEBUG] GcodeWriter processing layer 464 of 500
+Progress:export:465:500 	0.961584%
+[DEBUG] GcodeWriter processing layer 465 of 500
+Progress:export:466:500 	0.962671%
+[DEBUG] GcodeWriter processing layer 466 of 500
+Progress:export:467:500 	0.963759%
+[DEBUG] GcodeWriter processing layer 467 of 500
+Progress:export:468:500 	0.964846%
+[DEBUG] GcodeWriter processing layer 468 of 500
+Progress:export:469:500 	0.965934%
+[DEBUG] GcodeWriter processing layer 469 of 500
+Progress:export:470:500 	0.967021%
+[DEBUG] GcodeWriter processing layer 470 of 500
+Progress:export:471:500 	0.968109%
+[DEBUG] GcodeWriter processing layer 471 of 500
+Progress:export:472:500 	0.969197%
+[DEBUG] GcodeWriter processing layer 472 of 500
+Progress:export:473:500 	0.970284%
+[DEBUG] GcodeWriter processing layer 473 of 500
+Progress:export:474:500 	0.971372%
+[DEBUG] GcodeWriter processing layer 474 of 500
+Progress:export:475:500 	0.972459%
+[DEBUG] GcodeWriter processing layer 475 of 500
+Progress:export:476:500 	0.973547%
+[DEBUG] GcodeWriter processing layer 476 of 500
+Progress:export:477:500 	0.974634%
+[DEBUG] GcodeWriter processing layer 477 of 500
+Progress:export:478:500 	0.975722%
+[DEBUG] GcodeWriter processing layer 478 of 500
+Progress:export:479:500 	0.976810%
+[DEBUG] GcodeWriter processing layer 479 of 500
+Progress:export:480:500 	0.977897%
+[DEBUG] GcodeWriter processing layer 480 of 500
+Progress:export:481:500 	0.978985%
+[DEBUG] GcodeWriter processing layer 481 of 500
+Progress:export:482:500 	0.980072%
+[DEBUG] GcodeWriter processing layer 482 of 500
+Progress:export:483:500 	0.981160%
+[DEBUG] GcodeWriter processing layer 483 of 500
+Progress:export:484:500 	0.982247%
+[DEBUG] GcodeWriter processing layer 484 of 500
+Progress:export:485:500 	0.983335%
+[DEBUG] GcodeWriter processing layer 485 of 500
+Progress:export:486:500 	0.984422%
+[DEBUG] GcodeWriter processing layer 486 of 500
+Progress:export:487:500 	0.985510%
+[DEBUG] GcodeWriter processing layer 487 of 500
+Progress:export:488:500 	0.986598%
+[DEBUG] GcodeWriter processing layer 488 of 500
+Progress:export:489:500 	0.987685%
+[DEBUG] GcodeWriter processing layer 489 of 500
+Progress:export:490:500 	0.988773%
+[DEBUG] GcodeWriter processing layer 490 of 500
+Progress:export:491:500 	0.989860%
+[DEBUG] GcodeWriter processing layer 491 of 500
+Progress:export:492:500 	0.990948%
+[DEBUG] GcodeWriter processing layer 492 of 500
+Progress:export:493:500 	0.992035%
+[DEBUG] GcodeWriter processing layer 493 of 500
+Progress:export:494:500 	0.993123%
+[DEBUG] GcodeWriter processing layer 494 of 500
+Progress:export:495:500 	0.994210%
+[DEBUG] GcodeWriter processing layer 495 of 500
+Progress:export:496:500 	0.995298%
+[DEBUG] GcodeWriter processing layer 496 of 500
+Progress:export:497:500 	0.996386%
+[DEBUG] GcodeWriter processing layer 497 of 500
+Progress:export:498:500 	0.997473%
+[WARNING] There are empty layers (or layers with empty extruder plans) in the print! Temperature control and cross layer travel moves might suffer.
+[DEBUG] GcodeWriter processing layer 498 of 500
+Progress:export:499:500 	0.998561%
+[WARNING] There are empty layers (or layers with empty extruder plans) in the print! Temperature control and cross layer travel moves might suffer.
+[DEBUG] GcodeWriter processing layer 499 of 500
+Progress:export:500:500 	0.999648%
+[WARNING] There are empty layers (or layers with empty extruder plans) in the print! Temperature control and cross layer travel moves might suffer.
+Progress: export accomplished in 7.087s
+Progress:process:1:1 	1.000000%
+Total time elapsed 11.13s.
+Gcode header after slicing:
+;FLAVOR:Marlin
+;TIME:10686
+;Filament used: 7.59389m
+;Layer height: 0.1
+End of gcode header.
+Print time: 10686
+Print time (readable): 2h 58m 6s
+Filament: 18265

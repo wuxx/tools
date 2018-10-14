@@ -1,0 +1,54 @@
+[ ca ]
+default_ca  = CA_default1
+
+[ CA_default1 ]
+
+default_md = md5
+
+dir     = ./ca1      # Where everything is kept
+
+certificate = $dir/ca1.crt   # The CA certificate
+private_key = $dir/ca1.key
+
+dir     = ./demoCA      # Where everything is kept
+certs       = $dir/certs        # Where the issued certs are kept
+crl_dir     = $dir/crl      # Where the issued crl are kept
+database    = $dir/index.txt    # database index file.
+#unique_subject = no            # Set to 'no' to allow creation of
+                    # several ctificates with same subject.
+new_certs_dir   = $dir/newcerts     # default place for new certs.
+
+serial      = $dir/serial       # The current serial number
+crlnumber   = $dir/crlnumber    # the current crl number
+                    # must be commented out to leave a V1 CRL
+crl     = $dir/crl.pem      # The current CRL
+RANDFILE    = $dir/private/.rand    # private random number file
+
+policy      = policy_match
+
+# For the CA policy
+[ policy_match ]
+countryName     = match
+stateOrProvinceName = match
+organizationName    = match
+organizationalUnitName  = optional
+commonName      = supplied
+emailAddress        = optional
+
+[ v3_ca ]
+
+
+# Extensions for a typical CA
+
+
+# PKIX recommendation.
+
+subjectKeyIdentifier=hash
+
+authorityKeyIdentifier=keyid:always,issuer
+
+# This is what PKIX recommends but some broken software chokes on critical
+# extensions.
+#basicConstraints = critical,CA:true
+# So we do this instead.
+basicConstraints = CA:true

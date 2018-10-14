@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Emit a useful diagnostic if something fails:
+bb_exit_handler() {
+    ret=$?
+    case $ret in
+    0)  ;;
+    *)  case $BASH_VERSION in
+        "") echo "WARNING: exit code $ret from a shell command.";;
+        *)  echo "WARNING: ${BASH_SOURCE[0]}:${BASH_LINENO[0]} exit $ret from '$BASH_COMMAND'";;
+        esac
+        exit $ret
+    esac
+}
+trap 'bb_exit_handler' 0
+set -e
+export HOME="/root"
+export LC_ALL="en_US.UTF-8"
+export LOGNAME="root"
+export PATH="/home/share/oss/bitbake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin:/root/tools/:/root/tools/android/:/root/tools/android/dex2jar:/root/tools/tcc/bin:/root/lua/lua/src:/opt/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf/bin"
+export SHELL="/bin/bash"
+export TERM="screen"
+export USER="root"
+
+do_build() {
+	echo "myvar_sh: hello from MYVAR"
+}
+
+cd '/home/share/oss/tools/bitbake/bbTutorial/build'
+do_build
+
+# cleanup
+ret=$?
+trap '' 0
+exit $ret

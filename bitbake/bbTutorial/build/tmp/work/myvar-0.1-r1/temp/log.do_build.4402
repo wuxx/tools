@@ -1,0 +1,3 @@
+DEBUG: Executing shell function do_build
+myvar_sh: hello from MYVAR
+DEBUG: Shell function do_build finished

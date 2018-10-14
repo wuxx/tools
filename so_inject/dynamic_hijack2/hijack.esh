@@ -1,0 +1,15 @@
+#!/usr/bin/elfsh
+
+load /usr/bin/md5sum
+
+exec cc test.c -c
+
+load test.o
+
+reladd 1 2
+
+redir fopen64 fopen64_troj
+
+save md5sum.new
+
+quit

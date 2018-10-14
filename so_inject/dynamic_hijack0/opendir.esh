@@ -1,0 +1,16 @@
+#!/usr/bin/elfsh
+
+load ./opendir
+
+# swap dynamic[0], dynamic[13]
+# Move DT_DEBUG into DT_NEEDED
+set 1.dynamic[12].tag DT_NEEDED
+
+# Put the former DT_DEBUG entry value to the first DT_NEEDED value
+set 1.dynamic[12].val 1.dynamic[0].val
+
+# Add 3 to the first DT_NEEDED value => libselinux.so.1 becomes selinux.so.1 
+add 1.dynamic[0].val 2
+
+save opendir.new
+quit

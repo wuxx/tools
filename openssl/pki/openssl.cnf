@@ -1,0 +1,15 @@
+[ req ]
+default_bits = 2048
+default_keyfile = /var/MyCA/private/cakey.pem
+default_md = md5
+prompt = no
+distinguished_name = root_ca_distinguished_name
+x509_extensions = root_ca_extensions
+[ root_ca_distinguished_name ]
+commonName = My Test CA
+stateOrProvinceName = HZ
+countryName = CN
+emailAddress = test@cert.com 
+organizationName = Root Certification Authority
+[ root_ca_extensions ]
+basicConstraints = CA:true

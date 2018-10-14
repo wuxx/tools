@@ -1,0 +1,5 @@
+def do_myvar_py(d):
+	print "myvar_py:" + d.getVar('MYVAR', True)
+
+do_myvar_py(d)
+
