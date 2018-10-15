@@ -192,6 +192,9 @@ tmux
 detach the session
 ctrl+b d
 tmux a -t session-name
+
+tmux kill-session -t 2
+
 #cheetsheet
 http://blog.csdn.net/hcx25909/article/details/7602935
 
@@ -473,3 +476,6 @@ perl -e 'print "a" x 10'
 
 #cp file with progress
 rsync -av --progress --stats cm3_20181012.img /home/pi/
+
+#S.M.A.R.T health check.
+sudo smartctl -H /dev/sda10
