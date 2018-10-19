@@ -56,6 +56,9 @@ git checkout <SHA-1>
 #mov back to master
 git checkout master
 
+git reset HEAD^
+git checkout HEAD@{0}
+
 git branch --set-upstream-to=origin/master
 git branch --set-upstream-to=origin/master master
 
