@@ -8,8 +8,10 @@
 int main(int argc, char **argv)
 {
 	int fd;
+    int count = 0;
 
 	if(wiringPiSetup() < 0) {
+        printf("wiringPiSetup fail!\n");
         return 1;
     }
 
@@ -25,8 +27,25 @@ int main(int argc, char **argv)
         return 1;
     }
 
-	printf("start send [%s]...\n", argv[2]);
-	serialPrintf(fd, "%s\n", argv[2]);
+    sleep(5);
+
+    while (1) {
+        printf("[%d]\n", count);
+
+        printf("start send [G1 Z10]...\n");
+        serialPrintf(fd, "G1 Z10\n");
+
+        sleep(3);
+
+        printf("start send [G1 Z0]...\n");
+        serialPrintf(fd, "G1 Z0\n");
+
+        sleep(3);
+
+        count++;
+    }
+
+
 	serialClose(fd);
 	return 0;
 }

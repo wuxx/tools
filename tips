@@ -482,3 +482,14 @@ rsync -av --progress --stats cm3_20181012.img /home/pi/
 
 #S.M.A.R.T health check.
 sudo smartctl -H /dev/sda10
+
+#ffmpeg rotate clockwise 270 (anti-clock 90)
+ffmpeg -i in.MOV -vf transpose=2 out.mov
+#scp avoid stalled.
+scp -l 8192 source dest
+
+#rsync replace cp 
+alias cp="rsync -ah --progress"
+
+#ssh  socks5 proxy
+ssh -qTfnN -D 7070 -p 22 root@47.91.223.100
