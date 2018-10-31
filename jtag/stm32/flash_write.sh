@@ -42,7 +42,9 @@ sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
 "   init;
     halt;
     reset halt;
+    stm32f1x unlock 0;
     flash write_image erase ${TARGET};
+    stm32f1x lock 0;
     reset;
     shutdown;
 "
