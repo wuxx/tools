@@ -486,6 +486,9 @@ sudo smartctl -H /dev/sda10
 #ffmpeg rotate clockwise 270 (anti-clock 90)
 ffmpeg -i in.MOV -vf transpose=2 out.mov
 
+#ffmpeg rotate clockwise 90 (anti-clock 270)
+ffmpeg -i in.MOV -vf transpose=1 out.mov
+
 #ffmpeg cut video
 ffmpeg -i in.flv -vcodec copy -acodec copy -ss 00:00:04 -to 00:04:24 out.flv -y
 
