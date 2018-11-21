@@ -17,8 +17,8 @@ FLASH_SIZE=0x00010000 #64KB
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 
 #CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg
-#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
-CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
+CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
+#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
 
 sudo openocd -f ${CONFIG} -c \
 "   init;

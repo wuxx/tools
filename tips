@@ -246,7 +246,6 @@ set -o errexit
 
 #minicom usage
 minicom -D /dev/ttyUSB0 -b 115200
-<<<<<<< HEAD
 minicom -D /dev/ttyACM0 -b 115200
 #rz
 rz in minicom
@@ -307,7 +306,7 @@ sudo nmap -sT 192.168.1.0/24
 #fping
 fping -g 192.168.0.0 192.168.0.254
 
-#port map, visit the ipternet_ip:1234
+#port map, (map local machine 8020 to internet machine 1234) visit the ipternet_ip:1234
 ssh -N -f -R 1234:127.0.0.1:8020 root@internet_ip
 
 #count the file num opened by process
