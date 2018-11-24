@@ -347,6 +347,7 @@ convert -depth 8 -size 3x2+0 gray:f out.png
 
 #convert resize
 convert -resize 600x600! src.jpg dst.jpg
+convert -resize 50%x50% src.jpg dst.jpg
 #convert to 1-byte grayscale
 convert source.jpg -monochrome destination.jpg
 
@@ -431,6 +432,7 @@ cat /dev/urandom >/dev/fb0
 #convert rgba to rgb
 https://stackoverflow.com/questions/34305379/how-to-convert-gray-scale-png-image-to-rgb-from-comand-line-using-image-magick
 convert in.png -define png:color-type=2 out.png
+#rotate clockwise 270
 convert -rotate 270 in.png out.png
 
 convert -define png:color-type=2 -rotate 270 in.png out.png
