@@ -18,6 +18,10 @@ CURRENT_DIR=$(cd $(dirname $0); pwd)
 
 #CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg
 CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
+<<<<<<< HEAD
+=======
+#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 
 sudo openocd -f ${CONFIG} -c \
 "   init;

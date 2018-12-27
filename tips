@@ -56,6 +56,12 @@ git checkout <SHA-1>
 #mov back to master
 git checkout master
 
+<<<<<<< HEAD
+=======
+git reset HEAD^
+git checkout HEAD@{0}
+
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 git branch --set-upstream-to=origin/master
 git branch --set-upstream-to=origin/master master
 
@@ -192,6 +198,12 @@ tmux
 detach the session
 ctrl+b d
 tmux a -t session-name
+<<<<<<< HEAD
+=======
+
+tmux kill-session -t 2
+
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 #cheetsheet
 http://blog.csdn.net/hcx25909/article/details/7602935
 
@@ -241,6 +253,9 @@ set -o errexit
 #minicom usage
 minicom -D /dev/ttyUSB0 -b 115200
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 minicom -D /dev/ttyACM0 -b 115200
 #rz
 rz in minicom
@@ -301,7 +316,11 @@ sudo nmap -sT 192.168.1.0/24
 #fping
 fping -g 192.168.0.0 192.168.0.254
 
+<<<<<<< HEAD
 #port map, visit the ipternet_ip:1234
+=======
+#port map, (map local machine 8020 to internet machine 1234) visit the ipternet_ip:1234
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 ssh -N -f -R 1234:127.0.0.1:8020 root@internet_ip
 
 #count the file num opened by process
@@ -342,6 +361,10 @@ convert -depth 8 -size 3x2+0 gray:f out.png
 
 #convert resize
 convert -resize 600x600! src.jpg dst.jpg
+<<<<<<< HEAD
+=======
+convert -resize 50%x50% src.jpg dst.jpg
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 #convert to 1-byte grayscale
 convert source.jpg -monochrome destination.jpg
 
@@ -426,6 +449,10 @@ cat /dev/urandom >/dev/fb0
 #convert rgba to rgb
 https://stackoverflow.com/questions/34305379/how-to-convert-gray-scale-png-image-to-rgb-from-comand-line-using-image-magick
 convert in.png -define png:color-type=2 out.png
+<<<<<<< HEAD
+=======
+#rotate clockwise 270
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 convert -rotate 270 in.png out.png
 
 convert -define png:color-type=2 -rotate 270 in.png out.png
@@ -470,3 +497,36 @@ arm-none-eabi-objdump -Mforce-thumb -marm -b binary -D LED.bin
 
 #perl string operation
 perl -e 'print "a" x 10'
+<<<<<<< HEAD
+=======
+
+#cp file with progress
+rsync -av --progress --stats cm3_20181012.img /home/pi/
+
+#S.M.A.R.T health check.
+sudo smartctl -H /dev/sda10
+
+#ffmpeg rotate clockwise 270 (anti-clock 90)
+ffmpeg -i in.MOV -vf transpose=2 out.mov
+
+#ffmpeg rotate clockwise 90 (anti-clock 270)
+ffmpeg -i in.MOV -vf transpose=1 out.mov
+
+#ffmpeg cut video
+ffmpeg -i in.flv -vcodec copy -acodec copy -ss 00:00:04 -to 00:04:24 out.flv -y
+
+#ffmpeg remove sound acodec
+ffmpeg -i out.flv -an -vcodec copy out1.flv
+
+#ffmpeg combine video and sound.
+ffmpeg -i in.flv -i in.m4a -c copy out.flv
+
+#scp avoid stalled.
+scp -l 8192 source dest
+
+#rsync replace cp 
+alias cp="rsync -ah --progress"
+
+#ssh  socks5 proxy
+ssh -qTfnN -D 7070 -p 22 root@47.91.223.100
+>>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
