@@ -4,13 +4,19 @@ CURRENT_DIR=$(cd $(dirname $0); pwd)
 
 UART_SEND=${CURRENT_DIR}/tools/uart_send
 
-STM32_GPIO_LED=PB13
+#LED_RUN
+#PA9
 
-STM32_GPIO_TCK_SWCLK=PA4
-STM32_GPIO_TMS_SWDIO=PA0
+#LED_CON
+STM32_GPIO_LED=PB6
+
+STM32_GPIO_TCK_SWCLK=PB13
+#for nanoDAP V2.0 PB12 need set to input
+STM32_GPIO_TMS_SWDIO_IN=PB12
+STM32_GPIO_TMS_SWDIO_OUT=PB14
 STM32_GPIO_TDI=PA7
 STM32_GPIO_TDO=PA5
-STM32_GPIO_nRST=PA6
+STM32_GPIO_nRST=PB0
 
 RPI3B_GPIO_TCK_SWCLK=2
 RPI3B_GPIO_TMS_SWDIO=0
@@ -20,7 +26,7 @@ RPI3B_GPIO_nRST=4
 
 GPIO_MAP=("TCK_SWCLK" "TMS_SWDIO" "TDI" "TDO" "nRST")
 
-STM32_GPIO_MAP=("$STM32_GPIO_TCK_SWCLK" "$STM32_GPIO_TMS_SWDIO" "$STM32_GPIO_TDI" "$STM32_GPIO_TDO" "$STM32_GPIO_nRST")
+STM32_GPIO_MAP=("$STM32_GPIO_TCK_SWCLK" "$STM32_GPIO_TMS_SWDIO_OUT" "$STM32_GPIO_TDI" "$STM32_GPIO_TDO" "$STM32_GPIO_nRST")
 RPI3B_GPIO_MAP=("$RPI3B_GPIO_TCK_SWCLK" "$RPI3B_GPIO_TMS_SWDIO" "$RPI3B_GPIO_TDI" "$RPI3B_GPIO_TDO" "$RPI3B_GPIO_nRST")
 
 function stm32_gpio_write() {
@@ -44,7 +50,7 @@ echo $RV | grep "ATE"
 if [ $? -eq 0 ]; then
     echo "uart ok"
 else
-    echo "uart error"
+    echo "uart error [$RV]"
     exit 1
 fi
 
@@ -52,7 +58,10 @@ fi
 #2 light the led
 stm32_gpio_write "${STM32_GPIO_LED}" "1"
 
-#3 gpio test
+#3 set swdio input, to not affect the swdio output
+${UART_SEND} "gpio init ${STM32_GPIO_TMS_SWDIO_IN} in"
+
+#4 gpio test
 for((i=0;i<${#STM32_GPIO_MAP[@]};i++))
 do
     echo -n "gpio test: [${GPIO_MAP[i]}] "

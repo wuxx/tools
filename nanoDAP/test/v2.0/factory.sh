@@ -6,8 +6,9 @@ FLASH_WRITE=/home/pi/oss/tools/jtag/stm32/flash_write.sh
 PROBE_SH=/home/pi/oss/tools/jtag/stm32/probe.sh
 
 FACTORY_TEST_IMAGE=${CURRENT_DIR}/image/factory_test.hex
-DAP_IMAGE=${CURRENT_DIR}/image/DAP.hex
-#DAP_IMAGE=${CURRENT_DIR}/image/main.bin
+
+#DAP_IMAGE=${CURRENT_DIR}/image/flash_image_cmsisdap_20181227.bin
+DAP_IMAGE=${CURRENT_DIR}/image/flash_image_daplink_20181227.bin
 
 FACTORY_TEST_SH=${CURRENT_DIR}/rpi/factory_test.sh
 BUZZER_SH=${CURRENT_DIR}/buzzer.sh
@@ -31,12 +32,12 @@ while [ 1 ]; do
         if [ $? -ne 0 ]; then
             echo "factory test fail!"
             ${BUZZER_SH} "fail" &
-            #exit 1
+            exit 1
         fi
         
         ${FLASH_WRITE} ${DAP_IMAGE}
         if [ $? -ne 0 ]; then
-            echo "flash write DAP.hex fail!"
+            echo "flash write ${DAP_IMAGE} fail!"
             ${BUZZER_SH} "fail" &
             #exit 1
         fi

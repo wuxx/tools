@@ -46,8 +46,6 @@ sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
     reset;
     shutdown;
 "
-<<<<<<< HEAD
-=======
 
 exit 0
 
@@ -61,4 +59,3 @@ sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
     reset;
     shutdown;
 "
->>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
