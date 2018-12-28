@@ -277,7 +277,8 @@ static int32_t cmd_gpio()
 		GPIOMode_TypeDef mode;
 		GPIO_InitTypeDef gpio;
 		uint8_t b;
-	
+		gt911_main();
+
 		pgi = gi_get(argv[2]);
 		if (pgi == NULL) {
 			printf("unknown gpio num [%s]\n", argv[2]);
