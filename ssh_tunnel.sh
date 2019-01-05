@@ -14,11 +14,7 @@ while [ 1 ]; do
         echo "start ssh tunnel"
         #ssh -N -f -o TCPKeepAlive=yes -R 2222:127.0.0.1:22  root@123.56.12.242
         #ssh -N -f -o "StrictHostKeyChecking no" -R 2222:127.0.0.1:22  tester@123.56.12.242
-<<<<<<< HEAD
-        autossh -M 2231 -NR 2232:localhost:22 tester@123.56.12.242 -p 22
-=======
         autossh -M 2221 -NR 2222:localhost:22 tester@123.56.12.242 -p 22
->>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
     else
         echo "ssh tunnel already open, sleep... "
         sleep 60
