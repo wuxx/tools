@@ -61,12 +61,9 @@ git checkout <SHA-1>
 #mov back to master
 git checkout master
 
-<<<<<<< HEAD
-=======
 git reset HEAD^
 git checkout HEAD@{0}
 
->>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 git branch --set-upstream-to=origin/master
 git branch --set-upstream-to=origin/master master
 
@@ -203,12 +200,9 @@ tmux
 detach the session
 ctrl+b d
 tmux a -t session-name
-<<<<<<< HEAD
-=======
 
 tmux kill-session -t 2
 
->>>>>>> 3fec14219e625d7cedd8624dd663a406bf7ad7c9
 #cheetsheet
 http://blog.csdn.net/hcx25909/article/details/7602935
 

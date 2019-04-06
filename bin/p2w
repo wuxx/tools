@@ -1,0 +1,12 @@
+#!/bin/bash
+
+IP=$(hostname -I | tr -d ' ')
+
+#IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}')
+
+#WIN_PATH=$(echo ${PWD} | sed 's/\/home\/pi/\\\\'${IP}'/' | sed 's/\//\\/g')
+
+WIN_PATH=$(echo ${PWD} | sed 's#/#\\#g')
+
+echo "\\\\${IP}${WIN_PATH}"
+
