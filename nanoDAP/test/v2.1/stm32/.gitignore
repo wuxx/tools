@@ -1,0 +1,9 @@
+Output/*.o
+Output/*.crf
+Output/*.d
+Output/*.htm
+Output/*.lnp
+Output/*.plg
+Output/*.tra
+Output/*.dep
+
