@@ -8,7 +8,8 @@ PROBE_SH=/home/pi/oss/tools/jtag/stm32/probe.sh
 FACTORY_TEST_IMAGE=${CURRENT_DIR}/image/factory_test.hex
 
 #DAP_IMAGE=${CURRENT_DIR}/image/flash_image_cmsisdap_20181227.bin
-DAP_IMAGE=${CURRENT_DIR}/image/flash_image_daplink_soft_reset_20190428.bin
+#DAP_IMAGE=${CURRENT_DIR}/image/flash_image_daplink_soft_reset_20190428.bin
+DAP_IMAGE=${CURRENT_DIR}/image/flash_image_daplink_soft_reset_20190429.bin
 
 FACTORY_TEST_SH=${CURRENT_DIR}/rpi/factory_test.sh
 BUZZER_SH=${CURRENT_DIR}/buzzer.sh
