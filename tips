@@ -529,3 +529,6 @@ apt-get install texlive-lang-cjk
 
 #zip multi-volume
 zip -s 10g lakka_wireless.zip s905_lakka_20181221_wireless_home_joystick.img
+
+#
+picocom -b 115200 /dev/ttyUSB0
