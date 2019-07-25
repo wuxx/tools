@@ -543,3 +543,7 @@ date +%g%m%d%H%M%S
 
 #pdftoppm
 pdftoppm input.pdf output_name -png -rx 300 -ry 300
+
+#xdelta3
+xdelta3 -s SOURCE TARGET > OUT
+xdelta3 -d -s SOURCE OUT > TARGET
