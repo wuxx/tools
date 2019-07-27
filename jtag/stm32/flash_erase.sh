@@ -3,7 +3,7 @@
 #xxx.hex or xxx.bin
 
 FLASH_ADDR=0x08000000
-FLASH_SIZE=0x00020000 #128KB
+FLASH_SIZE=0x00010000 #128KB
 
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 
