@@ -11,12 +11,12 @@
 #FLASH_SIZE=0x00010000 #64KB
 
 #stm32f030c8t6
-FLASH_ADDR=0x08000000
-FLASH_SIZE=0x00010000 #64KB
+#FLASH_ADDR=0x08000000
+#FLASH_SIZE=0x00010000 #64KB
 
 #stm32f030cbt6
-#FLASH_ADDR=0x08000000
-#FLASH_SIZE=0x00020000 #128KB
+FLASH_ADDR=0x08000000
+FLASH_SIZE=0x00020000 #128KB
 
 #stm32f070f6p6
 #FLASH_ADDR=0x08000000
@@ -38,7 +38,7 @@ sudo openocd -f ${CONFIG} -c \
 "   init;
     halt;
     reset halt;
-    dump_image flash_image.bin ${FLASH_ADDR} ${FLASH_SIZE}
+    dump_image flash_image_dump.bin ${FLASH_ADDR} ${FLASH_SIZE}
     shutdown;
 "
 

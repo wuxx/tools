@@ -547,3 +547,37 @@ pdftoppm input.pdf output_name -png -rx 300 -ry 300
 #xdelta3
 xdelta3 -s SOURCE TARGET > OUT
 xdelta3 -d -s SOURCE OUT > TARGET
+
+#create new branch
+git checkout -b new_branch_name
+git push origin new_branch_name:new_branch_name
+
+#split
+split -b 3M xxx.bin
+
+#rpi install vim
+sudo apt-get remove vim-common
+sudo apt-get install -y vim
+
+#rpi get cpu temperature
+vcgencmd measure_temp
+cat /sys/class/thermal/thermal_zone0/temp
+
+#git delete local branches (already delete at remote peer)
+git remote show origin
+git remote prune origin
+
+
+#install libusb
+sudo apt-get install libusb-dev
+#sudo apt-get install libusb-1.0-0-dev
+
+#install hidapi
+sudo apt-get install libhidapi-dev
+
+#linux stress
+stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
+
+#
+sudo route add default gw 172.20.10.2 metric 2
+
