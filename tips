@@ -513,6 +513,10 @@ alias cp="rsync -ah --progress"
 #ssh  socks5 proxy
 ssh -qTfnN -D 7070 -p 22 root@47.91.223.100
 
+rule list
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+SwitchyOmega chrome extension
+
 #vi delete match line
 :g/match-string/d
 
@@ -530,6 +534,7 @@ apt-get install texlive-lang-cjk
 #zip multi-volume
 zip -s 10g lakka_wireless.zip s905_lakka_20181221_wireless_home_joystick.img
 
+<<<<<<< Updated upstream
 #
 picocom -b 115200 /dev/ttyUSB0
 
@@ -580,4 +585,5 @@ stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
 
 #
 sudo route add default gw 172.20.10.2 metric 2
+sudo ip route add default via 172.20.10.1 metric 100
 

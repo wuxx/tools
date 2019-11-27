@@ -139,53 +139,64 @@ uint8_t cook(uint8_t c)
 	}
 }
 
-static int32_t cmd_dumpb()
+void dumpb(uint8_t *p, uint32_t byte_nr)
 {
     uint32_t i, x;
+    uint8_t buf[16];
+    uint32_t count, left;
+
+    count = byte_nr / 16;
+    left  = byte_nr % 16;
+
+    PRINT_EMG("[0x%08x]: ", &p[0]);
+    for(i = 0; i < count; i++) {
+        for(x = 0; x < 16; x++) {
+            buf[x] = p[i * 16 + x];
+            PRINT_EMG("%02x ", buf[x]);
+        }
+        PRINT_EMG("  ");
+        for(x = 0; x < 16; x++) {
+            PRINT_EMG("%c", cook(buf[x]));
+        }
+
+        PRINT_EMG("\n[0x%08x]: ", &p[(i + 1) * 16]);
+    }
+
+    if (left != 0) {
+        for(x = 0; x < 16; x++) {
+            if (x < left) {
+                buf[x] = p[i * 16 + x];
+                PRINT_EMG("%02x ", buf[x]);
+            } else {
+                buf[x] = ' ';
+                PRINT_EMG("   ");
+            }
+        }
+        PRINT_EMG("  ");
+        for(x = 0; x < 16; x++) {
+            PRINT_EMG("%c", cook(buf[x]));
+        }
+
+    }
+
+    PRINT_EMG("\n");
+
+
+}
+
+static int32_t cmd_dumpb()
+{
     uint8_t *p;
-		uint8_t buf[16];
     uint32_t addr, byte_nr;
-		uint32_t count, left;
+    uint32_t i, x;
+    uint8_t buf[16];
+    uint32_t count, left;
 
     addr    = strtoul(argv[1], NULL, 0);
     byte_nr = strtoul(argv[2], NULL, 0);
     p       = (uint8_t*)addr;
-	
-		count = byte_nr / 16;
-		left  = byte_nr % 16;
-	
-    PRINT_EMG("[0x%08x]: ", &p[0]);
-    for(i = 0; i < count; i++) {
-				for(x = 0; x < 16; x++) {
-					buf[x] = p[i * 16 + x];
-					PRINT_EMG("%02x ", buf[x]);
-				}
-				PRINT_EMG("  ");
-				for(x = 0; x < 16; x++) {
-					PRINT_EMG("%c", cook(buf[x]));
-				}
-				
-        PRINT_EMG("\n[0x%08x]: ", &p[(i + 1) * 16]);
-    }
 
-		if (left != 0) {
-			for(x = 0; x < 16; x++) {
-				if (x < left) {
-					buf[x] = p[i * 16 + x];
-					PRINT_EMG("0x%02x ", buf[x]);
-				} else {
-					buf[x] = ' ';
-					PRINT_EMG("   ");
-				}
-			}
-			PRINT_EMG("  ");
-			for(x = 0; x < 16; x++) {
-				PRINT_EMG("%c", cook(buf[x]));
-			}
-		
-		}
-					
-	PRINT_EMG("\n");
+    dumpb(p, byte_nr);
 
     return 0;
 }
