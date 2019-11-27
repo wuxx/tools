@@ -431,6 +431,8 @@ git clone --recursive /path/to/repos/foo.git
 
    git push -f origin master
 
+git revert -n 8b89621019c9adc6fc4d242cd41daeb13aeb9861
+
 #fill the framebuffer
 cat /dev/urandom >/dev/fb0
 
