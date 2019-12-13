@@ -25,8 +25,8 @@ FLASH_SIZE=0x00020000 #128KB
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 
 #CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg
-CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
-#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
+#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
+CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
 
 #init;
 #halt;
