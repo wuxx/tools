@@ -506,6 +506,10 @@ ffmpeg -i out.flv -an -vcodec copy out1.flv
 #ffmpeg combine video and sound.
 ffmpeg -i in.flv -i in.m4a -c copy out.flv
 
+#ffmpeg combine multi video
+for f in *.flv; do echo "file '$f'" >> mylist.txt; done
+ffmpeg -f concat -i mylist.txt -c copy output.flv
+
 #scp avoid stalled.
 scp -l 8192 source dest
 
