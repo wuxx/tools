@@ -40,7 +40,9 @@ fi
 
 
 #CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_sysfsgpio_swd.cfg
-CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
+#CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
+
+CONFIG=${CURRENT_DIR}/tcl/target/stm32f0x_cmsisdap.cfg
 #CONFIG=${CURRENT_DIR}/tcl/target/stm32f1x_bcm2835gpio_swd.cfg
 
 #set FLASH_SIZE 0x20000
