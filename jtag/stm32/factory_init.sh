@@ -3,8 +3,8 @@
 succ_count=0
 fail_count=0
 
-#target_image=/home/pi/oss/nanoDAP/firmware/v2.3/stm32f103c8t6/flash_image_cmsisdap_20191007.bin
-target_image=/home/pi/oss/nanoDAP/firmware/v2.3/DAPLink/flash_image_128k_bl_if_hid.bin
+target_image=/home/pi/oss/nanoDAP/firmware/v2.3/CMSIS-DAP/flash_image_cmsisdap_20191007.bin
+#target_image=/home/pi/oss/nanoDAP/firmware/v2.3/DAPLink/flash_image_128k_bl_if_hid.bin
 
 while [ 1 ]; do
     ./probe.sh
@@ -14,10 +14,12 @@ while [ 1 ]; do
             
         if [ $? -eq 0 ]; then
             succ_count=$(($succ_count+1))  
-            echo "---------- SUCC [$succ_count] ----------"
+            echo -e "\033[32m---------- SUCC [$succ_count] ----------\033[0m"
+
         else
             fail_count=$(($fail_count+1))  
-            echo "---------- FAIL [$fail_count] ----------"
+            echo -e "\033[31m---------- FAIL [$succ_count] ----------\033[0m"
+
         fi
 
         while [ 1 ]; do
