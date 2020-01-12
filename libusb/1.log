@@ -1,0 +1,136 @@
+Dev (bus 1, device 4): 0424 - 7800
+  Configuration:
+    wTotalLength:         39
+    bNumInterfaces:       1
+    bConfigurationValue:  1
+    iConfiguration:       0
+    bmAttributes:         e0h
+    MaxPower:             1
+    Interface:
+      bInterfaceNumber:   0
+      bAlternateSetting:  0
+      bNumEndpoints:      3
+      bInterfaceClass:    255
+      bInterfaceSubClass: 0
+      bInterfaceProtocol: 255
+      iInterface:         0
+      Endpoint:
+        bEndpointAddress: 81h
+        bmAttributes:     02h
+        wMaxPacketSize:   512
+        bInterval:        0
+        bRefresh:         0
+        bSynchAddress:    0
+      Endpoint:
+        bEndpointAddress: 02h
+        bmAttributes:     02h
+        wMaxPacketSize:   512
+        bInterval:        0
+        bRefresh:         0
+        bSynchAddress:    0
+      Endpoint:
+        bEndpointAddress: 83h
+        bmAttributes:     03h
+        wMaxPacketSize:   16
+        bInterval:        4
+        bRefresh:         0
+        bSynchAddress:    0
+Dev (bus 1, device 3): 0424 - 2514
+  Configuration:
+    wTotalLength:         41
+    bNumInterfaces:       1
+    bConfigurationValue:  1
+    iConfiguration:       0
+    bmAttributes:         e0h
+    MaxPower:             1
+    Interface:
+      bInterfaceNumber:   0
+      bAlternateSetting:  0
+      bNumEndpoints:      1
+      bInterfaceClass:    9
+      bInterfaceSubClass: 0
+      bInterfaceProtocol: 1
+      iInterface:         0
+      Endpoint:
+        bEndpointAddress: 81h
+        bmAttributes:     03h
+        wMaxPacketSize:   1
+        bInterval:        12
+        bRefresh:         0
+        bSynchAddress:    0
+    Interface:
+      bInterfaceNumber:   0
+      bAlternateSetting:  1
+      bNumEndpoints:      1
+      bInterfaceClass:    9
+      bInterfaceSubClass: 0
+      bInterfaceProtocol: 2
+      iInterface:         0
+      Endpoint:
+        bEndpointAddress: 81h
+        bmAttributes:     03h
+        wMaxPacketSize:   1
+        bInterval:        12
+        bRefresh:         0
+        bSynchAddress:    0
+Dev (bus 1, device 2): 0424 - 2514
+  Configuration:
+    wTotalLength:         41
+    bNumInterfaces:       1
+    bConfigurationValue:  1
+    iConfiguration:       0
+    bmAttributes:         e0h
+    MaxPower:             1
+    Interface:
+      bInterfaceNumber:   0
+      bAlternateSetting:  0
+      bNumEndpoints:      1
+      bInterfaceClass:    9
+      bInterfaceSubClass: 0
+      bInterfaceProtocol: 1
+      iInterface:         0
+      Endpoint:
+        bEndpointAddress: 81h
+        bmAttributes:     03h
+        wMaxPacketSize:   1
+        bInterval:        12
+        bRefresh:         0
+        bSynchAddress:    0
+    Interface:
+      bInterfaceNumber:   0
+      bAlternateSetting:  1
+      bNumEndpoints:      1
+      bInterfaceClass:    9
+      bInterfaceSubClass: 0
+      bInterfaceProtocol: 2
+      iInterface:         0
+      Endpoint:
+        bEndpointAddress: 81h
+        bmAttributes:     03h
+        wMaxPacketSize:   1
+        bInterval:        12
+        bRefresh:         0
+        bSynchAddress:    0
+Dev (bus 1, device 1): 1D6B - 0002
+  Configuration:
+    wTotalLength:         25
+    bNumInterfaces:       1
+    bConfigurationValue:  1
+    iConfiguration:       0
+    bmAttributes:         e0h
+    MaxPower:             0
+    Interface:
+      bInterfaceNumber:   0
+      bAlternateSetting:  0
+      bNumEndpoints:      1
+      bInterfaceClass:    9
+      bInterfaceSubClass: 0
+      bInterfaceProtocol: 0
+      iInterface:         0
+      Endpoint:
+        bEndpointAddress: 81h
+        bmAttributes:     03h
+        wMaxPacketSize:   4
+        bInterval:        12
+        bRefresh:         0
+        bSynchAddress:    0
