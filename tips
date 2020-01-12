@@ -548,7 +548,6 @@ apt-get install texlive-lang-cjk
 #zip multi-volume
 zip -s 10g lakka_wireless.zip s905_lakka_20181221_wireless_home_joystick.img
 
-<<<<<<< Updated upstream
 #
 picocom -b 115200 /dev/ttyUSB0
 
@@ -570,6 +569,15 @@ xdelta3 -d -s SOURCE OUT > TARGET
 #create new branch
 git checkout -b new_branch_name
 git push origin new_branch_name:new_branch_name
+
+#delete total git log
+git checkout --orphan new_branch
+git add -A
+git commit -am "commit clear"
+git branch -D master
+git branch -m master
+git push -f origin master
+git push origin --delete master
 
 #split
 split -b 3M xxx.bin
