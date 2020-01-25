@@ -514,6 +514,13 @@ ffmpeg -i out.flv -an -vcodec copy out1.flv
 #ffmpeg combine video and sound.
 ffmpeg -i in.flv -i in.m4a -c copy out.flv
 
+#convert mkv to mp4
+ffmpeg.exe -i input.mkv -y -vcodec copy -acodec copy output.mp4
+
+#convert flv to mp4
+ffmpeg -i input.flv output.mp4
+
+
 #ffmpeg combine multi video
 for f in *.flv; do echo "file '$f'" >> mylist.txt; done
 ffmpeg -f concat -i mylist.txt -c copy output.flv
@@ -605,7 +612,16 @@ sudo apt-get install libhidapi-dev
 #linux stress
 stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
 
-#
+#route gateway
 sudo route add default gw 172.20.10.2 metric 2
 sudo ip route add default via 172.20.10.1 metric 100
 
+#libusb
+sudo apt-get install libusb-1.0-0-dev
+
+#minicom log to fail
+DEVICE=/dev/ttyUSB0
+BAUDRATE=921600
+LOG_FILE=ttyusb0.log
+
+minicom -D $DEVICE -b $BAUDRATE -C $LOG_FILE
