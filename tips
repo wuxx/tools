@@ -520,6 +520,8 @@ ffmpeg.exe -i input.mkv -y -vcodec copy -acodec copy output.mp4
 #convert flv to mp4
 ffmpeg -i input.flv output.mp4
 
+#convert m4a to mp3
+ffmpeg -i ifile.m4a -codec:v copy -codec:a libmp3lame -q:a 2 ofile.mp3
 
 #ffmpeg combine multi video
 for f in *.flv; do echo "file '$f'" >> mylist.txt; done
