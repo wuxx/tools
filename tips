@@ -398,6 +398,9 @@ git clone /path/to/repos/foo.git
 git submodule init
 git submodule update
 
+git submodule update --init --recursive
+
+
 git pull --recurse-submodules
 
 git pull -p
@@ -515,7 +518,7 @@ ffmpeg -i out.flv -an -vcodec copy out1.flv
 ffmpeg -i in.flv -i in.m4a -c copy out.flv
 
 #convert mkv to mp4
-ffmpeg.exe -i input.mkv -y -vcodec copy -acodec copy output.mp4
+ffmpeg -i input.mkv -y -vcodec copy -acodec copy output.mp4
 
 #convert flv to mp4
 ffmpeg -i input.flv output.mp4
@@ -627,3 +630,10 @@ BAUDRATE=921600
 LOG_FILE=ttyusb0.log
 
 minicom -D $DEVICE -b $BAUDRATE -C $LOG_FILE
+
+#create filesystem image
+mkfs.fat -S 4096 -C fat-test.img 4096
+mount -t vfat fat-test.img ./mnt
+copy files into ./mnt
+umount ./mnt
+

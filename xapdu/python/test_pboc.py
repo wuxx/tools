@@ -80,11 +80,12 @@ class Connection(object):
                 raise ValueError("Input error at: '%s'" % part)
 
         rdata = connection.send(bapdu, None, True)
+        print rdata
         sw = "%02x%02x" % (rdata[-2], rdata[-1])
         if (expect_sw != None):
             if expect_sw != sw:
-                print "fail"
-                sys.exit(-1)
+                print "fail recv %s" %(sw)
+                #sys.exit(-1)
             else:
                 print "succ"
 
@@ -204,6 +205,8 @@ if __name__ == "__main__":
 
         #select pboc applet (4Fxx tag of select PPSE)
         rdata = connection.tx('00A40400 08 A000000333010103', '9000')
+
+        rdata = connection.tx('00A40400 08 A000000333010101', '9000')
 
         #read the ATC (application transaction counter)
         rdata = connection.tx('80CA9F3600', '9000')
