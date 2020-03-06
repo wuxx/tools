@@ -23,12 +23,12 @@ int main (void)
         zmq_msg_init_size (&request, 5);
         memcpy (zmq_msg_data (&request), "Hello", 5);
         printf ("正在发送 Hello %d...\n", request_nbr);
-        zmq_send (requester, &request, 0, 0);
+        zmq_send (requester, &request, 0);
         zmq_msg_close (&request);
  
         zmq_msg_t reply;
         zmq_msg_init (&reply);
-        zmq_recv (requester, &reply, 0, 0);
+        zmq_recv (requester, &reply, 0);
         printf ("接收到 World %d\n", request_nbr);
         zmq_msg_close (&reply);
     }

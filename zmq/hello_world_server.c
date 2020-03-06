@@ -21,7 +21,7 @@ int main (void)
         //  等待客户端请求
         zmq_msg_t request;
         zmq_msg_init (&request);
-        zmq_recv (responder, &request, 0, 0);
+        zmq_recv (responder, &request, 0);
         printf ("收到 hello\n");
         zmq_msg_close (&request);
 
@@ -32,7 +32,7 @@ int main (void)
         zmq_msg_t reply;
         zmq_msg_init_size (&reply, 5);
         memcpy (zmq_msg_data (&reply), "world", 5);
-        zmq_send (responder, &reply, 0, 0);
+        zmq_send (responder, &reply, 0);
         zmq_msg_close (&reply);
     }
     //  程序不会运行到这里，以下只是演示我们应该如何结束

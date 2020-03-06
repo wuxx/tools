@@ -526,6 +526,9 @@ ffmpeg -i input.flv output.mp4
 #convert m4a to mp3
 ffmpeg -i ifile.m4a -codec:v copy -codec:a libmp3lame -q:a 2 ofile.mp3
 
+#convert mp4 to mp3 (https://www.kutu66.com//ubuntu/article_161575)
+ffmpeg -i video.mp4 -vn -acodec libmp3lame -ac 2 -qscale:a 4 -ar 48000 audio.mp3
+
 #ffmpeg combine multi video
 for f in *.flv; do echo "file '$f'" >> mylist.txt; done
 ffmpeg -f concat -i mylist.txt -c copy output.flv
@@ -618,7 +621,7 @@ sudo apt-get install libhidapi-dev
 stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 10s
 
 #route gateway
-sudo route add default gw 172.20.10.2 metric 2
+sudo route add default gw 172.20.10.1 metric 20
 sudo ip route add default via 172.20.10.1 metric 100
 
 #libusb
@@ -637,3 +640,6 @@ mount -t vfat fat-test.img ./mnt
 copy files into ./mnt
 umount ./mnt
 
+
+#vi replace string
+:10,50s/abc/def/g
