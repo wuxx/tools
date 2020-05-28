@@ -434,6 +434,7 @@ git clone --recursive /path/to/repos/foo.git
 
    git push -f origin master
 
+#git revert
 git revert -n 8b89621019c9adc6fc4d242cd41daeb13aeb9861
 
 #fill the framebuffer
@@ -594,6 +595,9 @@ git branch -m master
 git push -f origin master
 git push origin --delete master
 
+#git submodule
+git submodule add <url> <path>
+
 #split
 split -b 3M xxx.bin
 
@@ -643,3 +647,10 @@ umount ./mnt
 
 #vi replace string
 :10,50s/abc/def/g
+
+#avahi mdns
+sudo apt install avahi-utils
+sudo avahi-browse -a -v
+
+#stdbuf
+cat 1.bin | stdbuf -o0 xxd -e | egrep "aaaaaaaa|"

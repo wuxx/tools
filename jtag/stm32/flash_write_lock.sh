@@ -22,12 +22,12 @@ IMAGE_FILE=$1
 FLASH_ADDR=0x08000000
 FLASH_SIZE=0x00020000
 
-#${CURRENT_DIR}/probe.sh
+${CURRENT_DIR}/probe.sh
 
-#if [ $? -ne 0 ]; then
-#echo "probe fail!"
-#exit 1
-#fi
+if [ $? -ne 0 ]; then
+    echo "probe fail!"
+    exit 1
+fi
 
 EXT="${IMAGE_FILE##*.}"
 echo EXT: $EXT
@@ -62,15 +62,13 @@ sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
     shutdown;
 "
 
-exit $?
-
 sudo openocd -s ${CURRENT_DIR}/tcl -f ${CONFIG} -c \
 "   init;
     halt;
     reset halt;
-    stm32f1x unlock 0;
-    flash write_image erase ${TARGET};
-    stm32f1x lock 0;
-    reset;
+    stm32f1x lock 0
+    reset halt;
     shutdown;
 "
+
+exit $?
