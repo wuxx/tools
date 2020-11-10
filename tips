@@ -654,3 +654,9 @@ sudo avahi-browse -a -v
 
 #stdbuf
 cat 1.bin | stdbuf -o0 xxd -e | egrep "aaaaaaaa|"
+
+#ln
+echo "l(2.71828)" |bc -l
+
+#expand file size
+truncate -s 1048576 icesugar.bin

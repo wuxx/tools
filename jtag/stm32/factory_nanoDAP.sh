@@ -5,6 +5,7 @@ fail_count=0
 
 #target_image=/home/pi/oss/nanoDAP/firmware/v2.3/CMSIS-DAP/flash_image_cmsisdap_20191007.bin
 target_image=/home/pi/oss/nanoDAP/firmware/v2.3/DAPLink/flash_image_128k_bl_if_hid.bin
+#target_image=/home/pi/test/flash_image_128k_bl_if_hid_for_rak.bin
 
 while [ 1 ]; do
     ./probe.sh
