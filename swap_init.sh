@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#sudo swapoff /var/swap
+sudo swapoff /var/swap
 
-#sudo dd if=/dev/zero of=swap bs=1M count=1024
+sudo dd if=/dev/zero of=/var/swap bs=1M count=3072
 
 sudo mkswap /var/swap
 
