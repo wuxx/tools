@@ -34,7 +34,8 @@ unsigned long simple_strtoul(const char *cp,char **endp,unsigned int base)
 int main(int argc, char **argv)
 {
     unsigned int data;
-    data = strtoul(argv[1], NULL, 16);
+    //data = strtoul(argv[1], NULL, 16);
+    data = strtoul(argv[1], NULL, 0);
     printf("data: [0x%08x]\n", data);
     return 0;
 }
