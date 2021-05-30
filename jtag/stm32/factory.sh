@@ -39,13 +39,13 @@ while [ 1 ]; do
             if [ $? -eq 1 ]; then
                 break;
             else
-                echo "wait detach..."
+                echo "wait detach >>>"
                 sleep 0.1
             fi
         done
 
     else
-        echo "wait attach..."
+        echo "wait attach <<<"
         sleep 0.1
 
     fi
