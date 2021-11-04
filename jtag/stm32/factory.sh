@@ -45,7 +45,7 @@ while [ 1 ]; do
         done
 
     else
-        echo "wait attach <<<"
+        echo "wait attach <<< [$(lsusb | grep "0d28:0204")]"
         sleep 0.1
 
     fi
