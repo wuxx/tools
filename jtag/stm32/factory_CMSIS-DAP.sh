@@ -4,15 +4,19 @@ succ_count=0
 fail_count=0
 
 #target_image=/home/pi/oss/nanoDAP/firmware/v2.3/CMSIS-DAP/flash_image_cmsisdap_20191007.bin
+target_image=/home/pi/oss/nanoDAP/firmware/v2.3/CMSIS-DAP/flash_image_daplink_c6t6_20210530.bin
 #target_image=/home/pi/oss/nanoDAP/firmware/v2.3/DAPLink/flash_image_128k_bl_if_hid.bin
 #target_image=/home/pi/test/flash_image_128k_bl_if_hid_for_rak.bin
-target_image=/home/pi/oss/nanoDAP/firmware/v2.3/DAPLink/flash_image_20210104.bin
+#target_image=/home/pi/oss/nanoDAP/firmware/v2.3/DAPLink/flash_image_20210104.bin
+
+cd /home/pi/oss/tools/jtag/stm32
 
 trap 'onCtrlC' INT
 function onCtrlC () {
     echo 'exit'
     exit 0
 }
+
 
 while [ 1 ]; do
     ./probe.sh
@@ -41,7 +45,7 @@ while [ 1 ]; do
         done
 
     else
-        echo "wait attach..."
+        echo "wait attach... "
         sleep 0.1
 
     fi

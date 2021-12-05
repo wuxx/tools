@@ -2,8 +2,9 @@
 
 #convert path to window style
 
-IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}')
+#IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{ print $1}')
+IP=$(ifconfig  | grep 'inet '| grep -v '127.0.0.1' | awk '{ print $2}')
 
-WIN_PATH=$(echo ${PWD} | sed 's/\/home\/pi/\\\\'${IP}'/' | sed 's/\//\\/g')
+WIN_PATH=$(echo ${PWD} | sed 's/\/home\/pi/\\\\'${IP}'\\home\\pi/' | sed 's/\//\\/g')
 
 echo ${WIN_PATH}

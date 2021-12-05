@@ -55,6 +55,7 @@ int main(void)
                 ntohs(their_addr.sin_port));
         if (!fork())
         {
+            /* child process */
             if (send(conn_fd, "Hello, world!\n", 14, 0) == -1) {
                 fprintf(stderr, "send error!\n");
             }
@@ -69,7 +70,8 @@ int main(void)
             return 0;
         }
 
+        /* parent process */
         close(conn_fd);  
         while(waitpid(-1, NULL, WNOHANG) > 0);  
     }
-}  
+}
