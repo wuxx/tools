@@ -1,0 +1,25 @@
+#!/bin/bash
+
+BUZZER_GPIO=23
+
+raspi-gpio set $BUZZER_GPIO op
+
+function buzzer_succ () {
+    raspi-gpio set $BUZZER_GPIO dh
+    sleep 0.1
+    raspi-gpio set $BUZZER_GPIO dl
+    sleep 0.1
+}
+
+function buzzer_fail () {
+    for((i=0;i<3;i++)); do
+        raspi-gpio set $BUZZER_GPIO dh
+        sleep 0.1
+        raspi-gpio set $BUZZER_GPIO dl
+        sleep 0.1
+    done
+
+}
+
+
+buzzer_fail
