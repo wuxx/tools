@@ -12,7 +12,7 @@ CURRENT_DIR=$(cd $(dirname $0); pwd)
 
 #/home/pi/oss/tools/jtag/stm32/unlock.sh
 
-$CURRENT_DIR/wait_and_probe.sh
+#$CURRENT_DIR/wait_and_probe.sh
 
 #/home/pi/oss/tools/jtag/stm32/probe.sh
 #if [ $? -ne 0 ]; then
@@ -64,4 +64,5 @@ else
     buzzer_succ
 fi
 
-$CURRENT_DIR/wait_detach.sh
+#$CURRENT_DIR/wait_detach.sh
+exit 0

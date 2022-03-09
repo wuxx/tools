@@ -669,3 +669,11 @@ while [ 1 ]
 > a=$(ifconfig wlan0 | grep 'RX pac' | awk '{print $3}' | awk -F: '{print $NF}')
 > echo -ne "$a\r"
 > done
+
+#convert append
+Example (vertical sprite):
+convert image1.png image2.png image3.png -append result/result-sprite.png
+Example (horizontal sprite):
+convert image1.png image2.png image3.png +append result/result-sprite.png
+
+

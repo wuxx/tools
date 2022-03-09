@@ -31,7 +31,8 @@ FLASH_SIZE=0x00020000
 #fi
 
 EXT="${IMAGE_FILE##*.}"
-echo EXT: $EXT
+#echo EXT: $EXT
+echo "image: [$IMAGE_FILE]"
 
 #flash write_image erase xxx.hex;
 #flash write_image erase xxx.bin 0x08000000;
