@@ -1,1 +1,3 @@
-log.do_build.4643
+DEBUG: Executing shell function do_build
+build with args: my build arguments
+DEBUG: Shell function do_build finished

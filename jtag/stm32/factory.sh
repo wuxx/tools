@@ -47,11 +47,13 @@ while [ 1 ]; do
             
         if [ $? -eq 0 ]; then
             succ_count=$(($succ_count+1))  
+            bash /mnt/home/pi/oss/tools/jtag/stm32/buzzer_succ
             echo -e "\033[32m---------- SUCC [$succ_count] ----------\033[0m"
             buzzer_succ
 
         else
             fail_count=$(($fail_count+1))  
+            bash /mnt/home/pi/oss/tools/jtag/stm32/buzzer_fail
             echo -e "\033[31m---------- FAIL [$fail_count] ----------\033[0m"
             buzzer_fail
 

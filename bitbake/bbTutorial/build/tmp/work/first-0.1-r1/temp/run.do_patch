@@ -1,1 +1,5 @@
-run.do_patch.4143
+def do_patch(d):
+    bb.note ("first:do_patch")
+
+do_patch(d)
+

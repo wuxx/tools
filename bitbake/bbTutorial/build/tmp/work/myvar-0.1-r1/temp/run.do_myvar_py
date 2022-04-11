@@ -1,1 +1,5 @@
-run.do_myvar_py.4401
+def do_myvar_py(d):
+	print ("myvar_py: %s" %(d.getVar('MYVAR', True)))
+
+do_myvar_py(d)
+
