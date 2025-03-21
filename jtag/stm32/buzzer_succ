@@ -1,25 +1,41 @@
 #!/bin/bash
 
+
+MODEL=$(cat /proc/device-tree/model | tr -d '\0')
+
+if [[ $MODEL == *"Raspberry Pi 5"* ]]; then
+    #echo "rpi 5"
+    GPIO_TOOL=pinctrl
+elif [[ $MODEL == *"Raspberry Pi 4 Model B"* ]]; then
+    #echo "rpi 4b"
+    GPIO_TOOL=raspi-gpio
+elif [[ $MODEL == *"Raspberry Pi 3 Model B"* ]]; then
+    #echo "rpi 3b"
+    GPIO_TOOL=raspi-gpio
+else
+  echo "unknown model"
+
+fi
+
 BUZZER_GPIO=23
 
-raspi-gpio set $BUZZER_GPIO op
+$GPIO_TOOL set $BUZZER_GPIO op
 
 function buzzer_succ () {
-    raspi-gpio set $BUZZER_GPIO dh
+    $GPIO_TOOL set $BUZZER_GPIO dh
     sleep 0.1
-    raspi-gpio set $BUZZER_GPIO dl
+    $GPIO_TOOL set $BUZZER_GPIO dl
     sleep 0.1
 }
 
 function buzzer_fail () {
     for((i=0;i<3;i++)); do
-        raspi-gpio set $BUZZER_GPIO dh
+        $GPIO_TOOL set $BUZZER_GPIO dh
         sleep 0.1
-        raspi-gpio set $BUZZER_GPIO dl
+        $GPIO_TOOL set $BUZZER_GPIO dl
         sleep 0.1
     done
 
 }
-
 
 buzzer_succ
