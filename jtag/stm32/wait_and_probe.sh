@@ -15,7 +15,8 @@ while [ 1 ]; do
         echo "target connected [$DAP_INFO]"
         exit 0
     else
-        echo "wait attach <<< [$DAP_INFO]"
+        echo -e "\033[31m wait attach <<< [$DAP_INFO] \033[0m"
+
     fi
 
 done

@@ -12,7 +12,8 @@ while [ 1 ]; do
 
     /home/pi/oss/tools/jtag/stm32/probe.sh
     if [ $? -eq 0 ]; then
-        echo "wait detach >>> [$DAP_INFO]"
+        echo -e "\033[32m wait detach >>> [$DAP_INFO] \033[0m"
+
     else
         exit 0
     fi

@@ -12,7 +12,7 @@ CURRENT_DIR=$(cd $(dirname $0); pwd)
 #sudo openocd -f tcl/target/stm32f1x_cmsisdap.cfg -d3
 
 #sudo openocd -d4 -f ${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
-sudo openocd -f ${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap.cfg
+sudo openocd -d4 -f ${CURRENT_DIR}/tcl/target/stm32f1x_cmsisdap_jtag.cfg
 
 #sudo openocd -f tcl/target/stm32f0x_cmsisdap.cfg
 
